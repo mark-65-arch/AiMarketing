@@ -218,7 +218,7 @@ export default function Homepage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full" data-testid="button-register-workshops">
-                    <a href="#contact">Register Now</a>
+                    <a href="/ai-training">Learn More</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -257,7 +257,7 @@ export default function Homepage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" data-testid="button-ranking-higher">
-                    <a href="#contact">Start Ranking Higher</a>
+                    <a href="/business-profile">Learn More</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -293,7 +293,7 @@ export default function Homepage() {
                     </li>
                   </ul>
                   <Button asChild variant="secondary" className="w-full" data-testid="button-get-website">
-                    <a href="#contact">Get Your Website</a>
+                    <a href="/ai-websites">Learn More</a>
                   </Button>
                 </CardContent>
               </Card>

@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Homepage from "@/pages/homepage";
 import Assessment from "@/pages/assessment";
+import AITraining from "@/pages/ai-training";
+import BusinessProfile from "@/pages/business-profile";
+import AIWebsites from "@/pages/ai-websites";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +15,9 @@ function Router() {
     <Switch>
       <Route path="/" component={Homepage}/>
       <Route path="/assessment" component={Assessment}/>
+      <Route path="/ai-training" component={AITraining}/>
+      <Route path="/business-profile" component={BusinessProfile}/>
+      <Route path="/ai-websites" component={AIWebsites}/>
       <Route component={NotFound} />
     </Switch>
   );
