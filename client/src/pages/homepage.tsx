@@ -140,8 +140,8 @@ export default function Homepage() {
                   <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-free-audit">
                     <a href="#contact">Get Your Free AI Audit</a>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-demo">
-                    <a href="#demo">See AI Demo</a>
+                  <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-assessment">
+                    <a href="/assessment">Take Free AI Assessment</a>
                   </Button>
                 </div>
               </AnimatedSection>
