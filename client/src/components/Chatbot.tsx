@@ -145,7 +145,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
       
       setTimeout(() => {
         showSuccessStory();
-      }, 2000);
+      }, 1500);
     }, 500);
   };
 
@@ -183,29 +183,31 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
       
       setTimeout(() => {
         addBotMessage(
-          `Perfect! I can also set up a quick 15-minute call where I'll show you exactly which AI tools would work best for your ${userBusiness.toLowerCase()}. Would you like to schedule that?`,
-          ["Yes, book a call", "Not right now, just send the guide"]
+          `Thanks! I'll send that right over. I can also set up a quick 15-minute call where I'll show you exactly which AI tools would work best for your ${userBusiness.toLowerCase()}. What would you like to do?`,
+          ["Book Free Call", "Just Send Guide", "Start Over"]
         );
       }, 500);
     }
   };
 
-  const handleConsultationResponse = (response: string) => {
+  const handleFinalResponse = (response: string) => {
     addUserMessage(response);
     setCurrentStep(6);
     
-    if (response.includes("Yes")) {
+    if (response === "Book Free Call") {
       setTimeout(() => {
         addBotMessage(
-          "Excellent! You can schedule your free consultation by calling us at (713) 555-0123 or clicking the 'Contact' button in our menu. I'll make sure you get that ${userBusiness} guide right away too!\n\nI'm excited to help your Houston business grow with AI! 🚀"
+          "Perfect! You can schedule your free consultation at our contact page or call us directly at (713) 555-0123. I'll make sure you get that ${userBusiness} guide right away too!\n\nI'm excited to help your Houston business grow with AI! 🚀"
         );
       }, 500);
-    } else {
+    } else if (response === "Just Send Guide") {
       setTimeout(() => {
         addBotMessage(
-          "Perfect! I'm sending that ${userBusiness} AI guide to ${userEmail} right now. You'll have it within a few minutes. Feel free to explore our website for more AI marketing insights!\n\nWhen you're ready to take the next step, just give us a call at (713) 555-0123. 📞"
+          "Thanks! Check your email in a few minutes for your ${userBusiness} AI guide. If you change your mind about that call, just visit our contact page anytime.\n\nHere's to your business success! 📧"
         );
       }, 500);
+    } else if (response === "Start Over") {
+      startNewConversation();
     }
   };
 
@@ -215,8 +217,24 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     } else if (currentStep === 1) {
       handleChallengeSelection(option);
     } else if (currentStep === 5) {
-      handleConsultationResponse(option);
+      handleFinalResponse(option);
     }
+  };
+
+  const startNewConversation = () => {
+    setMessages([]);
+    setUserEmail('');
+    setUserBusiness('');
+    setUserChallenge('');
+    setCurrentStep(0);
+    setIsTyping(false);
+    
+    setTimeout(() => {
+      addBotMessage(
+        "👋 Hello! I'm Sarah, your AI marketing assistant from Houston AI Marketing. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
+        ["Restaurant", "Retail Store", "Professional Service", "Home Service", "Other"]
+      );
+    }, 500);
   };
 
   const openChat = () => {
@@ -368,6 +386,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
                     onChange={(e) => setUserEmail(e.target.value)}
                     className="flex-1 text-sm"
                     data-testid="chatbot-email-input"
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter') {
+                        handleEmailSubmit();
+                      }
+                    }}
                   />
                   <Button
                     onClick={handleEmailSubmit}
@@ -378,6 +401,21 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
                     <Send className="w-4 h-4" />
                   </Button>
                 </div>
+              </div>
+            )}
+            
+            {/* New Conversation Button */}
+            {messages.length > 0 && (
+              <div className="p-3 border-t bg-gray-50 flex justify-center">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={startNewConversation}
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid="chatbot-new-conversation"
+                >
+                  New Conversation
+                </Button>
               </div>
             )}
           </motion.div>
