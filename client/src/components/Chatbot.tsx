@@ -289,37 +289,43 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 flex flex-col overflow-hidden md:w-96 sm:w-80 xs:w-72"
+            className="fixed bottom-24 right-6 w-96 h-[500px] max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 flex flex-col overflow-hidden md:w-96 md:right-6 sm:right-3 sm:w-[calc(100vw-24px)] sm:max-w-[90vw] sm:h-[450px]"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
             data-testid="chatbot-window"
+            style={{
+              left: window.innerWidth < 768 ? '10px' : 'auto',
+              right: window.innerWidth < 768 ? '10px' : '24px',
+              width: window.innerWidth < 768 ? 'calc(100vw - 20px)' : '384px',
+              maxWidth: window.innerWidth < 768 ? '90vw' : '384px'
+            }}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#1E3A5F] to-[#0066FF] text-white p-4 flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5" />
+            <div className="bg-gradient-to-r from-[#1E3A5F] to-[#0066FF] text-white p-3 sm:p-4 flex items-center justify-between">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm">Houston AI Marketing</h3>
-                  <p className="text-xs opacity-90">AI Marketing Assistant</p>
+                  <h3 className="font-semibold text-xs sm:text-sm leading-tight">Houston AI Marketing</h3>
+                  <p className="text-xs opacity-90 leading-tight">AI Marketing Assistant</p>
                 </div>
               </div>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={closeChat}
-                className="text-white hover:bg-white/20 w-8 h-8"
+                className="text-white hover:bg-white/20 w-8 h-8 sm:w-8 sm:h-8 min-h-[44px] min-w-[44px] sm:min-h-[32px] sm:min-w-[32px]"
                 data-testid="chatbot-close"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+            <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gray-50">
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
@@ -328,23 +334,23 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
                   className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
                 >
                   <div
-                    className={`max-w-[80%] p-3 rounded-2xl text-sm ${
+                    className={`max-w-[85%] sm:max-w-[80%] p-2.5 sm:p-3 rounded-2xl text-xs sm:text-sm ${
                       message.isBot
                         ? 'bg-white text-gray-800 shadow-sm border'
                         : 'bg-[#0066FF] text-white'
                     }`}
                   >
-                    <p className="whitespace-pre-wrap leading-relaxed">{message.text}</p>
+                    <p className="whitespace-pre-wrap leading-relaxed break-words">{message.text}</p>
                     
                     {message.options && (
-                      <div className="mt-4 space-y-2">
+                      <div className="mt-3 sm:mt-4 space-y-2">
                         {message.options.map((option, index) => (
                           <Button
                             key={index}
                             variant="outline"
                             size="sm"
                             onClick={() => handleOptionClick(option)}
-                            className="w-full text-left justify-start text-sm py-3 px-4 h-auto hover:bg-[#0066FF] hover:text-white transition-colors border border-gray-200 rounded-lg"
+                            className="w-full text-left justify-start text-xs sm:text-sm py-3 sm:py-3 px-3 sm:px-4 h-auto min-h-[44px] hover:bg-[#0066FF] hover:text-white transition-colors border border-gray-200 rounded-lg leading-tight"
                             data-testid={`chatbot-option-${index}`}
                           >
                             {option}
@@ -362,7 +368,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
                   animate={{ opacity: 1 }}
                   className="flex justify-start"
                 >
-                  <div className="bg-white p-3 rounded-2xl shadow-sm border text-gray-800">
+                  <div className="bg-white p-2.5 sm:p-3 rounded-2xl shadow-sm border text-gray-800">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -377,14 +383,14 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
 
             {/* Email Input */}
             {currentStep === 4 && (
-              <div className="p-4 border-t bg-white">
-                <div className="flex space-x-2">
+              <div className="p-3 sm:p-4 border-t bg-white">
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                   <Input
                     type="email"
                     placeholder="your@email.com"
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
-                    className="flex-1 text-sm"
+                    className="flex-1 text-sm min-h-[44px] px-3 py-2"
                     data-testid="chatbot-email-input"
                     onKeyPress={(e) => {
                       if (e.key === 'Enter') {
@@ -395,10 +401,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
                   <Button
                     onClick={handleEmailSubmit}
                     size="sm"
-                    className="bg-[#0066FF] hover:bg-[#1E3A5F] px-4"
+                    className="bg-[#0066FF] hover:bg-[#1E3A5F] px-4 min-h-[44px] w-full sm:w-auto"
                     data-testid="chatbot-email-submit"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4 mr-2 sm:mr-0" />
+                    <span className="sm:hidden">Send Email</span>
                   </Button>
                 </div>
               </div>
@@ -406,12 +413,12 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
             
             {/* New Conversation Button */}
             {messages.length > 0 && (
-              <div className="p-3 border-t bg-gray-50 flex justify-center">
+              <div className="p-2 sm:p-3 border-t bg-gray-50 flex justify-center">
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={startNewConversation}
-                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors min-h-[44px] px-4 py-2"
                   data-testid="chatbot-new-conversation"
                 >
                   New Conversation
@@ -424,12 +431,38 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
       
       {/* Mobile Responsive Adjustments */}
       <style>{`
-        @media (max-width: 640px) {
-          .chatbot-window {
-            width: calc(100vw - 24px) !important;
-            right: 12px !important;
-            left: 12px !important;
+        @media (max-width: 768px) {
+          [data-testid="chatbot-window"] {
+            width: calc(100vw - 20px) !important;
+            max-width: 90vw !important;
+            left: 10px !important;
+            right: 10px !important;
             bottom: 80px !important;
+            height: 450px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          [data-testid="chatbot-window"] {
+            width: calc(100vw - 16px) !important;
+            left: 8px !important;
+            right: 8px !important;
+            bottom: 76px !important;
+            height: 400px !important;
+          }
+        }
+        
+        /* Ensure proper text wrapping and touch targets */
+        @media (max-width: 768px) {
+          .chatbot-window .break-words {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+          }
+          
+          .chatbot-window button {
+            min-height: 44px;
+            touch-action: manipulation;
           }
         }
       `}</style>
