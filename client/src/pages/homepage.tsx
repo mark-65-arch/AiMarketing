@@ -16,7 +16,9 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-  Instagram
+  Instagram,
+  Wand2,
+  Copy
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -49,6 +51,9 @@ const AnimatedSection = ({ children, className = "" }: { children: React.ReactNo
 export default function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [demoResult, setDemoResult] = useState("");
+  const [quickGenContent, setQuickGenContent] = useState("");
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [selectedBusinessType, setSelectedBusinessType] = useState("");
   const { toast } = useToast();
 
   const form = useForm<InsertContactSubmission>({
@@ -91,6 +96,49 @@ export default function Homepage() {
     setDemoResult(`🤖 Transform your Houston ${businessType} with AI! Discover how smart automation brings ${targetAudience} straight to your door. Experience the future of ${businessType} marketing in Houston!`);
   };
 
+  const handleQuickGenerate = () => {
+    if (!selectedBusinessType) {
+      toast({
+        title: "Please select a business type",
+        description: "Choose your business type to generate content",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsGenerating(true);
+
+    // Simulate AI generation
+    setTimeout(() => {
+      const sampleContent = {
+        "Restaurant": "🍽️ Craving authentic flavors? Our Houston restaurant serves up fresh, locally-sourced dishes that bring families together. Come taste the difference passion makes! #HoustonEats #AuthenticFlavors",
+        "Retail Store": "🛍️ Houston shoppers, discover your new favorite store! We've got unique finds, unbeatable prices, and friendly service that makes every visit special. Come see what's new today! #HoustonShopping #GreatFinds", 
+        "Professional Service": "🏢 Houston businesses deserve exceptional professional services. Our expert team delivers results that help you grow, succeed, and stay ahead of the competition. Let's discuss your goals! #HoustonBusiness #ProfessionalExcellence",
+        "Healthcare": "🏥 Your health is our priority. Our Houston practice provides compassionate, comprehensive care with the latest technology and a personal touch. Schedule your appointment today! #HoustonHealthcare #CompassionateCare",
+        "Real Estate": "🏠 Find your dream home in Houston! Our experienced realtors know the market inside and out, helping families discover the perfect neighborhood for their new beginning. #HoustonRealEstate #DreamHome"
+      };
+
+      setQuickGenContent(sampleContent[selectedBusinessType as keyof typeof sampleContent] || sampleContent["Professional Service"]);
+      setIsGenerating(false);
+    }, 2000);
+  };
+
+  const copyQuickContent = async () => {
+    try {
+      await navigator.clipboard.writeText(quickGenContent);
+      toast({
+        title: "Copied!",
+        description: "Content copied to clipboard",
+      });
+    } catch (err) {
+      toast({
+        title: "Error",
+        description: "Failed to copy content",
+        variant: "destructive",
+      });
+    }
+  };
+
   const onSubmit = (data: InsertContactSubmission) => {
     contactMutation.mutate(data);
   };
@@ -109,6 +157,7 @@ export default function Homepage() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <a href="#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
+                <a href="/ai-tools" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-ai-tools">Free AI Tools</a>
                 <a href="#demo" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-demo">AI Demo</a>
                 <a href="#testimonials" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-testimonials">Success Stories</a>
                 <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Started</a>
@@ -148,12 +197,82 @@ export default function Homepage() {
             </div>
             <div className="mt-12 lg:mt-0 lg:col-span-5">
               <AnimatedSection>
-                <img 
-                  src="https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                  alt="Houston business skyline" 
-                  className="rounded-2xl shadow-2xl w-full hover-lift" 
-                  data-testid="hero-image"
-                />
+                <Card className="shadow-xl bg-card/50 backdrop-blur-sm border-primary/20" data-testid="quick-generator-card">
+                  <CardContent className="p-8">
+                    <div className="text-center mb-6">
+                      <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Wand2 className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground">Try AI Content Generation</h3>
+                      <p className="text-muted-foreground text-sm">See how AI can create marketing content for your business</p>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">Business Type</label>
+                        <Select onValueChange={setSelectedBusinessType} value={selectedBusinessType}>
+                          <SelectTrigger data-testid="quick-business-type">
+                            <SelectValue placeholder="Select your business type" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="Restaurant">Restaurant</SelectItem>
+                            <SelectItem value="Retail Store">Retail Store</SelectItem>
+                            <SelectItem value="Professional Service">Professional Service</SelectItem>
+                            <SelectItem value="Healthcare">Healthcare</SelectItem>
+                            <SelectItem value="Real Estate">Real Estate</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <Button 
+                        onClick={handleQuickGenerate} 
+                        disabled={isGenerating || !selectedBusinessType}
+                        className="w-full"
+                        data-testid="button-quick-generate"
+                      >
+                        {isGenerating ? (
+                          <>
+                            <Wand2 className="w-4 h-4 mr-2 animate-spin" />
+                            Generating...
+                          </>
+                        ) : (
+                          <>
+                            <Wand2 className="w-4 h-4 mr-2" />
+                            Generate Sample Post
+                          </>
+                        )}
+                      </Button>
+
+                      {quickGenContent && (
+                        <div className="mt-4 p-4 bg-background/50 rounded-lg border">
+                          <p className="text-sm text-foreground mb-3" data-testid="quick-gen-result">
+                            {quickGenContent}
+                          </p>
+                          <div className="flex gap-2">
+                            <Button
+                              onClick={copyQuickContent}
+                              variant="outline"
+                              size="sm"
+                              className="flex-1"
+                              data-testid="button-copy-quick"
+                            >
+                              <Copy className="w-4 h-4 mr-2" />
+                              Copy
+                            </Button>
+                            <Button
+                              asChild
+                              size="sm"
+                              className="flex-1"
+                              data-testid="button-try-more"
+                            >
+                              <a href="/ai-tools">Try More AI Tools</a>
+                            </Button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
               </AnimatedSection>
             </div>
           </div>
