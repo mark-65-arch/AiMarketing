@@ -1,0 +1,39 @@
+Create two essential pages for Houston AI Marketing:
+
+1. "about.html" - About Us page
+2. "contact.html" - Contact page
+
+Requirements for both pages:
+- Business name: "Houston AI Marketing"
+- Match existing website design perfectly (same colors, fonts, navigation)
+- Professional, trust-building content
+- Mobile-responsive design
+- Clear calls-to-action
+
+About page content:
+- Professional founder story: young entrepreneur passionate about helping Houston businesses succeed with AI
+- Mission: "Making AI marketing accessible and affordable for every Houston small business"
+- Why we're different: "Houston's first AI-native marketing agency" 
+- Expertise section: AI tool certifications, local market knowledge, continuous learning
+- Community involvement: Houston Chamber of Commerce, local business groups
+- Values: transparency, education-first approach, guaranteed results
+- Professional headshot placeholder with caption
+- "Why choose Houston AI Marketing" section with 4-5 key benefits
+- Client success stats: "50+ Houston businesses served", "340% average lead increase", "15+ hours saved per week"
+
+Contact page content:
+- Multiple contact methods clearly displayed
+- Phone: (713) 555-0123
+- Email: info@aihoustonmarketing.com
+- Address: 1234 Main Street, Suite 100, Houston, TX 77002
+- Business hours: Monday-Friday 9 AM - 6 PM, Saturday 10 AM - 2 PM
+- Professional contact form with fields: Name, Email, Phone, Business Type, Service Interest, Message
+- Service inquiry dropdown: AI Training Workshop, Business Profile Optimization, AI Website Development, General Inquiry
+- Consultation booking section: "Schedule your free 15-minute consultation"
+- Response promise: "We respond to all inquiries within 4 hours"
+- Simple map placeholder or address highlight
+- Social media links placeholder section
+
+Make both pages feel personal but professional - like a trusted local business advisor who happens to be an AI expert.
+
+Add "About" and "Contact" to the main navigation menu on all pages.
