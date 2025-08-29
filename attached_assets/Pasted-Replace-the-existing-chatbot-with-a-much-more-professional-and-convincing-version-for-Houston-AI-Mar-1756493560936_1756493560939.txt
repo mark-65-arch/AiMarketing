@@ -1,0 +1,33 @@
+Replace the existing chatbot with a much more professional and convincing version for Houston AI Marketing.
+
+Requirements:
+- Keep the same visual design and placement
+- Completely rewrite all conversation responses to be more natural and professional
+- Fix the formatting issues with button spacing
+- Make responses feel like talking to a real marketing consultant
+
+Improved conversation flow:
+
+1. Initial greeting: "👋 Hello! I'm Sarah, your AI marketing assistant from Houston AI Marketing. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?"
+   Buttons: Restaurant | Retail Store | Professional Service | Home Service | Other
+
+2. After business type selection:
+   "Thanks! Running a [business type] in Houston can be challenging with all the competition. What's your biggest marketing challenge right now?"
+   Buttons: Not enough time | Creating content | Getting new customers | Managing online reputation | Something else
+
+3. Personalized responses based on business type AND challenge:
+   
+   For Restaurant + Content: "I totally understand! Restaurant owners tell me they spend hours trying to create social media posts about daily specials, events, and promotions. Our AI Training Workshop teaches you to create a week's worth of restaurant content in just 30 minutes. You'll learn specific prompts for food photos, menu descriptions, and customer engagement posts."
+
+   For Professional Service + New Customers: "That's the #1 challenge I hear from Houston professionals. Our Google Business Profile Optimization service is perfect for this. We optimize your profile so when people search 'best [service] near me' in Houston, you show up first. Our clients typically see 3x more phone calls within 60 days."
+
+   For Retail + Time: "You're not alone - retail owners are juggling inventory, customers, and marketing. Our AI tools can automate your social media, write product descriptions, and create email campaigns while you focus on running your store. Most clients save 10+ hours per week."
+
+4. Add success story: "For example, Maria's Mexican Restaurant in the Heights used our AI training and increased their weekend bookings by 40% while spending 75% less time on marketing."
+
+5. Lead capture: "I'd love to send you a free guide: '[Business Type] Owner's Guide to AI Marketing.' What's the best email to send this to?"
+
+6. Consultation offer: "Perfect! I can also set up a quick 15-minute call where I'll show you exactly which AI tools would work best for your [business type]. Would you like to schedule that?"
+   Buttons: Yes, book a call | Not right now, just send the guide
+
+Make all responses sound natural, helpful, and specific to Houston businesses. Fix button formatting so they're properly spaced and clickable.

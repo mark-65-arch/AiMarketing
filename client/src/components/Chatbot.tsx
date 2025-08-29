@@ -34,7 +34,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
       const timer = setTimeout(() => {
         setIsOpen(true);
         addBotMessage(
-          "👋 Hi! I'm here to help you discover how AI can grow your Houston business. What type of business do you own?",
+          "👋 Hello! I'm Sarah, your AI marketing assistant from Houston AI Marketing. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
           ["Restaurant", "Retail Store", "Professional Service", "Home Service", "Other"]
         );
       }, 45000); // 45 seconds
@@ -98,8 +98,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     
     setTimeout(() => {
       addBotMessage(
-        "Great! What's your biggest marketing challenge right now?",
-        ["Not enough time", "Creating content", "Getting new customers", "Managing reviews", "Other"]
+        `Thanks! Running a ${businessType.toLowerCase()} in Houston can be challenging with all the competition. What's your biggest marketing challenge right now?`,
+        ["Not enough time", "Creating content", "Getting new customers", "Managing online reputation", "Something else"]
       );
     }, 500);
   };
@@ -111,17 +111,34 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     
     setTimeout(() => {
       let recommendation = "";
-      let service = "";
       
-      if (challenge.includes("time") || challenge.includes("content")) {
-        service = "AI Training Workshop";
-        recommendation = `Perfect! Our ${service} is exactly what you need. In just 4 hours, you'll learn to use AI tools like ChatGPT to create marketing content 10x faster. You'll save hours every week while creating better content for your ${userBusiness.toLowerCase()}.`;
+      // Restaurant specific responses
+      if (userBusiness === "Restaurant" && challenge.includes("content")) {
+        recommendation = "I totally understand! Restaurant owners tell me they spend hours trying to create social media posts about daily specials, events, and promotions. Our AI Training Workshop teaches you to create a week's worth of restaurant content in just 30 minutes. You'll learn specific prompts for food photos, menu descriptions, and customer engagement posts.";
+      } else if (userBusiness === "Restaurant" && challenge.includes("customers")) {
+        recommendation = "That's so common for Houston restaurants! Our Google Business Profile Optimization service is perfect for this. We optimize your profile so when people search 'best Mexican food near me' or 'restaurants in Heights' you show up first. Our restaurant clients typically see 3x more reservations within 60 days.";
+      } else if (userBusiness === "Restaurant" && challenge.includes("time")) {
+        recommendation = "You're juggling so much - kitchen operations, staff, and marketing! Our AI tools can automate your social media posts, write menu descriptions, and create promotional content while you focus on what you do best - creating amazing food. Most restaurant owners save 10+ hours per week.";
+      }
+      // Professional Service specific responses  
+      else if (userBusiness === "Professional Service" && challenge.includes("customers")) {
+        recommendation = "That's the #1 challenge I hear from Houston professionals. Our Google Business Profile Optimization service is perfect for this. We optimize your profile so when people search 'best accountant near me' or 'Houston lawyer' you show up first. Our clients typically see 3x more phone calls within 60 days.";
+      } else if (userBusiness === "Professional Service" && challenge.includes("content")) {
+        recommendation = "Professional services need credible, authoritative content, and that takes time to write well. Our AI Training Workshop teaches you to create professional blog posts, social media content, and client communications in minutes instead of hours. You'll maintain your professional voice while saving tons of time.";
+      }
+      // Retail specific responses
+      else if (userBusiness === "Retail Store" && challenge.includes("time")) {
+        recommendation = "You're not alone - retail owners are juggling inventory, customers, and marketing. Our AI tools can automate your social media, write product descriptions, and create email campaigns while you focus on running your store. Most clients save 10+ hours per week.";
+      } else if (userBusiness === "Retail Store" && challenge.includes("customers")) {
+        recommendation = "Getting foot traffic in Houston retail is tough with all the competition! Our Google Business Profile Optimization helps you dominate local searches like 'clothing store near me' or 'gift shop in Houston.' We also set up AI-powered review management to build trust with potential customers.";
+      }
+      // Generic responses for other combinations
+      else if (challenge.includes("time") || challenge.includes("content")) {
+        recommendation = "I hear this constantly from Houston business owners! Our AI Training Workshop is perfect for this. In just 4 hours, you'll learn to use AI tools to create a week's worth of marketing content in 30 minutes. You'll save hours every week while creating better content for your business.";
       } else if (challenge.includes("customers")) {
-        service = "Business Profile Optimization";
-        recommendation = `Excellent! Our ${service} service is designed for this exact challenge. We'll optimize your Google Business Profile with AI-powered strategies to help your ${userBusiness.toLowerCase()} appear at the top of local search results, bringing you more customers automatically.`;
+        recommendation = "That's the biggest challenge for Houston businesses right now. Our Google Business Profile Optimization service is designed exactly for this. We optimize your profile so when people search for your type of business in Houston, you show up first. Our clients typically see 3x more inquiries within 60 days.";
       } else {
-        service = "AI Website Development";
-        recommendation = `Great choice! Our ${service} service creates websites specifically optimized for AI search and voice queries. This means more people will find your ${userBusiness.toLowerCase()} online, and your website will convert visitors into customers much more effectively.`;
+        recommendation = "I completely understand that challenge. Our AI marketing solutions can help streamline your operations and attract more customers. Let me tell you about a specific approach that works really well for Houston businesses like yours.";
       }
       
       addBotMessage(recommendation);
@@ -138,13 +155,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     let successStory = "";
     
     if (userBusiness === "Restaurant") {
-      successStory = "🌟 Success Story: Carlos from El Corazón Restaurant in Heights used our AI training and saw a 40% increase in customers within just 2 months. He now saves 10 hours per week on marketing while bringing in more business than ever!";
+      successStory = "For example, Maria's Mexican Restaurant in the Heights used our AI training and increased their weekend bookings by 40% while spending 75% less time on marketing. She went from spending 3 hours creating posts to just 30 minutes per week!";
     } else if (userBusiness === "Professional Service") {
-      successStory = "🌟 Success Story: Dr. Lisa from Houston Wellness Clinic automated her patient communications with our AI solutions. She's now saving 10 hours per week while providing better patient care and growing her practice!";
+      successStory = "For example, Johnson & Associates Law Firm used our Google Business Profile optimization and went from 2-3 consultation calls per week to 8-10 calls per week within just 60 days. Their profile now dominates searches for 'Houston attorney.'";
     } else if (userBusiness === "Retail Store") {
-      successStory = "🌟 Success Story: A local Houston retail store used our Business Profile Optimization and increased their foot traffic by 65% in just 3 months. Their Google listing now dominates local search results!";
+      successStory = "For example, Boutique 77 in Rice Village used our AI content tools and saw a 65% increase in foot traffic within 3 months. They now create engaging social media posts in minutes instead of hours, and their Google listing gets 5x more views.";
     } else {
-      successStory = "🌟 Success Story: Houston businesses working with us see an average of 340% increase in leads and save 15+ hours per week on marketing tasks. Our AI solutions are transforming how local businesses grow!";
+      successStory = "For example, Houston businesses working with us typically see a 340% increase in leads within 90 days while saving 15+ hours per week on marketing tasks. Our AI approach is transforming how local businesses grow!";
     }
     
     addBotMessage(successStory);
@@ -156,7 +173,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
 
   const requestEmail = () => {
     setCurrentStep(4);
-    addBotMessage(`I'd love to send you a free AI marketing guide specifically for ${userBusiness.toLowerCase()} businesses. What's your email address?`);
+    addBotMessage(`I'd love to send you a free guide: '${userBusiness} Owner's Guide to AI Marketing.' What's the best email to send this to?`);
   };
 
   const handleEmailSubmit = () => {
@@ -166,8 +183,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
       
       setTimeout(() => {
         addBotMessage(
-          `Perfect! I'll send that guide to ${userEmail} right away. 📧\n\nWould you like to schedule a quick 15-minute call to discuss your specific situation? It's completely free and I can show you exactly how AI can solve your marketing challenges.`,
-          ["Yes, let's schedule a call", "Not now, just send me resources"]
+          `Perfect! I can also set up a quick 15-minute call where I'll show you exactly which AI tools would work best for your ${userBusiness.toLowerCase()}. Would you like to schedule that?`,
+          ["Yes, book a call", "Not right now, just send the guide"]
         );
       }, 500);
     }
@@ -180,13 +197,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     if (response.includes("Yes")) {
       setTimeout(() => {
         addBotMessage(
-          "Fantastic! 🎉 You can schedule your free 15-minute consultation right now by calling us at (713) 555-0123 or visit our contact page.\n\nI'm excited to help your business succeed with AI marketing!"
+          "Excellent! You can schedule your free consultation by calling us at (713) 555-0123 or clicking the 'Contact' button in our menu. I'll make sure you get that ${userBusiness} guide right away too!\n\nI'm excited to help your Houston business grow with AI! 🚀"
         );
       }, 500);
     } else {
       setTimeout(() => {
         addBotMessage(
-          "No problem at all! I've sent you the free guide and you can always reach out when you're ready. Feel free to explore our website for more AI marketing tips.\n\nHere's to your business success! 🚀"
+          "Perfect! I'm sending that ${userBusiness} AI guide to ${userEmail} right now. You'll have it within a few minutes. Feel free to explore our website for more AI marketing insights!\n\nWhen you're ready to take the next step, just give us a call at (713) 555-0123. 📞"
         );
       }, 500);
     }
@@ -208,7 +225,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     
     if (messages.length === 0) {
       addBotMessage(
-        "👋 Hi! I'm here to help you discover how AI can grow your Houston business. What type of business do you own?",
+        "👋 Hello! I'm Sarah, your AI marketing assistant from Houston AI Marketing. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
         ["Restaurant", "Retail Store", "Professional Service", "Home Service", "Other"]
       );
     }
@@ -302,14 +319,14 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
                     <p className="whitespace-pre-wrap leading-relaxed">{message.text}</p>
                     
                     {message.options && (
-                      <div className="mt-3 space-y-2">
+                      <div className="mt-4 space-y-2">
                         {message.options.map((option, index) => (
                           <Button
                             key={index}
                             variant="outline"
                             size="sm"
                             onClick={() => handleOptionClick(option)}
-                            className="w-full text-left justify-start text-xs py-2 h-auto hover:bg-[#0066FF] hover:text-white transition-colors"
+                            className="w-full text-left justify-start text-sm py-3 px-4 h-auto hover:bg-[#0066FF] hover:text-white transition-colors border border-gray-200 rounded-lg"
                             data-testid={`chatbot-option-${index}`}
                           >
                             {option}
