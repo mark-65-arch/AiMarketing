@@ -15,7 +15,7 @@ import {
   Calendar
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoWide from "@assets/Logo 2_1756846680619.png";
+import logoWide from "@assets/GeneratedImageSeptember022025-3_25PM1-ezgif.com-gif-maker-removebg-preview_1756847016286.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -305,9 +305,7 @@ export default function Assessment() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <a href="/" data-testid="nav-logo">
-                  <div className="bg-white rounded px-2 py-1">
-                    <img src={logoWide} alt="Marketing AI Houston" className="h-8 w-auto" />
-                  </div>
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
                 </a>
               </div>
               <div className="hidden md:flex items-baseline space-x-8">
@@ -409,9 +407,7 @@ export default function Assessment() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <a href="/" data-testid="nav-logo">
-                  <div className="bg-white rounded px-2 py-1">
-                    <img src={logoWide} alt="Marketing AI Houston" className="h-8 w-auto" />
-                  </div>
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
                 </a>
               </div>
             </div>

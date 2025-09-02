@@ -20,7 +20,7 @@ import {
   Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoWide from "@assets/Logo 2_1756846680619.png";
+import logoWide from "@assets/GeneratedImageSeptember022025-3_25PM1-ezgif.com-gif-maker-removebg-preview_1756847016286.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -523,9 +523,7 @@ export default function AITools() {
             <div className="flex items-center">
               <div className="text-xl font-bold text-secondary">
                 <a href="/" data-testid="nav-logo">
-                  <div className="bg-white rounded px-2 py-1">
-                    <img src={logoWide} alt="Marketing AI Houston" className="h-8 w-auto" />
-                  </div>
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
                 </a>
               </div>
             </div>
