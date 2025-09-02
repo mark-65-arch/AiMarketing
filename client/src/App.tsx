@@ -19,6 +19,14 @@ import MidtownAIMarketing from "@/pages/midtown-ai-marketing";
 import DowntownAIMarketing from "@/pages/downtown-ai-marketing";
 import MemorialAIMarketing from "@/pages/memorial-ai-marketing";
 import GalleriaAIMarketing from "@/pages/galleria-ai-marketing";
+import WoodlandsAIMarketing from "@/pages/woodlands-ai-marketing";
+import SugarLandAIMarketing from "@/pages/sugar-land-ai-marketing";
+import KatyAIMarketing from "@/pages/katy-ai-marketing";
+import PearlandAIMarketing from "@/pages/pearland-ai-marketing";
+import ClearLakeAIMarketing from "@/pages/clear-lake-ai-marketing";
+import LeagueCityAIMarketing from "@/pages/league-city-ai-marketing";
+import PasadenaAIMarketing from "@/pages/pasadena-ai-marketing";
+import CypressAIMarketing from "@/pages/cypress-ai-marketing";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -41,6 +49,14 @@ function Router() {
         <Route path="/downtown-ai-marketing" component={DowntownAIMarketing}/>
         <Route path="/memorial-ai-marketing" component={MemorialAIMarketing}/>
         <Route path="/galleria-ai-marketing" component={GalleriaAIMarketing}/>
+        <Route path="/ai-marketing-the-woodlands-texas" component={WoodlandsAIMarketing}/>
+        <Route path="/ai-marketing-sugar-land-texas" component={SugarLandAIMarketing}/>
+        <Route path="/ai-marketing-katy-texas" component={KatyAIMarketing}/>
+        <Route path="/ai-marketing-pearland-texas" component={PearlandAIMarketing}/>
+        <Route path="/ai-marketing-clear-lake-texas" component={ClearLakeAIMarketing}/>
+        <Route path="/ai-marketing-league-city-texas" component={LeagueCityAIMarketing}/>
+        <Route path="/ai-marketing-pasadena-texas" component={PasadenaAIMarketing}/>
+        <Route path="/ai-marketing-cypress-texas" component={CypressAIMarketing}/>
         <Route component={NotFound} />
       </Switch>
       <Footer />

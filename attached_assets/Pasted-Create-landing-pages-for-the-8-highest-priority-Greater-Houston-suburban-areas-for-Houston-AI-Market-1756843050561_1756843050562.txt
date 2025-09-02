@@ -1,0 +1,41 @@
+Create landing pages for the 8 highest-priority Greater Houston suburban areas for Houston AI Marketing. IMPORTANT: Only reference well-known public landmarks, major shopping centers, and general area characteristics - do NOT mention specific businesses by name.
+
+Pages to create:
+1. "ai-marketing-the-woodlands-texas.html" - AI Marketing Services in The Woodlands
+2. "ai-marketing-sugar-land-texas.html" - AI Marketing for Sugar Land Businesses  
+3. "ai-marketing-katy-texas.html" - AI Marketing Services in Katy
+4. "ai-marketing-pearland-texas.html" - AI Marketing for Pearland Businesses
+5. "ai-marketing-clear-lake-texas.html" - Clear Lake AI Marketing Services
+6. "ai-marketing-league-city-texas.html" - AI Marketing for League City
+7. "ai-marketing-pasadena-texas.html" - AI Marketing Services in Pasadena
+8. "ai-marketing-cypress-texas.html" - AI Marketing for Cypress Businesses
+
+Safe reference guidelines:
+- Use general landmarks: "near the Woodlands Mall area", "close to Sugar Land Town Square"
+- Reference major roads: "serving businesses along Highway 6", "near FM 1960"
+- Mention area characteristics: "family-friendly community", "growing business district"
+- Use generic business types: "local restaurants", "medical practices", "retail stores"
+- Avoid naming specific businesses, restaurants, or shops
+
+Content structure for each page:
+- Professional headline targeting that city's AI marketing
+- General description of the area's business community
+- Business challenges common to suburban areas
+- AI solutions relevant to typical suburban business types
+- Contact form with city name pre-selected
+- Professional testimonial-style content (using safe composite approach)
+- Call-to-action for free consultation
+
+Make each page feel local and relevant without mentioning any specific business names that could cause legal issues.
+
+Target business types by area (generic references only):
+- The Woodlands: Professional services, medical practices, family businesses
+- Sugar Land: Professional services, family restaurants, retail businesses
+- Katy: Family-owned businesses, home services, local retailers
+- Clear Lake: Tech companies, marine-related businesses, local services
+- Pearland: Growing family businesses, service providers
+- League City: Professional services, family businesses
+- Pasadena: Industrial services, local businesses, contractors
+- Cypress: Family businesses, home services, local retailers
+
+Use professional, trustworthy language that builds confidence without making any false claims about specific businesses or partnerships.
