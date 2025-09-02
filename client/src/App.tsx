@@ -4,6 +4,8 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Chatbot from "@/components/Chatbot";
+import Footer from "@/components/Footer";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import Homepage from "@/pages/homepage";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
@@ -31,6 +33,7 @@ function Router() {
         <Route path="/ai-tools" component={AITools}/>
         <Route component={NotFound} />
       </Switch>
+      <Footer />
       <Chatbot autoOpenOnHomepage={isHomepage} />
     </>
   );
@@ -38,12 +41,14 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 

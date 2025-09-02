@@ -29,6 +29,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
+import { trackFormSubmission, trackAIToolUsage, trackBusinessGoal } from "@/lib/analytics";
+import LoadingSpinner from "@/components/LoadingSpinner";
 import type { InsertContactSubmission } from "@shared/schema";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
@@ -71,20 +73,34 @@ export default function Homepage() {
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactSubmission) => {
       const response = await apiRequest("POST", "/api/contact", data);
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
       return response.json();
     },
     onSuccess: () => {
+      trackFormSubmission('contact_form', true);
+      trackBusinessGoal('consultation_request');
       toast({
-        title: "Success!",
+        title: "🎉 Success!",
         description: "Thank you for your interest! We'll contact you within 24 hours to schedule your free AI audit.",
+        duration: 6000,
       });
       form.reset();
     },
     onError: (error: any) => {
+      trackFormSubmission('contact_form', false);
+      console.error('Contact form submission error:', error);
+      
+      const errorMessage = error.message?.includes('Server error') 
+        ? 'Our servers are experiencing high demand. Please try again in a few minutes or call us directly at (713) 555-AI01.'
+        : 'Something went wrong. Please check your internet connection and try again, or call us directly at (713) 555-AI01.';
+      
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again or call us directly.",
+        title: "❌ Submission Failed",
+        description: errorMessage,
         variant: "destructive",
+        duration: 8000,
       });
     },
   });
@@ -99,16 +115,17 @@ export default function Homepage() {
   const handleQuickGenerate = () => {
     if (!selectedBusinessType) {
       toast({
-        title: "Please select a business type",
-        description: "Choose your business type to generate content",
+        title: "⚠️ Business Type Required",
+        description: "Please select your business type to generate AI content",
         variant: "destructive",
       });
       return;
     }
 
+    trackAIToolUsage('quick_content_generator', 'generate');
     setIsGenerating(true);
 
-    // Simulate AI generation
+    // Simulate AI generation with realistic delay
     setTimeout(() => {
       const sampleContent = {
         "Restaurant": "🍽️ Craving authentic flavors? Our Houston restaurant serves up fresh, locally-sourced dishes that bring families together. Come taste the difference passion makes! #HoustonEats #AuthenticFlavors",
@@ -120,22 +137,40 @@ export default function Homepage() {
 
       setQuickGenContent(sampleContent[selectedBusinessType as keyof typeof sampleContent] || sampleContent["Professional Service"]);
       setIsGenerating(false);
+      trackAIToolUsage('quick_content_generator', 'content_generated');
     }, 2000);
   };
 
   const copyQuickContent = async () => {
     try {
       await navigator.clipboard.writeText(quickGenContent);
+      trackAIToolUsage('quick_content_generator', 'content_copied');
       toast({
-        title: "Copied!",
-        description: "Content copied to clipboard",
+        title: "✅ Copied!",
+        description: "Content copied to clipboard - ready to use in your marketing!",
       });
     } catch (err) {
-      toast({
-        title: "Error",
-        description: "Failed to copy content",
-        variant: "destructive",
-      });
+      // Fallback for browsers that don't support clipboard API
+      const textArea = document.createElement('textarea');
+      textArea.value = quickGenContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        trackAIToolUsage('quick_content_generator', 'content_copied_fallback');
+        toast({
+          title: "✅ Copied!",
+          description: "Content copied to clipboard - ready to use in your marketing!",
+        });
+      } catch (fallbackErr) {
+        toast({
+          title: "❌ Copy Failed",
+          description: "Unable to copy content. Please select and copy the text manually.",
+          variant: "destructive",
+        });
+      } finally {
+        document.body.removeChild(textArea);
+      }
     }
   };
 
@@ -231,10 +266,7 @@ export default function Homepage() {
                         data-testid="button-quick-generate"
                       >
                         {isGenerating ? (
-                          <>
-                            <Wand2 className="w-4 h-4 mr-2 animate-spin" />
-                            Generating...
-                          </>
+                          <LoadingSpinner size="sm" text="Generating AI content..." />
                         ) : (
                           <>
                             <Wand2 className="w-4 h-4 mr-2" />
@@ -755,6 +787,7 @@ export default function Homepage() {
                                   rows={4} 
                                   placeholder="Tell us about your marketing challenges..."
                                   {...field}
+                                  value={field.value || ""}
                                   data-testid="textarea-message"
                                 />
                               </FormControl>
@@ -768,7 +801,11 @@ export default function Homepage() {
                           className="w-full py-4 text-lg hover:shadow-xl transition-all duration-200"
                           data-testid="button-submit-contact"
                         >
-                          {contactMutation.isPending ? "Submitting..." : "Get My Free AI Audit ($500 Value)"}
+                          {contactMutation.isPending ? (
+                            <LoadingSpinner size="sm" text="Submitting your request..." />
+                          ) : (
+                            "Get My Free AI Audit ($500 Value)"
+                          )}
                         </Button>
                         <p className="text-sm text-muted-foreground text-center" data-testid="contact-disclaimer">
                           We'll analyze your current marketing and show you exactly how AI can grow your business.
