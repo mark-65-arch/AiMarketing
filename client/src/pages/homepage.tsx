@@ -805,6 +805,232 @@ export default function Homepage() {
         </div>
       </section>
 
+      {/* Houston Areas Section */}
+      <section className="py-20 bg-muted/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Dominate Local Search Across Houston
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                We specialize in AI marketing for Houston's premier neighborhoods. Click your area to see how we help local businesses like yours dominate search results.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AnimatedSection>
+              <Card className="h-full hover-lift transition-all duration-300 hover:shadow-lg" data-testid="heights-area-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <MapPin className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-xl font-bold text-foreground">Houston Heights</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Target young professionals and families near Heights Boulevard, 19th Street, and White Oak Bayou with AI marketing that speaks their language.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Heights Boulevard targeting
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Young professional demographics
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Local events integration
+                    </li>
+                  </ul>
+                  <Button asChild className="w-full" data-testid="heights-learn-more">
+                    <a href="/heights-ai-marketing">Heights AI Marketing →</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <Card className="h-full hover-lift transition-all duration-300 hover:shadow-lg" data-testid="midtown-area-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <MapPin className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-xl font-bold text-foreground">Midtown Houston</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Capture Medical Center professionals and Museum District visitors with AI marketing optimized for Houston's cultural heart.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Medical Center proximity
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Museum District traffic
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Professional targeting
+                    </li>
+                  </ul>
+                  <Button asChild className="w-full" data-testid="midtown-learn-more">
+                    <a href="/midtown-ai-marketing">Midtown AI Marketing →</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <Card className="h-full hover-lift transition-all duration-300 hover:shadow-lg" data-testid="downtown-area-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <MapPin className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-xl font-bold text-foreground">Downtown Houston</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Attract corporate executives and business travelers in Houston's premier business district with sophisticated AI marketing.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Corporate headquarters
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Theater District events
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Business lunch targeting
+                    </li>
+                  </ul>
+                  <Button asChild className="w-full" data-testid="downtown-learn-more">
+                    <a href="/downtown-ai-marketing">Downtown AI Marketing →</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <Card className="h-full hover-lift transition-all duration-300 hover:shadow-lg" data-testid="memorial-area-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <MapPin className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-xl font-bold text-foreground">Memorial Area</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Reach Houston's most affluent families near Memorial Park and Energy Corridor with premium AI marketing solutions.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Affluent family targeting
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Energy Corridor executives
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Memorial Park lifestyle
+                    </li>
+                  </ul>
+                  <Button asChild className="w-full" data-testid="memorial-learn-more">
+                    <a href="/memorial-ai-marketing">Memorial AI Marketing →</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <Card className="h-full hover-lift transition-all duration-300 hover:shadow-lg" data-testid="galleria-area-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <MapPin className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-xl font-bold text-foreground">Galleria District</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Capture Houston's luxury market near The Galleria mall and Uptown with high-end AI marketing for affluent shoppers.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Luxury shopping traffic
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      High-income demographics
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Corporate services
+                    </li>
+                  </ul>
+                  <Button asChild className="w-full" data-testid="galleria-learn-more">
+                    <a href="/galleria-ai-marketing">Galleria AI Marketing →</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection>
+              <Card className="h-full bg-gradient-to-br from-primary/10 to-blue-600/10 border-primary/20" data-testid="all-areas-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <Globe className="w-8 h-8 text-primary mr-3" />
+                    <h3 className="text-xl font-bold text-foreground">All Houston Areas</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Don't see your Houston neighborhood? We serve all Houston metro areas with customized AI marketing strategies.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Greater Houston coverage
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Custom local strategies
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                      Multi-location businesses
+                    </li>
+                  </ul>
+                  <Button asChild className="w-full" variant="outline" data-testid="contact-all-areas">
+                    <a href="/contact">Contact Us →</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection>
+            <div className="text-center mt-12">
+              <p className="text-lg text-muted-foreground mb-6">
+                <strong>Local SEO Domination:</strong> Each Houston area has unique demographics, business challenges, and search patterns. Our AI marketing adapts to your specific neighborhood for maximum local impact.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+                <span className="flex items-center">
+                  <Star className="w-4 h-4 text-yellow-500 mr-1" />
+                  500+ Local Keywords Optimized
+                </span>
+                <span className="flex items-center">
+                  <MapPin className="w-4 h-4 text-primary mr-1" />
+                  All Houston Zip Codes Covered
+                </span>
+                <span className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-1" />
+                  89 Houston Businesses Growing
+                </span>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Contact CTA Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -14,6 +14,11 @@ import AITraining from "@/pages/ai-training";
 import BusinessProfile from "@/pages/business-profile";
 import AIWebsites from "@/pages/ai-websites";
 import AITools from "@/pages/ai-tools";
+import HeightsAIMarketing from "@/pages/heights-ai-marketing";
+import MidtownAIMarketing from "@/pages/midtown-ai-marketing";
+import DowntownAIMarketing from "@/pages/downtown-ai-marketing";
+import MemorialAIMarketing from "@/pages/memorial-ai-marketing";
+import GalleriaAIMarketing from "@/pages/galleria-ai-marketing";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -31,6 +36,11 @@ function Router() {
         <Route path="/business-profile" component={BusinessProfile}/>
         <Route path="/ai-websites" component={AIWebsites}/>
         <Route path="/ai-tools" component={AITools}/>
+        <Route path="/heights-ai-marketing" component={HeightsAIMarketing}/>
+        <Route path="/midtown-ai-marketing" component={MidtownAIMarketing}/>
+        <Route path="/downtown-ai-marketing" component={DowntownAIMarketing}/>
+        <Route path="/memorial-ai-marketing" component={MemorialAIMarketing}/>
+        <Route path="/galleria-ai-marketing" component={GalleriaAIMarketing}/>
         <Route component={NotFound} />
       </Switch>
       <Footer />
