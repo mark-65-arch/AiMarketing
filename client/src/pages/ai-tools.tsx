@@ -523,7 +523,9 @@ export default function AITools() {
             <div className="flex items-center">
               <div className="text-xl font-bold text-secondary">
                 <a href="/" data-testid="nav-logo">
-                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+                  <div className="bg-white rounded px-2 py-1">
+                    <img src={logoWide} alt="Marketing AI Houston" className="h-8 w-auto" />
+                  </div>
                 </a>
               </div>
             </div>
