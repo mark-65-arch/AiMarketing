@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white py-16" data-testid="footer-main">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="mb-6">
@@ -83,6 +83,53 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-contact">
                   Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Houston Areas */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6" data-testid="footer-areas-title">Houston Areas</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/ai-marketing-the-woodlands-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-woodlands">
+                  The Woodlands
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-marketing-sugar-land-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-sugar-land">
+                  Sugar Land
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-marketing-katy-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-katy">
+                  Katy
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-marketing-pearland-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-pearland">
+                  Pearland
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-marketing-clear-lake-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-clear-lake">
+                  Clear Lake
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-marketing-league-city-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-league-city">
+                  League City
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-marketing-pasadena-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-pasadena">
+                  Pasadena
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-marketing-cypress-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-cypress">
+                  Cypress
                 </Link>
               </li>
             </ul>
