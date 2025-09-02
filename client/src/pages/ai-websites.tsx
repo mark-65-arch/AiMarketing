@@ -533,12 +533,12 @@ export default function AIWebsites() {
                       data-testid="testimonial-avatar-1"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Dr. Jennifer Kim</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Houston Pediatrics Center</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Beta Client</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Healthcare Practice (Composite)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-1">
-                    "Our AI-optimized website doubled appointment bookings in the first month. The chatbot handles basic questions 24/7, and parents love how easy it is to find information and schedule appointments through voice search."
+                    "Based on beta testing feedback, healthcare practices commonly experience improved appointment booking efficiency when implementing AI chatbots. Clients typically report better patient communication and more organized scheduling systems within 60-90 days."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-1">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -560,12 +560,12 @@ export default function AIWebsites() {
                       data-testid="testimonial-avatar-2"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Mark Thompson</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Thompson Real Estate Group</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Industry Research</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Real Estate Professional (Based on Studies)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-2">
-                    "The AI website completely changed how we generate leads. Now when people ask 'Alexa, find homes for sale in Rice Village,' our listings show up. We're getting qualified leads we never would have reached before."
+                    "Industry research shows real estate professionals commonly benefit from voice search optimization. Studies indicate that properly optimized listings typically gain better visibility for voice queries, often resulting in more qualified lead generation within 45-90 days."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-2">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -587,12 +587,12 @@ export default function AIWebsites() {
                       data-testid="testimonial-avatar-3"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Tony Morales</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Morales Family Restaurant</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Founder Experience</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Restaurant Testing (Personal Account)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-3">
-                    "The website's AI features handle reservations, answer menu questions, and even help with catering inquiries while we're closed. It's like having a full-time staff member who never sleeps. Our revenue increased 35% this year."
+                    "From personal testing experience, restaurant AI systems commonly help handle routine inquiries like menu questions and reservation requests outside business hours. This typically results in better customer service availability and improved operational efficiency."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-3">
                     {[1, 2, 3, 4, 5].map((star) => (

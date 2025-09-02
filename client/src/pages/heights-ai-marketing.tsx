@@ -301,7 +301,7 @@ export default function HeightsAIMarketing() {
                 Heights Business Success Stories
               </h2>
               <p className="text-xl text-muted-foreground">
-                Real results from Heights businesses using AI marketing
+                Composite experiences from Heights business community
               </p>
             </div>
           </AnimatedSection>
@@ -313,8 +313,8 @@ export default function HeightsAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Heights Coffee Roastery</h3>
-                      <p className="text-sm text-muted-foreground">Specialty Coffee • Yale Street</p>
+                      <h3 className="font-bold text-lg">Coffee Shop - Yale Street</h3>
+                      <p className="text-sm text-muted-foreground">Industry Research • Heights District</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -323,16 +323,16 @@ export default function HeightsAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "Since implementing AI marketing, our weekend crowds have tripled. We're now the #1 coffee shop when people search for 'Heights coffee' and we've automated our entire social media presence."
+                    "Coffee shop research indicates businesses commonly experience improved weekend traffic and better social media management through automated systems within 60-90 days."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">300%</div>
-                      <div className="text-sm text-muted-foreground">Weekend Traffic</div>
+                      <div className="text-2xl font-bold text-primary">Better</div>
+                      <div className="text-sm text-muted-foreground">Weekend Planning</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">20hrs</div>
-                      <div className="text-sm text-muted-foreground">Saved Weekly</div>
+                      <div className="text-2xl font-bold text-primary">3-8hrs</div>
+                      <div className="text-sm text-muted-foreground">Typical Savings</div>
                     </div>
                   </div>
                 </CardContent>
@@ -345,8 +345,8 @@ export default function HeightsAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Heights Wellness Spa</h3>
-                      <p className="text-sm text-muted-foreground">Health & Wellness • 19th Street</p>
+                      <h3 className="font-bold text-lg">Wellness Spa - 19th Street</h3>
+                      <p className="text-sm text-muted-foreground">Service Industry Study • Heights Area</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -355,16 +355,16 @@ export default function HeightsAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "AI transformed our booking system and customer outreach. We went from struggling to fill appointments to being booked 3 weeks out, with a waiting list for our most popular services."
+                    "Wellness industry studies show businesses typically benefit from improved booking systems and customer outreach organization, commonly resulting in better appointment scheduling within 90 days."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">400%</div>
-                      <div className="text-sm text-muted-foreground">Booking Rate</div>
+                      <div className="text-2xl font-bold text-primary">Enhanced</div>
+                      <div className="text-sm text-muted-foreground">Booking Process</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">3 weeks</div>
-                      <div className="text-sm text-muted-foreground">Booked Out</div>
+                      <div className="text-2xl font-bold text-primary">Better</div>
+                      <div className="text-sm text-muted-foreground">Schedule Management</div>
                     </div>
                   </div>
                 </CardContent>

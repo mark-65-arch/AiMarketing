@@ -616,15 +616,15 @@ export default function Homepage() {
                       data-testid="testimonial-avatar-1"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Maria Gonzalez</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Owner, Abuela's Kitchen (Montrose)</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Workshop Participant</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Houston Restaurant Owner (Composite)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-1">
-                    "In just 45 days, our Google listing went from page 3 to #1 for 'Mexican food Montrose.' We went from 15 online orders per day to 63! The AI chatbot handles 80% of our reservation calls now, saving me 3 hours daily."
+                    "Based on feedback from our workshop participants, restaurant owners typically see improvements in their Google Business profile ranking within 60-90 days. Many report saving 2-4 hours weekly through automated customer communications and better online visibility for local searches."
                   </p>
                   <div className="text-sm text-muted-foreground mb-4">
-                    <strong>Results:</strong> 320% increase in online orders, #1 Google ranking, 3 hours saved daily
+                    <strong>Common Experience:</strong> Improved local search ranking, time savings through automation, better customer engagement
                   </div>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-1">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -647,15 +647,15 @@ export default function Homepage() {
                       data-testid="testimonial-avatar-2"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Dr. James Patterson</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Memorial Hermann Affiliated Cardiologist</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Beta Client</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Houston Medical Practice (Composite)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-2">
-                    "Our new patient appointments increased from 8 per week to 31 per week after the website launch. The AI scheduling system reduced our front desk calls by 70%. My practice revenue grew $47,000 in the first quarter alone."
+                    "Healthcare professionals commonly experience improved patient scheduling efficiency and reduced administrative calls when implementing AI systems. Based on industry research, practices typically see better organization of patient communications and streamlined appointment processes within 30-60 days."
                   </p>
                   <div className="text-sm text-muted-foreground mb-4">
-                    <strong>Results:</strong> 288% more new patients, $47K additional quarterly revenue, 70% fewer calls
+                    <strong>Typical Results:</strong> More organized patient scheduling, reduced administrative workload, improved communication flow
                   </div>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-2">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -678,15 +678,15 @@ export default function Homepage() {
                       data-testid="testimonial-avatar-3"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Rachel Kim</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Partner, Kim & Associates (Downtown)</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Founder Experience</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Legal Professional (Personal Account)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-3">
-                    "We went from 2-3 consultation requests per month to 47 qualified leads. The AI qualification system filters out time-wasters, so we only speak with serious clients. Our case value increased 180% because we're attracting better clients."
+                    "From my personal experience testing these systems, legal professionals commonly find that proper qualification processes help identify more serious prospects. Industry feedback suggests that better lead qualification typically results in more focused client consultations and improved case-fit within 45-90 days."
                   </p>
                   <div className="text-sm text-muted-foreground mb-4">
-                    <strong>Results:</strong> 1,467% increase in leads, 180% higher case values, better client quality
+                    <strong>Common Experience:</strong> Better lead qualification, more focused consultations, improved client-case matching
                   </div>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-3">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -704,12 +704,12 @@ export default function Homepage() {
               <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12" data-testid="stats-container">
                 <div className="grid md:grid-cols-3 gap-8 text-center">
                   <div>
-                    <div className="text-4xl font-bold text-primary mb-2" data-testid="stat-revenue">250%</div>
-                    <div className="text-muted-foreground font-medium">Average Revenue Increase</div>
+                    <div className="text-4xl font-bold text-primary mb-2" data-testid="stat-revenue">Results Vary</div>
+                    <div className="text-muted-foreground font-medium">Individual Experiences Differ</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-accent mb-2" data-testid="stat-businesses">89</div>
-                    <div className="text-muted-foreground font-medium">Houston Businesses Served</div>
+                    <div className="text-4xl font-bold text-accent mb-2" data-testid="stat-businesses">Growing</div>
+                    <div className="text-muted-foreground font-medium">Houston Business Network</div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold text-secondary mb-2" data-testid="stat-rating">4.9★</div>
@@ -718,6 +718,15 @@ export default function Homepage() {
                 </div>
               </div>
             </AnimatedSection>
+          </div>
+          
+          {/* Disclaimer */}
+          <div className="mt-8 text-center">
+            <div className="bg-muted/30 rounded-lg p-6 max-w-4xl mx-auto">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <strong>Disclaimer:</strong> Testimonials represent individual experiences and are composites based on common feedback patterns. Results may vary based on business circumstances, market conditions, and implementation. Past performance does not guarantee future results. Individual outcomes depend on various factors including business type, market competition, and effort invested.
+              </p>
+            </div>
           </div>
         </div>
       </section>

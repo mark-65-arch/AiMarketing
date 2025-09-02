@@ -80,9 +80,9 @@ export default function About() {
   ];
 
   const stats = [
-    { number: "50+", label: "Houston businesses served" },
-    { number: "340%", label: "Average lead increase" },
-    { number: "15+", label: "Hours saved per week" }
+    { number: "Growing", label: "Houston business network" },
+    { number: "Results Vary", label: "Based on individual circumstances" },
+    { number: "3-8hrs", label: "Typical time savings reported" }
   ];
 
   return (

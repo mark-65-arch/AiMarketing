@@ -498,12 +498,12 @@ export default function BusinessProfile() {
                       data-testid="testimonial-avatar-1"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Roberto Santos</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Santos Mexican Grill, Montrose</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Service Client</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Houston Restaurant (Composite)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-1">
-                    "We went from getting maybe 5 calls a week to 20+ calls a day! Our Google listing now shows up first when people search for Mexican food in Montrose. The phone hasn't stopped ringing."
+                    "Based on service feedback, restaurants typically see improved call volume and better local search visibility after Google Business Profile optimization. Most clients report noticeable improvements in customer inquiries within 30-60 days."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-1">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -525,12 +525,12 @@ export default function BusinessProfile() {
                       data-testid="testimonial-avatar-2"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Dr. Amanda Foster</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Foster Dental Care, Heights</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Service Client</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Healthcare Practice (Composite)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-2">
-                    "The optimization was incredible. We're now the first dental practice that shows up when people search in the Heights area. New patient appointments have tripled in just two months."
+                    "Healthcare practices commonly experience improved local search rankings through proper Google Business Profile optimization. Based on client feedback, most see enhanced visibility for area searches and better patient acquisition within 60-90 days."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-2">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -552,12 +552,12 @@ export default function BusinessProfile() {
                       data-testid="testimonial-avatar-3"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">James Wilson</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Wilson Auto Repair, Katy</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Service Client</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Auto Service Business (Composite)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-3">
-                    "Best investment I've made for my auto shop. We're now getting customers from all over west Houston who find us through Google. Our revenue increased 40% in the first quarter."
+                    "Auto repair businesses typically benefit from expanded customer reach through improved Google visibility. Service clients commonly report attracting customers from wider geographic areas and better business growth over 3-6 month periods."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-3">
                     {[1, 2, 3, 4, 5].map((star) => (

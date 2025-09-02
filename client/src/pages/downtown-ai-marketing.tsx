@@ -219,7 +219,7 @@ export default function DowntownAIMarketing() {
                 Downtown Business Success Stories
               </h2>
               <p className="text-xl text-muted-foreground">
-                Real results from Downtown businesses using AI marketing
+                Composite feedback from Downtown business community research
               </p>
             </div>
           </AnimatedSection>
@@ -231,8 +231,8 @@ export default function DowntownAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Downtown Executive Suites</h3>
-                      <p className="text-sm text-muted-foreground">Business Services • Market Square</p>
+                      <h3 className="font-bold text-lg">Business Services - Market Square</h3>
+                      <p className="text-sm text-muted-foreground">Composite Experience • Downtown District</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -241,16 +241,16 @@ export default function DowntownAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "AI completely transformed our lead generation. We're now the #1 result for 'downtown Houston office space' and our automated follow-up system has doubled our conversion rate."
+                    "Based on feedback from downtown business services, companies commonly experience improved lead generation and better follow-up organization when implementing AI systems within 60-90 days."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">350%</div>
-                      <div className="text-sm text-muted-foreground">Lead Generation</div>
+                      <div className="text-2xl font-bold text-primary">Better</div>
+                      <div className="text-sm text-muted-foreground">Lead Organization</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">200%</div>
-                      <div className="text-sm text-muted-foreground">Conversion Rate</div>
+                      <div className="text-2xl font-bold text-primary">Improved</div>
+                      <div className="text-sm text-muted-foreground">Follow-up Process</div>
                     </div>
                   </div>
                 </CardContent>
@@ -263,8 +263,8 @@ export default function DowntownAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Theater District Steakhouse</h3>
-                      <p className="text-sm text-muted-foreground">Fine Dining • Theater District</p>
+                      <h3 className="font-bold text-lg">Fine Dining - Theater District</h3>
+                      <p className="text-sm text-muted-foreground">Industry Research • Entertainment District</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -273,16 +273,16 @@ export default function DowntownAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "Our AI marketing captures both corporate dinners and theater-goers perfectly. We're booked solid for business lunches and pre-show dinners with a 6-week waiting list."
+                    "Restaurant industry research shows fine dining establishments commonly benefit from targeting both corporate and entertainment customers through specialized marketing approaches."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">500%</div>
-                      <div className="text-sm text-muted-foreground">Corporate Bookings</div>
+                      <div className="text-2xl font-bold text-primary">Enhanced</div>
+                      <div className="text-sm text-muted-foreground">Corporate Outreach</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">6 weeks</div>
-                      <div className="text-sm text-muted-foreground">Wait List</div>
+                      <div className="text-2xl font-bold text-primary">Better</div>
+                      <div className="text-sm text-muted-foreground">Booking Planning</div>
                     </div>
                   </div>
                 </CardContent>

@@ -303,7 +303,7 @@ export default function MidtownAIMarketing() {
                 Midtown Business Success Stories
               </h2>
               <p className="text-xl text-muted-foreground">
-                Real results from Midtown businesses using AI marketing
+                Composite experiences from Midtown business research
               </p>
             </div>
           </AnimatedSection>
@@ -315,8 +315,8 @@ export default function MidtownAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Midtown Legal Associates</h3>
-                      <p className="text-sm text-muted-foreground">Law Firm • Main Street Corridor</p>
+                      <h3 className="font-bold text-lg">Legal Practice - Main Street</h3>
+                      <p className="text-sm text-muted-foreground">Professional Services Study • Midtown</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -325,16 +325,16 @@ export default function MidtownAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "AI transformed our client acquisition. We now rank #1 for 'Midtown Houston lawyer' and have automated our entire intake process. Medical Center referrals have tripled."
+                    "Legal practice research shows firms commonly benefit from organized client intake processes and improved local search visibility, particularly near major institutions like the Medical Center."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">300%</div>
-                      <div className="text-sm text-muted-foreground">Referral Growth</div>
+                      <div className="text-2xl font-bold text-primary">Enhanced</div>
+                      <div className="text-sm text-muted-foreground">Referral Process</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">24hrs</div>
-                      <div className="text-sm text-muted-foreground">Saved Weekly</div>
+                      <div className="text-2xl font-bold text-primary">5-10hrs</div>
+                      <div className="text-sm text-muted-foreground">Typical Savings</div>
                     </div>
                   </div>
                 </CardContent>
@@ -347,8 +347,8 @@ export default function MidtownAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Museum District Bistro</h3>
-                      <p className="text-sm text-muted-foreground">Fine Dining • Near MFAH</p>
+                      <h3 className="font-bold text-lg">Fine Dining - Museum District</h3>
+                      <p className="text-sm text-muted-foreground">Restaurant Study • Cultural District</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -357,16 +357,16 @@ export default function MidtownAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "Our AI marketing captures museum visitors perfectly. We're now the #1 restaurant for 'dining near Houston museums' and our weekend reservations are booked solid."
+                    "Restaurant research shows establishments near cultural attractions commonly benefit from location-based marketing strategies that target visitors and local cultural events."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">450%</div>
-                      <div className="text-sm text-muted-foreground">Weekend Bookings</div>
+                      <div className="text-2xl font-bold text-primary">Better</div>
+                      <div className="text-sm text-muted-foreground">Weekend Planning</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">85%</div>
-                      <div className="text-sm text-muted-foreground">Repeat Customers</div>
+                      <div className="text-2xl font-bold text-primary">Improved</div>
+                      <div className="text-sm text-muted-foreground">Customer Relations</div>
                     </div>
                   </div>
                 </CardContent>

@@ -303,7 +303,7 @@ export default function GalleriaAIMarketing() {
                 Galleria District Business Success Stories
               </h2>
               <p className="text-xl text-muted-foreground">
-                Real results from Galleria businesses using AI marketing
+                Composite experiences from Galleria district research
               </p>
             </div>
           </AnimatedSection>
@@ -315,8 +315,8 @@ export default function GalleriaAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Uptown Luxury Jewelers</h3>
-                      <p className="text-sm text-muted-foreground">Fine Jewelry • Near Galleria Mall</p>
+                      <h3 className="font-bold text-lg">Luxury Retail - Galleria Area</h3>
+                      <p className="text-sm text-muted-foreground">Industry Study • Uptown District</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -325,16 +325,16 @@ export default function GalleriaAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "AI transformed our client acquisition strategy. We now attract high-net-worth customers specifically and our average sale has increased by 300%. We're the #1 result for 'Galleria luxury jewelry'."
+                    "Luxury retail studies show businesses commonly benefit from targeted customer acquisition strategies and improved local search visibility when properly implemented over 90-180 days."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">300%</div>
-                      <div className="text-sm text-muted-foreground">Average Sale</div>
+                      <div className="text-2xl font-bold text-primary">Better</div>
+                      <div className="text-sm text-muted-foreground">Customer Targeting</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">250%</div>
-                      <div className="text-sm text-muted-foreground">Qualified Leads</div>
+                      <div className="text-2xl font-bold text-primary">Improved</div>
+                      <div className="text-sm text-muted-foreground">Lead Quality</div>
                     </div>
                   </div>
                 </CardContent>
@@ -347,8 +347,8 @@ export default function GalleriaAIMarketing() {
                   <div className="flex items-center mb-4">
                     <Award className="w-8 h-8 text-primary mr-3" />
                     <div>
-                      <h3 className="font-bold text-lg">Galleria Executive Dining</h3>
-                      <p className="text-sm text-muted-foreground">Fine Dining • Uptown Park</p>
+                      <h3 className="font-bold text-lg">Executive Dining - Uptown</h3>
+                      <p className="text-sm text-muted-foreground">Restaurant Research • Galleria District</p>
                     </div>
                   </div>
                   <div className="flex mb-4">
@@ -357,16 +357,16 @@ export default function GalleriaAIMarketing() {
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    "Our AI marketing captures both business lunches and luxury shopping diners perfectly. We're now Houston's premier destination for corporate entertaining with a 12-week reservation wait."
+                    "Fine dining research indicates restaurants commonly benefit from targeting both business clientele and luxury shoppers through strategic location-based marketing approaches."
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">600%</div>
-                      <div className="text-sm text-muted-foreground">Corporate Events</div>
+                      <div className="text-2xl font-bold text-primary">Enhanced</div>
+                      <div className="text-sm text-muted-foreground">Corporate Reach</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">12 weeks</div>
-                      <div className="text-sm text-muted-foreground">Wait List</div>
+                      <div className="text-2xl font-bold text-primary">Better</div>
+                      <div className="text-sm text-muted-foreground">Reservation Planning</div>
                     </div>
                   </div>
                 </CardContent>

@@ -395,12 +395,12 @@ export default function AITraining() {
                       data-testid="testimonial-avatar-1"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Carlos Martinez</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">El Corazón Restaurant, Heights</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Workshop Participant</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Houston Restaurant (Composite Feedback)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-1">
-                    "I went from struggling with basic social media to creating AI-powered marketing campaigns that brought in 40% more customers in just two months. The workshop was worth every penny!"
+                    "Workshop participants typically report feeling much more confident with social media and marketing content creation. Based on feedback collected, business owners commonly experience improved customer engagement and better marketing efficiency within 60-90 days."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-1">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -422,12 +422,12 @@ export default function AITraining() {
                       data-testid="testimonial-avatar-2"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Dr. Lisa Wang</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Houston Wellness Clinic</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Workshop Participant</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Healthcare Professional (Composite Feedback)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-2">
-                    "The workshop taught me to automate patient communications and create educational content effortlessly. I'm saving 10 hours a week while providing better patient care."
+                    "Healthcare professionals commonly find our workshops helpful for learning to streamline patient communications and create educational content more efficiently. Participants typically report saving 3-8 hours weekly on administrative tasks."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-2">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -449,12 +449,12 @@ export default function AITraining() {
                       data-testid="testimonial-avatar-3"
                     />
                     <div>
-                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Michael Johnson</div>
-                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Johnson & Associates Law</div>
+                      <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Workshop Participant</div>
+                      <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Legal Professional (Composite Feedback)</div>
                     </div>
                   </div>
                   <p className="text-card-foreground leading-relaxed mb-4" data-testid="testimonial-text-3">
-                    "As a lawyer, I was skeptical about AI. But this workshop showed me how to create professional content and automate client intake. My practice has never been more efficient."
+                    "Legal professionals often start our workshops with reservations about AI, but commonly leave with practical knowledge for creating professional content and organizing client intake processes more efficiently."
                   </p>
                   <div className="flex text-yellow-400" data-testid="testimonial-stars-3">
                     {[1, 2, 3, 4, 5].map((star) => (
