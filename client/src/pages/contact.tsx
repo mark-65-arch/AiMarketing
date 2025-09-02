@@ -18,6 +18,7 @@ import {
   Send
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoWide from "@assets/Logo Wide_1756845680532.webp";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -130,7 +131,9 @@ export default function Contact() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="text-xl font-bold text-secondary">
-                <a href="/" className="gradient-text" data-testid="nav-logo">Houston AI Marketing</a>
+                <a href="/" data-testid="nav-logo">
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+                </a>
               </div>
             </div>
             <div className="hidden md:block">

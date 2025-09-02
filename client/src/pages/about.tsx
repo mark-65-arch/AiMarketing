@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Building
 } from "lucide-react";
+import logoWide from "@assets/Logo Wide_1756845680532.webp";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -92,9 +93,9 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-xl font-bold text-secondary">
-                <a href="/" className="gradient-text" data-testid="nav-logo">Houston AI Marketing</a>
-              </div>
+              <a href="/" data-testid="nav-logo">
+                <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+              </a>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
