@@ -205,6 +205,19 @@ export default function Homepage() {
             </div>
           </div>
         </div>
+        
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-background border-t border-border" data-testid="mobile-menu">
+            <div className="px-4 py-3 space-y-3">
+              <a href="/about" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-about">About</a>
+              <a href="#services" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>Services</a>
+              <a href="/ai-tools" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-ai-tools">Free AI Tools</a>
+              <a href="/contact" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-contact">Contact</a>
+              <a href="#contact" className="block bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 rounded-lg text-base font-medium text-center transition-all duration-200" data-testid="mobile-nav-cta" onClick={() => setIsMenuOpen(false)}>Get Started</a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
