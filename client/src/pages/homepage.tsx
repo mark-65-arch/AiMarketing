@@ -24,7 +24,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
-import logoWide from "@assets/Logo_1756846025115.png";
+import logoWide from "@assets/Logo 2_1756846680619.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -192,7 +192,7 @@ export default function Homepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" data-testid="nav-logo" style={{backgroundColor: 'transparent'}} />
+              <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" data-testid="nav-logo" />
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">

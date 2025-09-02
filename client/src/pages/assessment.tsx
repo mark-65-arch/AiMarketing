@@ -15,7 +15,7 @@ import {
   Calendar
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoWide from "@assets/Logo_1756846025115.png";
+import logoWide from "@assets/Logo 2_1756846680619.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -305,7 +305,7 @@ export default function Assessment() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <a href="/" data-testid="nav-logo">
-                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto mix-blend-multiply" style={{filter: 'brightness(0) invert(1)'}} />
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
                 </a>
               </div>
               <div className="hidden md:flex items-baseline space-x-8">
@@ -407,7 +407,7 @@ export default function Assessment() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <a href="/" data-testid="nav-logo">
-                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto mix-blend-multiply" style={{filter: 'brightness(0) invert(1)'}} />
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
                 </a>
               </div>
             </div>
