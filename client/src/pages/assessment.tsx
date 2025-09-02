@@ -372,13 +372,17 @@ export default function Assessment() {
                       Book a free 30-minute consultation to discuss your AI marketing strategy and get started on your growth journey.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button size="lg" className="text-lg px-8 py-4" data-testid="button-book-consultation">
-                        <Calendar className="w-5 h-5 mr-2" />
-                        Book Free Consultation
+                      <Button asChild size="lg" className="text-lg px-8 py-4" data-testid="button-book-consultation">
+                        <a href="/#contact">
+                          <Calendar className="w-5 h-5 mr-2" />
+                          Book Free Consultation
+                        </a>
                       </Button>
-                      <Button variant="outline" size="lg" className="text-lg px-8 py-4" data-testid="button-call-now">
-                        <Phone className="w-5 h-5 mr-2" />
-                        Call (713) 555-0123
+                      <Button variant="outline" size="lg" className="text-lg px-8 py-4" asChild data-testid="button-call-now">
+                        <a href="tel:(713)555-AI01">
+                          <Phone className="w-5 h-5 mr-2" />
+                          Call (713) 555-AI01
+                        </a>
                       </Button>
                     </div>
                   </div>
