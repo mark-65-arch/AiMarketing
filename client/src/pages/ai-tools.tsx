@@ -911,46 +911,6 @@ export default function AITools() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-secondary text-secondary-foreground py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-bold mb-4">Houston AI Marketing</h3>
-              <p className="text-secondary-foreground/80 text-sm leading-relaxed">
-                Empowering Houston businesses with artificial intelligence marketing solutions that drive real results.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/ai-training" className="hover:text-white transition-colors">AI Training Workshops</a></li>
-                <li><a href="/business-profile" className="hover:text-white transition-colors">Google Profile Optimization</a></li>
-                <li><a href="/ai-websites" className="hover:text-white transition-colors">AI-Optimized Websites</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm">
-                <li>(713) 555-0123</li>
-                <li>info@aihoustonmarketing.com</li>
-                <li>1234 Main Street<br />Houston, TX 77002</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-                <a href="#" className="hover:text-white transition-colors">Twitter</a>
-                <a href="#" className="hover:text-white transition-colors">Facebook</a>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center text-sm">
-            <p>&copy; 2025 Houston AI Marketing. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

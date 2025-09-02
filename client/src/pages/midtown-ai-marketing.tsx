@@ -517,52 +517,6 @@ export default function MidtownAIMarketing() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-secondary text-secondary-foreground py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Houston AI Marketing</h3>
-              <p className="text-secondary-foreground/80 mb-4">
-                Helping Midtown businesses dominate local search with AI-powered marketing solutions.
-              </p>
-              <div className="flex items-center text-sm">
-                <Phone className="w-4 h-4 mr-2" />
-                (713) 555-AI01
-              </div>
-              <div className="flex items-center text-sm mt-2">
-                <Mail className="w-4 h-4 mr-2" />
-                hello@houstonaimarketing.com
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Midtown Services</h4>
-              <ul className="space-y-2 text-sm text-secondary-foreground/80">
-                <li>Midtown Local SEO</li>
-                <li>Medical Center Marketing</li>
-                <li>Museum District Targeting</li>
-                <li>Professional Service SEO</li>
-                <li>Cultural Event Marketing</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Other Houston Areas</h4>
-              <ul className="space-y-2 text-sm text-secondary-foreground/80">
-                <li><a href="/heights-ai-marketing" className="hover:text-white">Houston Heights</a></li>
-                <li><a href="/downtown-ai-marketing" className="hover:text-white">Downtown Houston</a></li>
-                <li><a href="/memorial-ai-marketing" className="hover:text-white">Memorial Area</a></li>
-                <li><a href="/galleria-ai-marketing" className="hover:text-white">Galleria District</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center text-sm text-secondary-foreground/60">
-            <p>&copy; 2024 Houston AI Marketing. All rights reserved. Serving Midtown Houston and surrounding areas.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
