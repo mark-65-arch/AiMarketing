@@ -305,7 +305,7 @@ export default function Assessment() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <a href="/" data-testid="nav-logo">
-                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto mix-blend-multiply" style={{filter: 'brightness(0) invert(1)'}} />
                 </a>
               </div>
               <div className="hidden md:flex items-baseline space-x-8">
@@ -407,7 +407,7 @@ export default function Assessment() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <a href="/" data-testid="nav-logo">
-                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto mix-blend-multiply" style={{filter: 'brightness(0) invert(1)'}} />
                 </a>
               </div>
             </div>
@@ -541,7 +541,7 @@ export default function Assessment() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <a href="/" data-testid="nav-logo">
-                <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+                <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto mix-blend-multiply" style={{filter: 'brightness(0) invert(1)'}} />
               </a>
             </div>
             <div className="text-sm text-muted-foreground" data-testid="progress-text">

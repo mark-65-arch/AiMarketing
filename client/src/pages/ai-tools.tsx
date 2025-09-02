@@ -523,7 +523,7 @@ export default function AITools() {
             <div className="flex items-center">
               <div className="text-xl font-bold text-secondary">
                 <a href="/" data-testid="nav-logo">
-                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+                  <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto mix-blend-multiply" style={{filter: 'brightness(0) invert(1)'}} />
                 </a>
               </div>
             </div>
