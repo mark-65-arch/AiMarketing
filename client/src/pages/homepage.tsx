@@ -961,52 +961,6 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-secondary text-secondary-foreground py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="text-2xl font-bold mb-4" data-testid="footer-logo">Houston AI Marketing</div>
-              <p className="text-secondary-foreground/80 mb-6 leading-relaxed" data-testid="footer-description">
-                Transform your Houston business with cutting-edge AI marketing solutions. We help local businesses dominate search results and automate customer engagement.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors" data-testid="social-facebook">
-                  <Facebook className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors" data-testid="social-twitter">
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors" data-testid="social-linkedin">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors" data-testid="social-instagram">
-                  <Instagram className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4" data-testid="footer-services-title">Services</h4>
-              <ul className="space-y-2 text-secondary-foreground/80">
-                <li><a href="#services" className="hover:text-secondary-foreground transition-colors" data-testid="footer-link-workshops">AI Training Workshops</a></li>
-                <li><a href="#services" className="hover:text-secondary-foreground transition-colors" data-testid="footer-link-optimization">Google Business Optimization</a></li>
-                <li><a href="#services" className="hover:text-secondary-foreground transition-colors" data-testid="footer-link-websites">AI-Optimized Websites</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4" data-testid="footer-contact-title">Contact</h4>
-              <ul className="space-y-2 text-secondary-foreground/80">
-                <li data-testid="footer-phone">(713) 555-0123</li>
-                <li data-testid="footer-email">info@aihoustonmarketing.com</li>
-                <li data-testid="footer-address">1234 Main Street<br/>Houston, TX 77002</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center text-secondary-foreground/60">
-            <p data-testid="footer-copyright">&copy; 2025 Houston AI Marketing. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
