@@ -24,7 +24,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
-import logoWide from "@assets/Logo Wide_1756845680532.webp";
+import logoWide from "@assets/Logo_1756846025115.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -188,7 +188,7 @@ export default function Homepage() {
   return (
     <div className="bg-background font-sans antialiased">
       {/* Navigation */}
-      <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+      <nav className="bg-background/95 backdrop-blur-sm border-b border-border fixed top-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -196,10 +196,10 @@ export default function Homepage() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="/about" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">About</a>
-                <a href="#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
-                <a href="/ai-tools" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-ai-tools">Free AI Tools</a>
-                <a href="/contact" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">Contact</a>
+                <a href="/about" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">About</a>
+                <a href="#services" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
+                <a href="/ai-tools" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-ai-tools">Free AI Tools</a>
+                <a href="/contact" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">Contact</a>
                 <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get FREE Audit</a>
               </div>
             </div>
@@ -213,12 +213,12 @@ export default function Homepage() {
         
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-background border-t border-border" data-testid="mobile-menu">
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border" data-testid="mobile-menu">
             <div className="px-4 py-3 space-y-3">
-              <a href="/about" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about">About</a>
-              <a href="#services" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>Services</a>
-              <a href="/ai-tools" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-ai-tools">Free AI Tools</a>
-              <a href="/contact" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-contact">Contact</a>
+              <a href="/about" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about">About</a>
+              <a href="#services" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>Services</a>
+              <a href="/ai-tools" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-ai-tools">Free AI Tools</a>
+              <a href="/contact" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-contact">Contact</a>
               <a href="#contact" className="block bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-4 min-h-[44px] rounded-lg text-base font-medium text-center transition-all duration-200 touch-target" data-testid="mobile-nav-cta" onClick={() => setIsMenuOpen(false)}>Get FREE Audit</a>
             </div>
           </div>
@@ -227,19 +227,21 @@ export default function Homepage() {
 
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 overflow-hidden hero-section"
+        className="relative overflow-hidden hero-section"
         style={{
           backgroundImage: `url(${houstonSkylineImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           willChange: 'transform', // Optimize for animations
+          paddingTop: '64px', // Account for fixed nav height
+          minHeight: '100vh'
         }}
       >
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/50"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-32">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
             <div className="lg:col-span-7">
               <AnimatedSection>

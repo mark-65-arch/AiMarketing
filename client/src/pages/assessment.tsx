@@ -15,7 +15,7 @@ import {
   Calendar
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoWide from "@assets/Logo Wide_1756845680532.webp";
+import logoWide from "@assets/Logo_1756846025115.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";

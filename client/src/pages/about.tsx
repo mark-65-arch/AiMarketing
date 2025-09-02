@@ -12,7 +12,7 @@ import {
   GraduationCap,
   Building
 } from "lucide-react";
-import logoWide from "@assets/Logo Wide_1756845680532.webp";
+import logoWide from "@assets/Logo_1756846025115.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
