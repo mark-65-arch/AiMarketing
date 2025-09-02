@@ -168,3 +168,202 @@
     transform: translateX(0);
   }
 }
+
+/* Houston skyline hero section optimizations */
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: center center !important;
+    background-size: cover !important;
+    min-height: 70vh;
+    /* Performance optimizations for mobile */
+    transform: translateZ(0); /* Hardware acceleration */
+    will-change: scroll-position;
+    background-attachment: scroll; /* Better mobile performance */
+  }
+  
+  .hero-section .relative.z-10 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-section {
+    background-position: center center !important;
+    background-size: cover !important;
+    min-height: 80vh;
+    background-attachment: fixed; /* Parallax effect on desktop only */
+  }
+}
+
+/* Performance optimizations for mobile animations */
+@media (max-width: 768px) {
+  /* Reduce motion for better performance on mobile */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-section {
+      transition: transform 0.3s ease-out;
+    }
+  }
+  
+  /* Optimize animations for mobile performance */
+  .hover-lift:hover {
+    transform: translateY(-2px); /* Reduced animation for mobile */
+  }
+  
+  /* Optimize framer motion animations for mobile */
+  [data-framer-motion] {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+}
+
+/* Improve text readability on all devices */
+.hero-section h1,
+.hero-section p,
+.hero-section div {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced backdrop blur for mobile browsers */
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+}
+
+/* Mobile touch targets optimization */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  touch-action: manipulation;
+}
+
+/* Mobile chatbot optimizations */
+@media (max-width: 480px) {
+  .mobile-chatbot {
+    width: calc(100vw - 1rem) !important;
+    height: calc(100vh - 10rem) !important;
+    right: 0.5rem !important;
+    left: 0.5rem !important;
+    margin: 0 auto;
+  }
+  
+  .mobile-chatbot .messages-container {
+    max-height: calc(100vh - 16rem);
+    overflow-y: auto;
+  }
+  
+  .mobile-chatbot .chatbot-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Mobile form optimizations */
+@media (max-width: 768px) {
+  /* Prevent zoom on input focus for iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="phone"],
+  textarea,
+  select {
+    font-size: 16px !important;
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+  
+  /* Better spacing for mobile forms */
+  .grid.md\\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Larger touch targets for buttons */
+  button {
+    min-height: 44px;
+    padding: 12px 24px;
+    touch-action: manipulation;
+  }
+  
+  /* Better spacing for radio buttons and labels */
+  .space-y-4 > div {
+    margin-bottom: 1rem;
+  }
+  
+  /* Form validation messages */
+  [role="alert"] {
+    font-size: 14px;
+    margin-top: 4px;
+    padding: 4px 8px;
+  }
+}
+
+/* Specific mobile keyboard optimizations */
+input[type="email"] {
+  autocomplete: email;
+  autocapitalize: none;
+}
+
+input[type="tel"] {
+  autocomplete: tel;
+}
+
+input[name="phone"] {
+  inputmode: tel;
+  autocomplete: tel;
+}
+
+input[name="firstName"] {
+  autocomplete: given-name;
+  autocapitalize: words;
+}
+
+input[name="lastName"] {
+  autocomplete: family-name;
+  autocapitalize: words;
+}
+
+/* Improve mobile select dropdown experience */
+@media (max-width: 768px) {
+  select,
+  [role="combobox"] {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23666' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 40px;
+  }
+}
+
+/* Performance optimizations for mobile networks */
+@media (max-width: 768px) {
+  /* Optimize images for mobile */
+  img {
+    image-rendering: optimizeQuality;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  
+  /* Reduce expensive CSS operations on mobile */
+  .shadow-xl {
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Optimize backdrop filters for mobile performance */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+  }
+}
+
+/* Optimize font loading for mobile */
+@media (max-width: 768px) {
+  body {
+    font-display: swap;
+    text-rendering: optimizeSpeed;
+  }
+}

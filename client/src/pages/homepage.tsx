@@ -23,6 +23,7 @@ import {
   ChevronUp,
   HelpCircle
 } from "lucide-react";
+import houstonSkylineImage from "@assets/houston-skyline.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -215,32 +216,44 @@ export default function Homepage() {
         {isMenuOpen && (
           <div className="md:hidden bg-background border-t border-border" data-testid="mobile-menu">
             <div className="px-4 py-3 space-y-3">
-              <a href="/about" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-about">About</a>
-              <a href="#services" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>Services</a>
-              <a href="/ai-tools" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-ai-tools">Free AI Tools</a>
-              <a href="/contact" className="block text-foreground hover:text-primary px-3 py-2 text-base font-medium transition-colors" data-testid="mobile-nav-contact">Contact</a>
-              <a href="#contact" className="block bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 rounded-lg text-base font-medium text-center transition-all duration-200" data-testid="mobile-nav-cta" onClick={() => setIsMenuOpen(false)}>Get FREE Audit</a>
+              <a href="/about" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about">About</a>
+              <a href="#services" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>Services</a>
+              <a href="/ai-tools" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-ai-tools">Free AI Tools</a>
+              <a href="/contact" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-contact">Contact</a>
+              <a href="#contact" className="block bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-4 min-h-[44px] rounded-lg text-base font-medium text-center transition-all duration-200 touch-target" data-testid="mobile-nav-cta" onClick={() => setIsMenuOpen(false)}>Get FREE Audit</a>
             </div>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-background to-muted/30 py-20 lg:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-20 lg:py-32 overflow-hidden hero-section"
+        style={{
+          backgroundImage: `url(${houstonSkylineImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          willChange: 'transform', // Optimize for animations
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
             <div className="lg:col-span-7">
               <AnimatedSection>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg" data-testid="hero-title" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                   Transform Your Houston Business with{" "}
-                  <span className="gradient-text">Artificial Intelligence</span>
+                  <span className="text-blue-300 drop-shadow-lg">Artificial Intelligence</span>
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
+                <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-md" data-testid="hero-subtitle" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
                   Stop losing customers to competitors who rank higher on Google. Our proven AI marketing systems have helped 50+ Houston businesses increase revenue by 200-400% while saving 15+ hours per week on marketing tasks.
                 </p>
-                <div className="bg-accent/10 rounded-lg p-4 mb-6 border border-accent/20">
-                  <p className="text-sm font-semibold text-accent mb-1">⚡ LIMITED TIME: January Workshop Special</p>
-                  <p className="text-sm text-muted-foreground">Only 12 seats remaining for our next AI Training Workshop. Houston businesses are booking fast.</p>
+                <div className="bg-blue-600/20 backdrop-blur-sm rounded-lg p-4 mb-6 border border-blue-400/30">
+                  <p className="text-sm font-semibold text-blue-200 mb-1 drop-shadow-md">⚡ LIMITED TIME: January Workshop Special</p>
+                  <p className="text-sm text-gray-200 drop-shadow-sm">Only 12 seats remaining for our next AI Training Workshop. Houston businesses are booking fast.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-free-audit">
@@ -333,25 +346,25 @@ export default function Homepage() {
         </div>
         
         {/* Trust Badges */}
-        <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
-            <p className="text-center text-muted-foreground mb-8 font-medium" data-testid="trust-text">Trusted by 50+ Houston Businesses Since 2023</p>
+            <p className="text-center text-gray-200 mb-8 font-medium drop-shadow-md" data-testid="trust-text" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>Trusted by 50+ Houston Businesses Since 2023</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div className="bg-background/80 rounded-lg p-4 border" data-testid="trust-metric-1">
-                <div className="text-2xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">Businesses Served</div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg" data-testid="trust-metric-1">
+                <div className="text-2xl font-bold text-blue-600">50+</div>
+                <div className="text-sm text-gray-600">Businesses Served</div>
               </div>
-              <div className="bg-background/80 rounded-lg p-4 border" data-testid="trust-metric-2">
-                <div className="text-2xl font-bold text-primary">300%</div>
-                <div className="text-sm text-muted-foreground">Avg. Revenue Increase</div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg" data-testid="trust-metric-2">
+                <div className="text-2xl font-bold text-blue-600">300%</div>
+                <div className="text-sm text-gray-600">Avg. Revenue Increase</div>
               </div>
-              <div className="bg-background/80 rounded-lg p-4 border" data-testid="trust-metric-3">
-                <div className="text-2xl font-bold text-primary">15+</div>
-                <div className="text-sm text-muted-foreground">Hours Saved Weekly</div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg" data-testid="trust-metric-3">
+                <div className="text-2xl font-bold text-blue-600">15+</div>
+                <div className="text-sm text-gray-600">Hours Saved Weekly</div>
               </div>
-              <div className="bg-background/80 rounded-lg p-4 border" data-testid="trust-metric-4">
-                <div className="text-2xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg" data-testid="trust-metric-4">
+                <div className="text-2xl font-bold text-blue-600">98%</div>
+                <div className="text-sm text-gray-600">Client Satisfaction</div>
               </div>
             </div>
           </AnimatedSection>

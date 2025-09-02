@@ -483,7 +483,7 @@ export default function Assessment() {
                           <FormItem>
                             <FormLabel>Phone Number</FormLabel>
                             <FormControl>
-                              <Input placeholder="(713) 555-0123" {...field} data-testid="input-phone" />
+                              <Input type="tel" placeholder="(713) 555-0123" {...field} data-testid="input-phone" inputMode="tel" autoComplete="tel" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
