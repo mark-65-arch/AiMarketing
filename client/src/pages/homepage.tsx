@@ -609,12 +609,9 @@ export default function Homepage() {
               <Card className="shadow-sm h-full" data-testid="testimonial-card-1">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
-                      alt="Professional business owner" 
-                      className="w-12 h-12 rounded-full mr-4" 
-                      data-testid="testimonial-avatar-1"
-                    />
+                    <div className="w-12 h-12 rounded-full mr-4 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center" data-testid="testimonial-avatar-1">
+                      <span className="text-white font-semibold text-lg">RO</span>
+                    </div>
                     <div>
                       <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Workshop Participant</div>
                       <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Houston Restaurant Owner (Composite)</div>
@@ -640,12 +637,9 @@ export default function Homepage() {
               <Card className="shadow-sm h-full" data-testid="testimonial-card-2">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <img 
-                      src="https://images.unsplash.com/photo-1494790108755-2616c56d5e55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
-                      alt="Professional female business leader" 
-                      className="w-12 h-12 rounded-full mr-4" 
-                      data-testid="testimonial-avatar-2"
-                    />
+                    <div className="w-12 h-12 rounded-full mr-4 bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center" data-testid="testimonial-avatar-2">
+                      <span className="text-white font-semibold text-lg">MP</span>
+                    </div>
                     <div>
                       <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Beta Client</div>
                       <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Houston Medical Practice (Composite)</div>
@@ -671,12 +665,9 @@ export default function Homepage() {
               <Card className="shadow-sm h-full" data-testid="testimonial-card-3">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
-                      alt="Professional male business executive" 
-                      className="w-12 h-12 rounded-full mr-4" 
-                      data-testid="testimonial-avatar-3"
-                    />
+                    <div className="w-12 h-12 rounded-full mr-4 bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center" data-testid="testimonial-avatar-3">
+                      <span className="text-white font-semibold text-lg">LP</span>
+                    </div>
                     <div>
                       <div className="font-semibold text-card-foreground" data-testid="testimonial-name-3">Founder Experience</div>
                       <div className="text-sm text-muted-foreground" data-testid="testimonial-title-3">Legal Professional (Personal Account)</div>

@@ -526,12 +526,9 @@ export default function AIWebsites() {
               <Card className="shadow-sm h-full" data-testid="testimonial-card-1">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <img 
-                      src="https://images.unsplash.com/photo-1494790108755-2616c56d5e55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
-                      alt="Healthcare professional testimonial" 
-                      className="w-12 h-12 rounded-full mr-4" 
-                      data-testid="testimonial-avatar-1"
-                    />
+                    <div className="w-12 h-12 rounded-full mr-4 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center" data-testid="testimonial-avatar-1">
+                      <span className="text-white font-semibold text-lg">HC</span>
+                    </div>
                     <div>
                       <div className="font-semibold text-card-foreground" data-testid="testimonial-name-1">Beta Client</div>
                       <div className="text-sm text-muted-foreground" data-testid="testimonial-title-1">Healthcare Practice (Composite)</div>
@@ -553,12 +550,9 @@ export default function AIWebsites() {
               <Card className="shadow-sm h-full" data-testid="testimonial-card-2">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
-                      alt="Real estate professional testimonial" 
-                      className="w-12 h-12 rounded-full mr-4" 
-                      data-testid="testimonial-avatar-2"
-                    />
+                    <div className="w-12 h-12 rounded-full mr-4 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center" data-testid="testimonial-avatar-2">
+                      <span className="text-white font-semibold text-lg">RE</span>
+                    </div>
                     <div>
                       <div className="font-semibold text-card-foreground" data-testid="testimonial-name-2">Industry Research</div>
                       <div className="text-sm text-muted-foreground" data-testid="testimonial-title-2">Real Estate Professional (Based on Studies)</div>
