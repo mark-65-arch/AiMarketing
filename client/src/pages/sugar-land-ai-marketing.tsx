@@ -29,6 +29,7 @@ import { insertContactSubmissionSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import type { InsertContactSubmission } from "@shared/schema";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
+import logoWide from "@assets/Logo3_1756847446520.png";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);
@@ -143,8 +144,8 @@ export default function SugarLandAIMarketing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="/" className="text-xl font-bold text-secondary">
-                <span className="gradient-text" data-testid="nav-logo">Houston AI Marketing</span>
+              <a href="/" data-testid="nav-logo">
+                <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
               </a>
             </div>
             <div className="hidden md:flex items-center space-x-8">
