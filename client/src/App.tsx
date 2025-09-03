@@ -43,6 +43,14 @@ import GoogleBusinessProfileAIOptimization from "@/pages/google-business-profile
 import AIContentCreationGuide from "@/pages/ai-content-creation-guide";
 import VoiceSearchOptimizationHouston from "@/pages/voice-search-optimization-houston";
 
+// Lead Magnet Pages
+import FreeAIMarketingAudit from "@/pages/free-ai-marketing-audit";
+import HoustonBusinessAIGuide from "@/pages/houston-business-ai-guide";
+import AIToolsChecklist from "@/pages/ai-tools-checklist";
+import ThirtyDayAICalendar from "@/pages/30-day-ai-calendar";
+import AIROICalculator from "@/pages/ai-roi-calculator";
+import ThankYou from "@/pages/thank-you";
+
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -92,6 +100,14 @@ function Router() {
         <Route path="/google-business-profile-ai-optimization" component={GoogleBusinessProfileAIOptimization}/>
         <Route path="/ai-content-creation-guide" component={AIContentCreationGuide}/>
         <Route path="/voice-search-optimization-houston" component={VoiceSearchOptimizationHouston}/>
+        
+        {/* Lead Magnet Pages */}
+        <Route path="/free-ai-marketing-audit" component={FreeAIMarketingAudit}/>
+        <Route path="/houston-business-ai-guide" component={HoustonBusinessAIGuide}/>
+        <Route path="/ai-tools-checklist" component={AIToolsChecklist}/>
+        <Route path="/30-day-ai-calendar" component={ThirtyDayAICalendar}/>
+        <Route path="/ai-roi-calculator" component={AIROICalculator}/>
+        <Route path="/thank-you" component={ThankYou}/>
         
         <Route component={NotFound} />
       </Switch>

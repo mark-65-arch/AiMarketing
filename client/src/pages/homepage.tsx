@@ -21,7 +21,11 @@ import {
   Copy,
   ChevronDown,
   ChevronUp,
-  HelpCircle
+  HelpCircle,
+  CheckSquare,
+  Calendar,
+  BookOpen,
+  Calculator
 } from "lucide-react";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
 import logoWide from "@assets/Logo3_1756847446520.png";
@@ -258,7 +262,7 @@ export default function Homepage() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-free-audit">
-                    <a href="#contact">Get FREE $500 AI Audit (Limited Time)</a>
+                    <a href="/free-ai-marketing-audit">Get FREE $500 AI Audit (Limited Time)</a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-assessment">
                     <a href="/assessment">Take Free AI Readiness Test</a>
@@ -333,7 +337,7 @@ export default function Homepage() {
                               className="flex-1"
                               data-testid="button-try-more"
                             >
-                              <a href="/ai-tools">Try More AI Tools</a>
+                              <a href="/ai-tools-checklist">Get AI Tools Checklist</a>
                             </Button>
                           </div>
                         </div>
@@ -369,6 +373,175 @@ export default function Homepage() {
               </div>
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Free Resources Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <AnimatedSection>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="resources-title">
+                FREE AI Marketing Resources for Houston Businesses
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="resources-subtitle">
+                Download our proven tools and guides to start transforming your business today
+              </p>
+            </AnimatedSection>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Free AI Marketing Audit */}
+            <AnimatedSection className="hover-lift">
+              <Card className="h-full shadow-sm border-2 border-primary/20" data-testid="resource-audit">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <BrainCircuit className="w-6 h-6 text-primary" />
+                    </div>
+                    <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                      MOST POPULAR
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3 text-center">
+                    FREE AI Marketing Audit
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4 text-center leading-relaxed">
+                    Get a personalized $500 audit showing exactly how AI can increase your leads by 200-400%
+                  </p>
+                  <div className="text-center mb-4">
+                    <div className="text-2xl font-bold text-primary">FREE</div>
+                    <div className="text-sm text-muted-foreground line-through">Usually $500</div>
+                  </div>
+                  <Button asChild className="w-full" data-testid="button-audit">
+                    <a href="/free-ai-marketing-audit">Get FREE Audit</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* AI Tools Checklist */}
+            <AnimatedSection className="hover-lift">
+              <Card className="h-full shadow-sm" data-testid="resource-checklist">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <CheckSquare className="w-6 h-6 text-accent" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3 text-center">
+                    25 Essential AI Tools
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4 text-center leading-relaxed">
+                    Hand-picked checklist of AI tools that save Houston businesses $5,000+ monthly
+                  </p>
+                  <div className="text-center mb-4">
+                    <div className="text-lg font-bold text-accent">FREE Download</div>
+                  </div>
+                  <Button asChild variant="outline" className="w-full" data-testid="button-checklist">
+                    <a href="/ai-tools-checklist">Download Checklist</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* 30-Day Calendar */}
+            <AnimatedSection className="hover-lift">
+              <Card className="h-full shadow-sm" data-testid="resource-calendar">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <Calendar className="w-6 h-6 text-secondary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3 text-center">
+                    30-Day AI Implementation
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4 text-center leading-relaxed">
+                    Step-by-step calendar to transform your business in 30 days (15 min/day)
+                  </p>
+                  <div className="text-center mb-4">
+                    <div className="text-lg font-bold text-secondary">FREE Guide</div>
+                  </div>
+                  <Button asChild variant="outline" className="w-full" data-testid="button-calendar">
+                    <a href="/30-day-ai-calendar">Get Calendar</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Houston AI Guide */}
+            <AnimatedSection className="hover-lift">
+              <Card className="shadow-sm" data-testid="resource-guide">
+                <CardContent className="p-6">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                      <BookOpen className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-foreground mb-2">
+                        Complete Houston AI Marketing Guide
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        87-page comprehensive guide + $1,188 in bonuses
+                      </p>
+                      <Button asChild variant="outline" size="sm" data-testid="button-guide">
+                        <a href="/houston-business-ai-guide">Download Free</a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* ROI Calculator */}
+            <AnimatedSection className="hover-lift">
+              <Card className="shadow-sm" data-testid="resource-calculator">
+                <CardContent className="p-6">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                      <Calculator className="w-6 h-6 text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-foreground mb-2">
+                        AI Marketing ROI Calculator
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-3">
+                        Calculate your potential ROI from AI marketing in 2 minutes
+                      </p>
+                      <Button asChild variant="outline" size="sm" data-testid="button-calculator">
+                        <a href="/ai-roi-calculator">Calculate ROI</a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+
+          <div className="text-center mt-12">
+            <AnimatedSection>
+              <p className="text-muted-foreground mb-6">
+                Join 500+ Houston business owners who have downloaded our free resources
+              </p>
+              <div className="flex items-center justify-center space-x-8">
+                <div className="flex items-center text-sm text-muted-foreground">
+                  <CheckCircle className="w-4 h-4 mr-2 text-primary" />
+                  No spam, ever
+                </div>
+                <div className="flex items-center text-sm text-muted-foreground">
+                  <CheckCircle className="w-4 h-4 mr-2 text-primary" />
+                  Instant download
+                </div>
+                <div className="flex items-center text-sm text-muted-foreground">
+                  <CheckCircle className="w-4 h-4 mr-2 text-primary" />
+                  Always free
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
