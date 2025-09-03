@@ -156,34 +156,52 @@ export default function Services() {
 
   const comparisonData = [
     {
-      criteria: "Project Scope",
-      google: "Google Business Profile only",
-      aiSystem: "Full marketing automation",
-      website: "Complete online presence"
+      criteria: "Main Problem Solved",
+      google: "Not showing up in local searches",
+      aiSystem: "Spending too much time on marketing",
+      website: "Website not converting visitors"
     },
     {
-      criteria: "Time Investment Required",
-      google: "2-3 hours total",
-      aiSystem: "8-10 hours over 3 weeks",
-      website: "12-15 hours over 4 weeks"
+      criteria: "Monthly Time Savings",
+      google: "5-8 hours (posting & reviews)",
+      aiSystem: "10-15 hours (content creation)",
+      website: "3-5 hours (lead management)"
     },
     {
-      criteria: "Technical Complexity",
-      google: "Beginner friendly",
-      aiSystem: "Intermediate level",
-      website: "We handle technical parts"
+      criteria: "Best If You Currently",
+      google: "Post inconsistently on Google",
+      aiSystem: "Manually create all content",
+      website: "Have outdated/slow website"
     },
     {
-      criteria: "Best Business Size",
-      google: "Local service businesses",
-      aiSystem: "Growing businesses (5-50 employees)",
-      website: "Established businesses needing web presence"
+      criteria: "You'll See Results When",
+      google: "Customers find you in local search",
+      aiSystem: "You automate daily marketing tasks",
+      website: "More website visitors become leads"
     },
     {
-      criteria: "Expected ROI Timeline",
-      google: "2-4 weeks",
-      aiSystem: "4-8 weeks",
-      website: "6-12 weeks"
+      criteria: "Typical Client Profile",
+      google: "Local restaurant, salon, contractor",
+      aiSystem: "Professional service, growing business",
+      website: "Any business needing web presence"
+    },
+    {
+      criteria: "Investment vs Monthly Agency",
+      google: "Replaces $300-500/month local SEO",
+      aiSystem: "Replaces $800-1500/month content creation",
+      website: "Replaces $1000-2000/month web management"
+    },
+    {
+      criteria: "ROI Payback Period",
+      google: "2-3 months",
+      aiSystem: "1-2 months",
+      website: "3-4 months"
+    },
+    {
+      criteria: "Perfect If Your Revenue Is",
+      google: "$10K-50K/month",
+      aiSystem: "$25K-100K/month",
+      website: "$50K-200K/month"
     }
   ];
 
@@ -422,6 +440,73 @@ export default function Services() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Decision Helper Section */}
+            <div className="mt-12 bg-blue-50 p-8 rounded-lg border border-blue-200">
+              <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">
+                Still Not Sure? Here's a Simple Way to Choose:
+              </h3>
+              <div className="grid md:grid-cols-1 gap-4 text-blue-800">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-sm font-bold">1</span>
+                    </div>
+                    <span><strong>Choose Google Business AI</strong> if you're not showing up when people search for your services locally</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-sm font-bold">2</span>
+                    </div>
+                    <span><strong>Choose AI Marketing System</strong> if you're spending more than 10 hours/week on marketing tasks</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-sm font-bold">3</span>
+                    </div>
+                    <span><strong>Choose Website + AI</strong> if your current website was built more than 3 years ago or converts poorly</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-sm font-bold">?</span>
+                    </div>
+                    <span><strong>Not sure about your website conversion?</strong> We can tell you in 5 minutes during a free consultation</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* What You DON'T Get Section */}
+            <div className="mt-12 bg-red-50 p-8 rounded-lg border border-red-200">
+              <h3 className="text-2xl font-bold text-red-900 mb-6 text-center">
+                What You DON'T Get (Setting Proper Expectations)
+              </h3>
+              <p className="text-red-800 mb-6 text-center font-medium">
+                This isn't ongoing management - we BUILD systems that YOU own and control forever:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <ul className="space-y-3 text-red-800">
+                  <li className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
+                    <span>We <strong>don't manage</strong> your marketing month-to-month</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
+                    <span>We <strong>don't create new content</strong> for you after the project</span>
+                  </li>
+                </ul>
+                <ul className="space-y-3 text-red-800">
+                  <li className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
+                    <span>We <strong>don't run</strong> your advertising campaigns</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
+                    <span>We <strong>BUILD systems</strong> that YOU own and control forever</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>
