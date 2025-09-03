@@ -45,6 +45,7 @@ import { SEOHead, generateLocationKeywords } from "@/components/seo/SEOHead";
 import { LocalBusinessSchema, FAQSchema, WebPageSchema } from "@/components/seo/SchemaMarkup";
 import { HeroImage, LazyImage } from "@/components/ui/LazyImage";
 import { generalAIMarketingFAQs, voiceSearchFAQs } from "@/data/faqData";
+import { Navigation } from "@/components/Navigation";
 import type { InsertContactSubmission } from "@shared/schema";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
@@ -65,7 +66,6 @@ const AnimatedSection = ({ children, className = "" }: { children: React.ReactNo
 };
 
 export default function Homepage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [demoResult, setDemoResult] = useState("");
   const [quickGenContent, setQuickGenContent] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
@@ -236,42 +236,7 @@ export default function Homepage() {
       <FAQSchema faqs={homepageFAQs} />
 
       {/* Navigation */}
-      <nav className="bg-background/95 backdrop-blur-sm border-b border-border fixed top-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" data-testid="nav-logo" />
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <a href="/about" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">About</a>
-                <a href="#services" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
-                <a href="/ai-tools" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-ai-tools">Free AI Tools</a>
-                <a href="/contact" className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">Contact</a>
-                <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get FREE Audit</a>
-              </div>
-            </div>
-            <div className="md:hidden">
-              <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)} data-testid="nav-mobile-menu">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border" data-testid="mobile-menu">
-            <div className="px-4 py-3 space-y-3">
-              <a href="/about" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about">About</a>
-              <a href="#services" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>Services</a>
-              <a href="/ai-tools" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-ai-tools">Free AI Tools</a>
-              <a href="/contact" className="block text-white hover:text-blue-300 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-contact">Contact</a>
-              <a href="#contact" className="block bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-4 min-h-[44px] rounded-lg text-base font-medium text-center transition-all duration-200 touch-target" data-testid="mobile-nav-cta" onClick={() => setIsMenuOpen(false)}>Get FREE Audit</a>
-            </div>
-          </div>
-        )}
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section 
