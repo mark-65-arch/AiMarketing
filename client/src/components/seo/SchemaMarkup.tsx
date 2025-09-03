@@ -64,8 +64,8 @@ export function LocalBusinessSchema({
     stateName: "Texas",
     postalCode: "77001"
   },
-  telephone = "(713) 555-AI01",
-  email = "hello@houstonaimarketing.com",
+  telephone = "(713) 555-0123",
+  email = "info@marketingaihouston.com",
   url = "https://houstonaimarketing.com",
   serviceArea = [
     "Houston, TX",

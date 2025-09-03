@@ -87,7 +87,7 @@ export const serviceSpecificFAQs: FAQ[] = [
 export const voiceSearchFAQs: FAQ[] = [
   {
     question: "Where can I find AI marketing help near me in Houston?",
-    answer: "Marketing AI Houston serves businesses throughout the greater Houston area, including The Heights, Midtown, Downtown, Memorial, Galleria, The Woodlands, Sugar Land, Katy, Pearland, Clear Lake, League City, Pasadena, and Cypress. Contact us at (713) 555-AI01 for a free consultation.",
+    answer: "Marketing AI Houston serves businesses throughout the greater Houston area, including The Heights, Midtown, Downtown, Memorial, Galleria, The Woodlands, Sugar Land, Katy, Pearland, Clear Lake, League City, Pasadena, and Cypress. Contact us at (713) 555-0123 for a free consultation.",
     category: "voice-search"
   },
   {
@@ -97,7 +97,7 @@ export const voiceSearchFAQs: FAQ[] = [
   },
   {
     question: "How do I get started with AI marketing for my Houston business?",
-    answer: "Getting started is easy! Book a free 30-minute consultation where we'll analyze your current marketing, identify AI opportunities, and create a customized strategy. Call (713) 555-AI01 or visit our website to schedule your free audit today.",
+    answer: "Getting started is easy! Book a free 30-minute consultation where we'll analyze your current marketing, identify AI opportunities, and create a customized strategy. Call (713) 555-0123 or visit our website to schedule your free audit today.",
     category: "voice-search"
   },
   {

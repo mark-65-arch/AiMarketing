@@ -13,7 +13,7 @@ export default function Footer() {
                 Marketing AI Houston
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed" data-testid="footer-company-description">
-                Transforming Houston businesses with cutting-edge AI marketing solutions. We help local companies dominate search results and automate customer engagement.
+                Building AI marketing systems that Houston businesses own and control. One-time setup, lifetime benefits, no monthly fees.
               </p>
             </div>
             
@@ -25,11 +25,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-300" data-testid="footer-phone">
                 <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                <span>(713) 555-AI01</span>
+                <span>(713) 555-0123</span>
               </div>
               <div className="flex items-center text-gray-300" data-testid="footer-email">
                 <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                <span>hello@houstonaimarketing.com</span>
+                <span>info@marketingaihouston.com</span>
               </div>
             </div>
           </div>
@@ -39,24 +39,24 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6" data-testid="footer-services-title">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/ai-training" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-ai-training">
-                  AI Training Workshops
-                </Link>
+                <span className="text-gray-300">
+                  Google Business AI Domination
+                </span>
               </li>
               <li>
-                <Link href="/business-profile" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-business-profile">
-                  Business Profile Optimization
-                </Link>
+                <span className="text-gray-300">
+                  AI Marketing System Setup
+                </span>
               </li>
               <li>
-                <Link href="/ai-websites" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-ai-websites">
-                  AI-Optimized Websites
-                </Link>
+                <span className="text-gray-300">
+                  Website + AI Optimization
+                </span>
               </li>
               <li>
-                <Link href="/ai-tools" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-ai-tools">
-                  Free AI Tools
-                </Link>
+                <span className="text-gray-300">
+                  Free System Audit
+                </span>
               </li>
             </ul>
           </div>

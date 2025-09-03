@@ -498,12 +498,12 @@ export default function HoustonBusinessResources() {
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-primary mb-2" />
                 <h3 className="font-semibold text-foreground mb-1">Phone Support</h3>
-                <p className="text-sm text-muted-foreground">(713) 555-AI01</p>
+                <p className="text-sm text-muted-foreground">(713) 555-0123</p>
               </div>
               <div className="flex flex-col items-center">
                 <Mail className="w-8 h-8 text-primary mb-2" />
                 <h3 className="font-semibold text-foreground mb-1">Email Support</h3>
-                <p className="text-sm text-muted-foreground">hello@houstonaimarketing.com</p>
+                <p className="text-sm text-muted-foreground">info@marketingaihouston.com</p>
               </div>
               <div className="flex flex-col items-center">
                 <Calendar className="w-8 h-8 text-primary mb-2" />

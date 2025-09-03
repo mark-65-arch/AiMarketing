@@ -187,8 +187,8 @@ export const houstonLocationSEO = {
   businessData: {
     name: "Marketing AI Houston",
     description: "Houston's premier AI marketing agency helping local businesses grow with artificial intelligence technology, automation, and digital marketing strategies.",
-    phone: "(713) 555-AI01",
-    email: "hello@houstonaimarketing.com",
+    phone: "(713) 555-0123",
+    email: "info@marketingaihouston.com",
     address: {
       streetAddress: "Houston Business District",
       cityName: "Houston",

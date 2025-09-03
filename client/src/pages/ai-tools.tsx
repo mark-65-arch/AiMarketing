@@ -902,7 +902,7 @@ export default function AITools() {
               </div>
               <div className="flex items-center text-foreground">
                 <Mail className="w-5 h-5 mr-2" />
-                <span className="text-lg">info@aihoustonmarketing.com</span>
+                <span className="text-lg">info@marketingaihouston.com</span>
               </div>
             </div>
             <div className="mt-8">

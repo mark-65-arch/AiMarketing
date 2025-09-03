@@ -382,9 +382,9 @@ export default function Assessment() {
                         </a>
                       </Button>
                       <Button variant="outline" size="lg" className="text-lg px-8 py-4" asChild data-testid="button-call-now">
-                        <a href="tel:(713)555-AI01">
+                        <a href="tel:(713)555-0123">
                           <Phone className="w-5 h-5 mr-2" />
-                          Call (713) 555-AI01
+                          Call (713) 555-0123
                         </a>
                       </Button>
                     </div>

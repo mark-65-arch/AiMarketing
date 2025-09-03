@@ -80,8 +80,8 @@ export default function HeightsAIMarketing() {
     onError: (error: any) => {
       console.error('Contact form submission error:', error);
       const errorMessage = error.message?.includes('Server error') 
-        ? 'Our servers are experiencing high demand. Please try again in a few minutes or call us directly at (713) 555-AI01.'
-        : 'Something went wrong. Please check your internet connection and try again, or call us directly at (713) 555-AI01.';
+        ? 'Our servers are experiencing high demand. Please try again in a few minutes or call us directly at (713) 555-0123.'
+        : 'Something went wrong. Please check your internet connection and try again, or call us directly at (713) 555-0123.';
       
       toast({
         title: "❌ Submission Failed",
@@ -117,7 +117,7 @@ export default function HeightsAIMarketing() {
       "areaServed": "Houston Heights, TX",
       "serviceArea": "Houston Heights, TX",
       "priceRange": "$397-$2500",
-      "telephone": "(713) 555-AI01"
+      "telephone": "(713) 555-0123"
     };
 
     const script = document.createElement('script');
@@ -200,7 +200,7 @@ export default function HeightsAIMarketing() {
                     <a href="#contact">Get FREE Heights Business AI Audit</a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-200" data-testid="button-call">
-                    <a href="tel:(713)555-AI01">Call (713) 555-AI01</a>
+                    <a href="tel:(713)555-0123">Call (713) 555-0123</a>
                   </Button>
                 </div>
               </AnimatedSection>

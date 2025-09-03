@@ -48,7 +48,7 @@ export default class ErrorBoundary extends Component<Props, State> {
                   asChild
                   className="w-full"
                 >
-                  <a href="tel:(713) 555-AI01">Call Us: (713) 555-AI01</a>
+                  <a href="tel:(713) 555-0123">Call Us: (713) 555-0123</a>
                 </Button>
               </div>
             </CardContent>

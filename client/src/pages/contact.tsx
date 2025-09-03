@@ -97,9 +97,9 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6 text-primary" />,
       title: "Email", 
-      value: "info@aihoustonmarketing.com",
+      value: "info@marketingaihouston.com",
       description: "Send us a detailed message",
-      action: "mailto:info@aihoustonmarketing.com"
+      action: "mailto:info@marketingaihouston.com"
     },
     {
       icon: <MapPin className="w-6 h-6 text-primary" />,

@@ -765,7 +765,7 @@ export default function BusinessProfile() {
                     </div>
                     <div className="flex items-center text-foreground">
                       <Mail className="w-4 h-4 mr-2" />
-                      <span>info@aihoustonmarketing.com</span>
+                      <span>info@marketingaihouston.com</span>
                     </div>
                   </div>
                 </div>

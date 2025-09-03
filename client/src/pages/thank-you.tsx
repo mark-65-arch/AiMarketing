@@ -388,7 +388,7 @@ export default function ThankYou() {
                 <Phone className="w-4 h-4 inline mr-2" />
                 Call us: (713) 555-0123 • 
                 <Mail className="w-4 h-4 inline mx-2" />
-                Email: info@aihoustonmarketing.com
+                Email: info@marketingaihouston.com
               </p>
             </div>
           </AnimatedSection>
