@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { FormField, FormItem, FormLabel, FormControl } from "@/components/ui/form";
 import LeadMagnetForm from "@/components/LeadMagnetForm";
-import logoWide from "@assets/Logo 3_1756914281767.png";
+import logoWide from "@assets/Logo3-ezgif.com-optipng_1756914512078.png";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);

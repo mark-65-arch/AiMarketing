@@ -28,7 +28,7 @@ import {
   Calculator
 } from "lucide-react";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
-import logoWide from "@assets/Logo 3_1756914281767.png";
+import logoWide from "@assets/Logo3-ezgif.com-optipng_1756914512078.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";

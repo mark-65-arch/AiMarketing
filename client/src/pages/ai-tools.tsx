@@ -20,7 +20,7 @@ import {
   Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoWide from "@assets/Logo 3_1756914281767.png";
+import logoWide from "@assets/Logo3-ezgif.com-optipng_1756914512078.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";

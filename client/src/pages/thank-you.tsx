@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import logoWide from "@assets/Logo 3_1756914281767.png";
+import logoWide from "@assets/Logo3-ezgif.com-optipng_1756914512078.png";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);
