@@ -1,0 +1,40 @@
+Update the existing Marketing AI Houston homepage to reflect the new project-based service model. Modify the current content structure while keeping the existing design and layout.
+
+Key Changes Needed:
+
+**UPDATE HERO SECTION:**
+- Change main headline to: "AI Marketing Systems That Run Themselves"
+- Update sub-headline to: "We build professional AI marketing systems for Houston businesses. One-time setup, lifetime benefits. No monthly fees."
+- Keep existing CTA buttons but update text to "Get FREE System Audit" and "See Project Packages"
+- Add tagline under business name: "AI Marketing Systems Specialist"
+
+**REVISE SERVICE CARDS:**
+Replace existing service descriptions with project-based packages:
+
+1. **Google Business AI Domination** - $800-1,200
+   - Complete profile optimization + 6 months automated posting
+   - AI review response system + training included
+   - Delivered in 2 weeks, then you own it forever
+
+2. **AI Marketing System Setup** - $1,500-2,500  
+   - Custom AI content creation system you control
+   - Social media automation + email integration
+   - Delivered in 3 weeks with full training
+
+3. **Website + AI Optimization** - $2,500-5,000
+   - Complete AI-optimized website + smart chatbot
+   - Local SEO + conversion optimization included
+   - Delivered in 4 weeks, lifetime ownership
+
+**UPDATE VALUE PROPOSITIONS:**
+Replace existing messaging with:
+- "Own Your Marketing Systems" - No monthly fees, you control everything
+- "Professional Setup + Training" - We build it, teach you, support you
+- "Houston Local Expertise" - Deep understanding of local market
+- "One-Time Investment" - Build once, benefit forever
+
+**MODIFY TESTIMONIALS:**
+Update existing testimonial language to reflect project delivery:
+"Marketing AI Houston built us a complete marketing system that runs itself. No more monthly fees to agencies - we own everything and it works 24/7."
+
+Keep existing design, colors, layout, and navigation. Only update the content and messaging to reflect the project-based model. Maintain professional appearance and Houston local focus.

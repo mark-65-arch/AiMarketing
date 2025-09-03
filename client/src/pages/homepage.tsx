@@ -146,12 +146,17 @@ export default function Homepage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6" data-testid="hero-title" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-                <span className="text-blue-300">Transform Your Houston Business</span>{" "}
-                with AI Marketing
+                <span className="text-blue-300">AI Marketing Systems</span>{" "}
+                That Run Themselves
               </h1>
               <p className="text-xl md:text-2xl text-gray-100 mb-6 leading-relaxed max-w-3xl mx-auto" data-testid="hero-subtitle" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
-                We help Houston businesses save 15+ hours per week and dominate local search using proven AI marketing systems
+                We build professional AI marketing systems for Houston businesses. One-time setup, lifetime benefits. No monthly fees.
               </p>
+              <div className="mb-4">
+                <p className="text-lg font-medium text-blue-200" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+                  AI Marketing Systems Specialist
+                </p>
+              </div>
               <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
                 Proudly serving Houston and surrounding areas since 2024
               </p>
@@ -173,7 +178,7 @@ export default function Homepage() {
                   className="text-lg px-10 py-6 min-h-[56px] w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 font-bold" 
                   data-testid="button-primary-cta"
                 >
-                  <a href="#audit-form">Get FREE AI Marketing Audit</a>
+                  <a href="#audit-form">Get FREE System Audit</a>
                 </Button>
                 <Button 
                   asChild 
@@ -182,9 +187,9 @@ export default function Homepage() {
                   className="text-lg px-8 py-6 min-h-[56px] w-full sm:w-auto text-white border-white/50 hover:bg-white/10 transition-all duration-200 font-medium" 
                   data-testid="button-demo"
                 >
-                  <a href="/ai-tools" className="flex items-center justify-center gap-2">
+                  <a href="/services" className="flex items-center justify-center gap-2">
                     <Play className="w-5 h-5" />
-                    Watch 2-Minute Demo
+                    See Project Packages
                   </a>
                 </Button>
               </div>
@@ -276,7 +281,7 @@ export default function Homepage() {
                       ))}
                     </div>
                     <p className="text-lg text-gray-800 mb-4 leading-relaxed italic">
-                      "Marketing AI Houston helped us streamline our social media and online presence. We're now getting more qualified leads and spending less time on marketing tasks. The AI tools they taught us have been a game-changer for our small business."
+                      "Marketing AI Houston built us a complete marketing system that runs itself. No more monthly fees to agencies - we own everything and it works 24/7."
                     </p>
                     <div className="font-semibold text-gray-900">Sarah M.</div>
                     <div className="text-gray-600">Local Business Owner, Houston</div>
@@ -298,15 +303,15 @@ export default function Homepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Choose Your AI Marketing Solution
+              Choose Your Project Package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Proven services that help Houston businesses dominate their local market
+              Professional AI marketing systems built for you. One-time setup, lifetime ownership.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Service 1: AI Training Workshops */}
+            {/* Package 1: Google Business AI Domination */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -319,34 +324,34 @@ export default function Homepage() {
                     <Trophy className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                    AI Training Workshops
+                    Google Business AI Domination
                   </h3>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      Learn 25+ AI tools for marketing automation
+                      Complete profile optimization + 6 months automated posting
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      Hands-on training with real business examples
+                      AI review response system + training included
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      Certificate of completion + ongoing support
+                      Delivered in 2 weeks, then you own it forever
                     </li>
                   </ul>
                   <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">$150</div>
-                    <div className="text-gray-600">per person</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">$800-1,200</div>
+                    <div className="text-gray-600">one-time project</div>
                   </div>
                   <Button asChild className="w-full min-h-[48px]" size="lg">
-                    <a href="/ai-training">Learn More</a>
+                    <a href="/google-business-ai">Learn More</a>
                   </Button>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Service 2: Google Business Optimization */}
+            {/* Package 2: AI Marketing System Setup */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -364,34 +369,34 @@ export default function Homepage() {
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                    Google Business Optimization
+                    AI Marketing System Setup
                   </h3>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      AI-powered Google My Business optimization
+                      Custom AI content creation system you control
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      Local SEO domination in Houston market
+                      Social media automation + email integration
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      Review management and reputation building
+                      Delivered in 3 weeks with full training
                     </li>
                   </ul>
                   <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-green-600 mb-1">$397</div>
-                    <div className="text-gray-600">one-time setup</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">$1,500-2,500</div>
+                    <div className="text-gray-600">one-time project</div>
                   </div>
                   <Button asChild className="w-full min-h-[48px]" size="lg">
-                    <a href="/business-profile">Learn More</a>
+                    <a href="/ai-marketing-system">Learn More</a>
                   </Button>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Service 3: AI-Optimized Websites */}
+            {/* Package 3: Website + AI Optimization */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -404,28 +409,28 @@ export default function Homepage() {
                     <Shield className="w-8 h-8 text-purple-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                    AI-Optimized Websites
+                    Website + AI Optimization
                   </h3>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      AI-powered design and content optimization
+                      Complete AI-optimized website + smart chatbot
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      Mobile-first, conversion-focused design
+                      Local SEO + conversion optimization included
                     </li>
                     <li className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      Built-in chatbots and lead capture systems
+                      Delivered in 4 weeks, lifetime ownership
                     </li>
                   </ul>
                   <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-purple-600 mb-1">$1,200</div>
-                    <div className="text-gray-600">complete website</div>
+                    <div className="text-3xl font-bold text-purple-600 mb-1">$2,500-5,000</div>
+                    <div className="text-gray-600">complete project</div>
                   </div>
                   <Button asChild className="w-full min-h-[48px]" size="lg">
-                    <a href="/ai-websites">Learn More</a>
+                    <a href="/website-ai-optimization">Learn More</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -445,10 +450,10 @@ export default function Homepage() {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get Your FREE AI Marketing Audit
+              Get Your FREE AI System Audit
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Discover exactly how AI can transform your Houston business and increase your customer flow
+              Discover which AI marketing system is right for your Houston business. Free consultation, no obligations.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -457,15 +462,15 @@ export default function Homepage() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3 text-blue-100">
                     <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span>Complete AI readiness assessment for your business</span>
+                    <span>Assessment of which AI system fits your business needs</span>
                   </li>
                   <li className="flex items-start gap-3 text-blue-100">
                     <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span>Customized AI marketing strategy for Houston market</span>
+                    <span>Project timeline and deliverables breakdown</span>
                   </li>
                   <li className="flex items-start gap-3 text-blue-100">
                     <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span>ROI projections showing potential revenue increase</span>
+                    <span>One-time investment breakdown with no hidden fees</span>
                   </li>
                 </ul>
               </div>
@@ -499,7 +504,7 @@ export default function Homepage() {
                           className="w-full h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 min-h-[56px]"
                           data-testid="audit-submit-button"
                         >
-                          {auditMutation.isPending ? "Sending..." : "Get My FREE Audit"}
+                          {auditMutation.isPending ? "Sending..." : "Get My FREE System Audit"}
                         </Button>
                       </form>
                     </Form>
@@ -537,7 +542,7 @@ export default function Homepage() {
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-10 h-10 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Local Houston Experts</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Houston Local Expertise</h3>
               <p className="text-gray-600">
                 Deep understanding of Houston's unique market dynamics and customer behavior patterns
               </p>
@@ -553,9 +558,9 @@ export default function Homepage() {
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Proven AI Systems</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Own Your Marketing Systems</h3>
               <p className="text-gray-600">
-                Battle-tested AI marketing systems that have generated millions in revenue for local businesses
+                No monthly fees, you control everything. Build once, benefit forever with systems that work 24/7.
               </p>
             </motion.div>
 
@@ -569,9 +574,9 @@ export default function Homepage() {
               <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-10 h-10 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Guaranteed Results</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Professional Setup + Training</h3>
               <p className="text-gray-600">
-                We're so confident in our systems, we guarantee measurable results within 90 days or work for free
+                We build it, teach you how to use it, and support you. One-time investment for lifetime benefits.
               </p>
             </motion.div>
           </div>
