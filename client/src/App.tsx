@@ -28,6 +28,21 @@ import ClearLakeAIMarketing from "@/pages/clear-lake-ai-marketing";
 import LeagueCityAIMarketing from "@/pages/league-city-ai-marketing";
 import PasadenaAIMarketing from "@/pages/pasadena-ai-marketing";
 import CypressAIMarketing from "@/pages/cypress-ai-marketing";
+
+// Blog and Resource Pages
+import Blog from "@/pages/blog";
+import HoustonAIMarketingGuide from "@/pages/houston-ai-marketing-guide";
+import AIToolsSmallBusiness from "@/pages/ai-tools-small-business";
+import AIMarketingChecklist from "@/pages/ai-marketing-checklist";
+import HoustonBusinessResources from "@/pages/houston-business-resources";
+
+// Blog Articles
+import HowAIHelpsHoustonRestaurants from "@/pages/how-ai-helps-houston-restaurants";
+import AIVsTraditionalMarketing from "@/pages/ai-vs-traditional-marketing";
+import GoogleBusinessProfileAIOptimization from "@/pages/google-business-profile-ai-optimization";
+import AIContentCreationGuide from "@/pages/ai-content-creation-guide";
+import VoiceSearchOptimizationHouston from "@/pages/voice-search-optimization-houston";
+
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -63,6 +78,21 @@ function Router() {
         <Route path="/ai-marketing-league-city-texas" component={LeagueCityAIMarketing}/>
         <Route path="/ai-marketing-pasadena-texas" component={PasadenaAIMarketing}/>
         <Route path="/ai-marketing-cypress-texas" component={CypressAIMarketing}/>
+        
+        {/* Blog and Resource Pages */}
+        <Route path="/blog" component={Blog}/>
+        <Route path="/houston-ai-marketing-guide" component={HoustonAIMarketingGuide}/>
+        <Route path="/ai-tools-small-business" component={AIToolsSmallBusiness}/>
+        <Route path="/ai-marketing-checklist" component={AIMarketingChecklist}/>
+        <Route path="/houston-business-resources" component={HoustonBusinessResources}/>
+        
+        {/* Blog Articles */}
+        <Route path="/how-ai-helps-houston-restaurants" component={HowAIHelpsHoustonRestaurants}/>
+        <Route path="/ai-vs-traditional-marketing" component={AIVsTraditionalMarketing}/>
+        <Route path="/google-business-profile-ai-optimization" component={GoogleBusinessProfileAIOptimization}/>
+        <Route path="/ai-content-creation-guide" component={AIContentCreationGuide}/>
+        <Route path="/voice-search-optimization-houston" component={VoiceSearchOptimizationHouston}/>
+        
         <Route component={NotFound} />
       </Switch>
       <Footer />
