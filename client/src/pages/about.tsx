@@ -1,20 +1,28 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { 
-  BrainCircuit, 
   CheckCircle, 
-  Users, 
-  Award, 
+  Star, 
   Target, 
-  Heart, 
   TrendingUp,
+  Users,
+  Zap,
+  Brain,
+  Heart,
+  Home,
+  DollarSign,
+  Clock,
+  Shield,
+  Award,
+  Lightbulb,
   MapPin,
-  GraduationCap,
-  Building
+  Phone,
+  Mail
 } from "lucide-react";
-import logoWide from "@assets/Logo3-ezgif.com-optipng_1756914512078.png";
+import houstonSkylineImage from "@assets/houston-skyline.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Navigation } from "@/components/Navigation";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);
@@ -34,118 +42,56 @@ const AnimatedSection = ({ children, className = "" }: { children: React.ReactNo
 };
 
 export default function About() {
-  const benefits = [
-    {
-      icon: <Target className="w-6 h-6 text-primary" />,
-      title: "AI-Native from Day One",
-      description: "Growing up with AI technology means I understand its potential in ways traditional marketers simply can't."
-    },
-    {
-      icon: <GraduationCap className="w-6 h-6 text-primary" />,
-      title: "Young is Our Advantage",
-      description: "Being young in technology means faster adoption, innovative thinking, and staying ahead of industry changes."
-    },
-    {
-      icon: <MapPin className="w-6 h-6 text-primary" />,
-      title: "Deep Houston Roots",
-      description: "Born and raised in Houston, with family business experience spanning multiple generations in our community."
-    },
-    {
-      icon: <Users className="w-6 h-6 text-primary" />,
-      title: "Education-First Philosophy",
-      description: "I believe in empowering clients with knowledge, not creating dependency. Your success is my success."
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-primary" />,
-      title: "Future-Focused Results",
-      description: "While others catch up to yesterday's trends, we're already implementing tomorrow's solutions."
-    }
-  ];
-
-  const values = [
-    {
-      icon: <Heart className="w-8 h-8 text-primary" />,
-      title: "Authentic Leadership",
-      description: "Being young means being genuine about what I know and what I'm learning. No false promises - just honest expertise and commitment to your success."
-    },
-    {
-      icon: <GraduationCap className="w-8 h-8 text-primary" />,
-      title: "Education-First",
-      description: "I believe in empowering business owners with knowledge. Your success grows when you understand AI, not just use it."
-    },
-    {
-      icon: <CheckCircle className="w-8 h-8 text-primary" />,
-      title: "Future-Focused Results",
-      description: "While others catch up to today's technology, I implement tomorrow's solutions. Your business stays ahead of the competition."
-    }
-  ];
-
-  const stats = [
-    { number: "Growing", label: "Houston business network" },
-    { number: "Results Vary", label: "Based on individual circumstances" },
-    { number: "3-8hrs", label: "Typical time savings reported" }
-  ];
-
   return (
     <div className="bg-background font-sans antialiased">
       {/* Navigation */}
-      <nav className="bg-background/95 backdrop-blur-sm border-b border-border fixed top-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <a href="/" data-testid="nav-logo">
-                <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
-              </a>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-home">Home</a>
-                <a href="/about" className="text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">About</a>
-                <a href="/services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
-                <a href="/services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
-                <a href="/contact" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">Contact</a>
-                <a href="/contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-background to-muted/30 py-20 lg:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* HERO SECTION */}
+      <section 
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${houstonSkylineImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          paddingTop: '64px',
+          minHeight: '80vh'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/60"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-32">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
             <div className="lg:col-span-7">
               <AnimatedSection>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
-                  <span className="gradient-text">Houston's Next-Generation</span>
-                  <br />AI Marketing Specialist
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6" data-testid="hero-title" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+                  Meet Houston's <span className="text-blue-300">AI Marketing Specialist</span>
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
-                  Where digital native meets Houston business expertise. As a young entrepreneur who grew up with AI technology, I see opportunities others miss and make cutting-edge AI marketing accessible to Houston's small businesses.
+                <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed" data-testid="hero-subtitle" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+                  Fresh perspective, cutting-edge technology, unbeatable value
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-get-started">
+                  <Button asChild size="lg" className="text-lg px-8 py-4 text-white bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-get-started">
                     <a href="/contact">Start Your AI Journey</a>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-learn-more">
-                    <a href="/services">View Our Services</a>
+                  <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 text-gray-900 bg-white/90 border-white hover:bg-white hover:text-gray-900 transition-all duration-200" data-testid="button-services">
+                    <a href="/services">View Services</a>
                   </Button>
                 </div>
               </AnimatedSection>
             </div>
             <div className="mt-12 lg:mt-0 lg:col-span-5">
               <AnimatedSection>
-                <Card className="shadow-xl bg-card/50 backdrop-blur-sm border-primary/20" data-testid="founder-card">
+                <Card className="shadow-xl bg-white/95 backdrop-blur-sm border-0" data-testid="founder-card">
                   <CardContent className="p-8 text-center">
-                    <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <div className="w-24 h-24 bg-muted rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold text-foreground">Founder Photo</span>
+                    <div className="w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
+                        <span className="text-sm font-bold text-gray-700">[Your Name]</span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Next-Generation Leadership</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      Father-son team combining business experience with AI innovation. Fresh perspective meets proven technology, with deep Houston roots and community connection.
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Founder & AI Marketing Specialist</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Professional photo placeholder
                     </p>
                   </CardContent>
                 </Card>
@@ -153,224 +99,283 @@ export default function About() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Success Stats */}
-        <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* PERSONAL STORY SECTION */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              {stats.map((stat, index) => (
-                <div key={index} className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-primary/20" data-testid={`stat-${index}`}>
-                  <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                  <div className="text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                The AI Marketing Advantage
+              </h2>
+            </div>
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
+              <p>
+                As someone who grew up with artificial intelligence technology, I see opportunities that traditional marketers miss. While other agencies are just learning about AI tools, I've been using them to solve real business problems.
+              </p>
+              <p>
+                My mission is simple: make advanced AI marketing accessible and affordable for Houston's small businesses. No corporate overhead, no monthly retainer fees, no complicated contracts - just professional AI systems that you own and control.
+              </p>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-background">
+      {/* WHY CHOOSE HOME-BASED SPECIALIST */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Why Choose a Home-Based AI Specialist
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Working from home isn't just convenient - it's a competitive advantage that benefits you directly
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Lower Costs, Higher Value */}
+            <AnimatedSection>
+              <Card className="shadow-xl h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                    <DollarSign className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Lower Costs, Higher Value</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>No expensive office rent = savings passed to you</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>No corporate overhead = competitive project pricing</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>Direct access to the specialist, not account managers</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>Personal attention to your specific business needs</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* Technology Advantage */}
+            <AnimatedSection>
+              <Card className="shadow-xl h-full">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                    <Zap className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Technology Advantage</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <span>Native understanding of AI tools and capabilities</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <span>Latest AI techniques applied to Houston market</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <span>Fresh perspective on traditional marketing challenges</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <span>Rapid implementation without corporate bureaucracy</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCAL HOUSTON FOCUS */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-            <AnimatedSection>
-              <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Houston skyline representing our local community focus" 
-                className="rounded-2xl shadow-xl w-full" 
-                data-testid="mission-image"
-              />
-            </AnimatedSection>
+            <div>
+              <AnimatedSection>
+                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                  <MapPin className="w-8 h-8 text-red-600" />
+                </div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                  Local Houston Focus
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Born and raised in Houston, I understand:
+                </p>
+                <ul className="space-y-4 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <Star className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                    <span>Local business challenges and opportunities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Star className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                    <span>Houston market dynamics and customer behavior</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Star className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                    <span>Community connections and networking importance</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Star className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                    <span>Suburban vs urban market differences</span>
+                  </li>
+                </ul>
+              </AnimatedSection>
+            </div>
             <div className="mt-12 lg:mt-0">
               <AnimatedSection>
-                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                  <BrainCircuit className="w-8 h-8 text-primary" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6" data-testid="mission-title">
-                  My Mission
-                </h2>
-                <p className="text-xl text-muted-foreground mb-6 leading-relaxed" data-testid="mission-description">
-                  Making cutting-edge AI marketing accessible to Houston's small businesses.
-                </p>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  AI marketing is the future, and that future is now. As someone who grew up alongside artificial intelligence technology, I see opportunities that traditional marketers miss. My mission is to bridge that gap for Houston businesses - bringing tomorrow's marketing strategies to today's local companies with fresh perspective, proven technology, and unwavering local focus.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-foreground">AI is the Future</div>
-                      <div className="text-muted-foreground text-sm">Every business will use AI marketing - I help you get there first</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-foreground">Young Advantage</div>
-                      <div className="text-muted-foreground text-sm">Growing up with technology means faster innovation and adoption</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-foreground">Education & Success</div>
-                      <div className="text-muted-foreground text-sm">Committed to teaching clients AI strategies for long-term success</div>
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1583416750470-965b2707b355?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  alt="Houston downtown skyline" 
+                  className="rounded-2xl shadow-xl w-full" 
+                />
               </AnimatedSection>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 demo-container">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="benefits-title">
-                Why Work with a Next-Generation AI Expert?
+      {/* MY COMMITMENT */}
+      <section className="py-20 bg-blue-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <Shield className="w-16 h-16 text-white mx-auto mb-6" />
+              <h2 className="text-4xl font-bold text-white mb-6">
+                My Commitment to You
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="benefits-subtitle">
-                Fresh perspective meets proven technology. I bring the advantage of growing up with AI while understanding Houston's local business needs.
-              </p>
-            </AnimatedSection>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <AnimatedSection key={index} className="hover-lift">
-                <Card className="h-full shadow-sm" data-testid={`benefit-card-${index}`}>
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                      {benefit.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-card-foreground mb-4" data-testid={`benefit-title-${index}`}>
-                      {benefit.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed" data-testid={`benefit-description-${index}`}>
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 text-white">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-blue-300 mt-1 flex-shrink-0" />
+                  <span>Honest assessment of what AI can and cannot do for your business</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-blue-300 mt-1 flex-shrink-0" />
+                  <span>Complete transparency in pricing and project scope</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-blue-300 mt-1 flex-shrink-0" />
+                  <span>Systems you own forever, not rent monthly</span>
+                </li>
+              </ul>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-blue-300 mt-1 flex-shrink-0" />
+                  <span>Personal support and training throughout the project</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-blue-300 mt-1 flex-shrink-0" />
+                  <span>30-day follow-up to ensure your success</span>
+                </li>
+              </ul>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-background">
+      {/* CREDENTIALS & APPROACH */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="grid md:grid-cols-2 gap-12">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="values-title">
-                My Core Values
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="values-subtitle">
-                The principles that guide how I serve Houston businesses with next-generation AI marketing.
-              </p>
-            </AnimatedSection>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <AnimatedSection key={index} className="text-center hover-lift">
-                <Card className="h-full shadow-sm" data-testid={`value-card-${index}`}>
-                  <CardContent className="p-8">
-                    <div className="w-20 h-20 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                      {value.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-4" data-testid={`value-title-${index}`}>
-                      {value.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed" data-testid={`value-description-${index}`}>
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Community Involvement Section */}
-      <section className="py-20 demo-container">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="community-title">
-                Deep Houston Roots & Community Connection
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="community-subtitle">
-                Born and raised in Houston with family business experience spanning generations. My commitment to our city's success runs deep.
-              </p>
-            </AnimatedSection>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <div className="space-y-8">
-                <div className="flex items-start">
-                  <Building className="w-8 h-8 text-primary mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Next-Generation Networking</h3>
-                    <p className="text-muted-foreground">
-                      Building bridges between traditional Houston business leaders and the new AI-powered economy.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Users className="w-8 h-8 text-primary mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Young Entrepreneur Leadership</h3>
-                    <p className="text-muted-foreground">
-                      Active in Houston's young professional community, bridging the gap between AI innovation and local business needs.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Award className="w-8 h-8 text-primary mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">AI Education Advocate</h3>
-                    <p className="text-muted-foreground">
-                      Passionate about teaching Houston businesses that AI isn't scary - it's the competitive advantage they've been looking for.
-                    </p>
-                  </div>
-                </div>
+              <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-purple-600" />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Credentials & Approach</h3>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <Lightbulb className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <span>Certified in leading AI marketing platforms</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Lightbulb className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <span>Continuous learning in emerging AI technologies</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Lightbulb className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <span>Focus on practical, measurable business results</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Lightbulb className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <span>Education-first approach - I teach, not just implement</span>
+                </li>
+              </ul>
             </AnimatedSection>
 
             <AnimatedSection>
-              <img 
-                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Houston business community meeting" 
-                className="rounded-2xl shadow-xl w-full" 
-                data-testid="community-image"
-              />
+              <div className="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                <Target className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Project-Based Philosophy</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                I believe in building systems you own and control. Unlike traditional agencies that want monthly retainers, I create AI marketing systems that work for you 24/7 without ongoing fees.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                You get the technology advantage without the corporate markup.
+              </p>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-background">
+      {/* CONTACT INFO UPDATE */}
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6" data-testid="cta-title">
-              Ready to Transform Your Business with AI?
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="cta-description">
-              Join the growing community of Houston businesses using AI to dominate their markets. Let's discuss how we can help your business thrive in the age of artificial intelligence.
+            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+              Schedule a free 15-minute consultation to discuss your business goals and see if AI marketing is right for you.
             </p>
+
+            {/* Contact Information */}
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-blue-600" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Call</h4>
+                <p className="text-gray-600">(713) 555-0123</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-green-600" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Email</h4>
+                <p className="text-gray-600">info@marketingaihouston.com</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-purple-600" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Service Area</h4>
+                <p className="text-gray-600">Serving Greater Houston Area</p>
+                <p className="text-sm text-gray-500 mt-1">Remote consultations available</p>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-get-consultation">
-                <a href="/contact">Get Free Consultation</a>
+              <Button asChild size="lg" className="text-lg px-8 py-4 bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-consultation">
+                <a href="/contact">Schedule Free Consultation</a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-view-services">
-                <a href="/services">View All Services</a>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-gray-50 transition-all duration-200" data-testid="button-assessment">
+                <a href="/assessment">Take Free Assessment</a>
               </Button>
             </div>
           </AnimatedSection>
