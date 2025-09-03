@@ -103,7 +103,7 @@ export default function CypressAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Cypress",
+      "name": "Marketing AI Houston - Cypress",
       "description": "AI Marketing Services for Cypress businesses. Local AI solutions for family businesses, home services, and local retailers in Cypress area.",
       "address": {
         "@type": "PostalAddress",

@@ -103,7 +103,7 @@ export default function DowntownAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Downtown",
+      "name": "Marketing AI Houston - Downtown",
       "description": "AI Marketing Services for Downtown Houston businesses. Local AI solutions for corporate clients, financial services, and restaurants in Downtown Houston's business district.",
       "address": {
         "@type": "PostalAddress",

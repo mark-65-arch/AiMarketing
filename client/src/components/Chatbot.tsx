@@ -34,7 +34,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
       const timer = setTimeout(() => {
         setIsOpen(true);
         addBotMessage(
-          "👋 Hello! I'm Sarah, your AI marketing assistant from Houston AI Marketing. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
+          "👋 Hello! I'm Sarah, your AI marketing assistant from Marketing AI Houston. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
           ["Restaurant", "Retail Store", "Professional Service", "Home Service", "Other"]
         );
       }, 45000); // 45 seconds
@@ -231,7 +231,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     
     setTimeout(() => {
       addBotMessage(
-        "👋 Hello! I'm Sarah, your AI marketing assistant from Houston AI Marketing. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
+        "👋 Hello! I'm Sarah, your AI marketing assistant from Marketing AI Houston. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
         ["Restaurant", "Retail Store", "Professional Service", "Home Service", "Other"]
       );
     }, 500);
@@ -243,7 +243,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
     
     if (messages.length === 0) {
       addBotMessage(
-        "👋 Hello! I'm Sarah, your AI marketing assistant from Houston AI Marketing. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
+        "👋 Hello! I'm Sarah, your AI marketing assistant from Marketing AI Houston. I help local business owners discover how AI can save them time and attract more customers. What type of business do you own?",
         ["Restaurant", "Retail Store", "Professional Service", "Home Service", "Other"]
       );
     }
@@ -309,7 +309,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ autoOpenOnHomepage = false }) => {
                   <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-xs sm:text-sm leading-tight">Houston AI Marketing</h3>
+                  <h3 className="font-semibold text-xs sm:text-sm leading-tight">Marketing AI Houston</h3>
                   <p className="text-xs opacity-90 leading-tight">AI Marketing Assistant</p>
                 </div>
               </div>

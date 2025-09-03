@@ -56,7 +56,7 @@ interface WebPageSchemaProps {
 }
 
 export function LocalBusinessSchema({
-  businessName = "Houston AI Marketing",
+  businessName = "Marketing AI Houston",
   description = "Houston's premier AI marketing agency helping local businesses grow with artificial intelligence technology, automation, and digital marketing strategies.",
   address = {
     streetAddress: "Houston Business District",
@@ -321,7 +321,7 @@ export function WebPageSchema({ title, description, url, breadcrumbs }: WebPageS
       "url": url,
       "isPartOf": {
         "@type": "WebSite",
-        "name": "Houston AI Marketing",
+        "name": "Marketing AI Houston",
         "url": "https://houstonaimarketing.com"
       },
       ...(breadcrumbs && {

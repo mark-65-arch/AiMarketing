@@ -113,7 +113,7 @@ function formatSegmentName(segment: string): string {
     'assessment': 'Assessment',
     'blog': 'Blog',
     'free-ai-marketing-audit': 'Free AI Marketing Audit',
-    'houston-ai-marketing-guide': 'Houston AI Marketing Guide',
+    'houston-ai-marketing-guide': 'Marketing AI Houston Guide',
     'ai-tools-checklist': 'AI Tools Checklist',
     '30-day-ai-calendar': '30-Day AI Calendar',
     'ai-roi-calculator': 'AI ROI Calculator',

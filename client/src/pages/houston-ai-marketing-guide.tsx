@@ -296,7 +296,7 @@ export default function HoustonAIMarketingGuide() {
           <AnimatedSection>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="opportunity-title">
-                The Houston AI Marketing Opportunity
+                The Marketing AI Houston Opportunity
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Houston's massive market and competitive landscape make AI marketing essential for business success

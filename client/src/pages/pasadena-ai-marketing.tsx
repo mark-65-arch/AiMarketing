@@ -103,7 +103,7 @@ export default function PasadenaAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Pasadena",
+      "name": "Marketing AI Houston - Pasadena",
       "description": "AI Marketing Services for Pasadena businesses. Local AI solutions for industrial services, local businesses, and contractors in Pasadena area.",
       "address": {
         "@type": "PostalAddress",

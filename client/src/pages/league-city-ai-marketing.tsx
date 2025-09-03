@@ -103,7 +103,7 @@ export default function LeagueCityAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - League City",
+      "name": "Marketing AI Houston - League City",
       "description": "AI Marketing Services for League City businesses. Local AI solutions for professional services and family businesses in League City area.",
       "address": {
         "@type": "PostalAddress",

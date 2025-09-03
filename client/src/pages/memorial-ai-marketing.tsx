@@ -103,7 +103,7 @@ export default function MemorialAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Memorial",
+      "name": "Marketing AI Houston - Memorial",
       "description": "AI Marketing Services for Memorial Area Houston businesses. Local AI solutions for upscale services, family businesses, and professional services in Memorial Area.",
       "address": {
         "@type": "PostalAddress",

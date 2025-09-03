@@ -101,7 +101,7 @@ export default function HeightsAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Heights",
+      "name": "Marketing AI Houston - Heights",
       "description": "AI Marketing Services for The Heights Houston businesses. Local AI solutions for restaurants, shops, and services in Houston Heights.",
       "address": {
         "@type": "PostalAddress",

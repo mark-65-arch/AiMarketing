@@ -103,7 +103,7 @@ export default function SugarLandAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Sugar Land",
+      "name": "Marketing AI Houston - Sugar Land",
       "description": "AI Marketing Services for Sugar Land businesses. Local AI solutions for professional services, family restaurants, and retail businesses in Sugar Land area.",
       "address": {
         "@type": "PostalAddress",

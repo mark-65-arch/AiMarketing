@@ -190,7 +190,7 @@ const workshops = [
 
 const communityResources = [
   {
-    title: "Houston AI Marketing Community",
+    title: "Marketing AI Houston Community",
     description: "Join 500+ Houston business owners sharing AI marketing strategies and results",
     members: "500+",
     platform: "Private Facebook Group",

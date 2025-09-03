@@ -103,7 +103,7 @@ export default function PearlandAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Pearland",
+      "name": "Marketing AI Houston - Pearland",
       "description": "AI Marketing Services for Pearland businesses. Local AI solutions for growing family businesses and service providers in Pearland area.",
       "address": {
         "@type": "PostalAddress",

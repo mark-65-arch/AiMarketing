@@ -69,7 +69,7 @@ export default function ThankYou() {
             "Download the 87-page guide from your email",
             "Start with Chapter 1: AI Marketing Fundamentals",
             "Set up your first AI tool using our step-by-step instructions",
-            "Join our Houston AI Marketing community for ongoing support"
+            "Join our Marketing AI Houston community for ongoing support"
           ]
         };
       case 'checklist':
@@ -116,7 +116,7 @@ export default function ThankYou() {
           icon: <CheckCircle className="w-16 h-16 text-primary" />,
           title: "Thank You for Your Interest!",
           subtitle: "We'll be in touch soon",
-          description: "Thank you for reaching out to Houston AI Marketing. We've received your information and will follow up with you soon with valuable AI marketing insights for your business.",
+          description: "Thank you for reaching out to Marketing AI Houston. We've received your information and will follow up with you soon with valuable AI marketing insights for your business.",
           nextSteps: [
             "Check your email for confirmation",
             "Follow us on social media for daily AI tips",
@@ -161,7 +161,7 @@ export default function ThankYou() {
       icon: <BrainCircuit className="w-6 h-6" />
     },
     {
-      title: "Houston AI Marketing Guide",
+      title: "Marketing AI Houston Guide",
       description: "87-page comprehensive guide to AI marketing",
       href: "/houston-business-ai-guide",
       icon: <BookOpen className="w-6 h-6" />

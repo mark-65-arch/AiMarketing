@@ -103,7 +103,7 @@ export default function WoodlandsAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - The Woodlands",
+      "name": "Marketing AI Houston - The Woodlands",
       "description": "AI Marketing Services for The Woodlands businesses. Local AI solutions for professional services, medical practices, and family businesses in The Woodlands area.",
       "address": {
         "@type": "PostalAddress",

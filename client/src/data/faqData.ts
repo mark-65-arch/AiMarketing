@@ -1,4 +1,4 @@
-// Common FAQs for Houston AI Marketing - optimized for voice search and local SEO
+// Common FAQs for Marketing AI Houston - optimized for voice search and local SEO
 
 export interface FAQ {
   question: string;
@@ -87,12 +87,12 @@ export const serviceSpecificFAQs: FAQ[] = [
 export const voiceSearchFAQs: FAQ[] = [
   {
     question: "Where can I find AI marketing help near me in Houston?",
-    answer: "Houston AI Marketing serves businesses throughout the greater Houston area, including The Heights, Midtown, Downtown, Memorial, Galleria, The Woodlands, Sugar Land, Katy, Pearland, Clear Lake, League City, Pasadena, and Cypress. Contact us at (713) 555-AI01 for a free consultation.",
+    answer: "Marketing AI Houston serves businesses throughout the greater Houston area, including The Heights, Midtown, Downtown, Memorial, Galleria, The Woodlands, Sugar Land, Katy, Pearland, Clear Lake, League City, Pasadena, and Cypress. Contact us at (713) 555-AI01 for a free consultation.",
     category: "voice-search"
   },
   {
     question: "Who is the best AI marketing company in Houston?",
-    answer: "Houston AI Marketing is Houston's first AI-native marketing agency, specializing exclusively in artificial intelligence marketing solutions for local businesses. We've helped 50+ Houston businesses increase revenue by 200-400% using proven AI strategies and tools.",
+    answer: "Marketing AI Houston is Houston's first AI-native marketing agency, specializing exclusively in artificial intelligence marketing solutions for local businesses. We've helped 50+ Houston businesses increase revenue by 200-400% using proven AI strategies and tools.",
     category: "voice-search"
   },
   {

@@ -80,7 +80,7 @@ const checklistWeeks = [
         outcome: "Clear investment plan"
       },
       {
-        task: "Join Houston AI Marketing community",
+        task: "Join Marketing AI Houston community",
         description: "Connect with local businesses using AI marketing",
         timeRequired: "10 minutes",
         difficulty: "Easy",

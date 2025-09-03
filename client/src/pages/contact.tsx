@@ -157,7 +157,7 @@ export default function Contact() {
             <AnimatedSection>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
                 Contact{" "}
-                <span className="gradient-text">Houston AI Marketing</span>
+                <span className="gradient-text">Marketing AI Houston</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto" data-testid="hero-subtitle">
                 Ready to transform your Houston business with AI marketing? Get in touch with us today for a free consultation and discover how artificial intelligence can drive your growth.

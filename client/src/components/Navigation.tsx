@@ -51,7 +51,7 @@ export function Navigation({ className = "" }: NavigationProps) {
     ],
     resources: [
       { name: "Blog", href: "/blog", description: "Latest AI marketing insights and tips" },
-      { name: "Houston AI Marketing Guide", href: "/houston-ai-marketing-guide", description: "Complete guide to AI marketing in Houston" },
+      { name: "Marketing AI Houston Guide", href: "/houston-ai-marketing-guide", description: "Complete guide to AI marketing in Houston" },
       { name: "AI Tools for Small Business", href: "/ai-tools-small-business", description: "Essential AI tools for small businesses" },
       { name: "AI Marketing Checklist", href: "/ai-marketing-checklist", description: "Step-by-step AI marketing checklist" },
       { name: "Houston Business Resources", href: "/houston-business-resources", description: "Local business resources and directories" },
@@ -86,7 +86,7 @@ export function Navigation({ className = "" }: NavigationProps) {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" data-testid="nav-logo">
-              <img src={logoWide} alt="Houston AI Marketing" className="h-10 w-auto" />
+              <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
             </a>
           </div>
 

@@ -103,7 +103,7 @@ export default function GalleriaAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Galleria",
+      "name": "Marketing AI Houston - Galleria",
       "description": "AI Marketing Services for Galleria District Houston businesses. Local AI solutions for luxury retail, upscale dining, and professional services in Houston's premier shopping district.",
       "address": {
         "@type": "PostalAddress",

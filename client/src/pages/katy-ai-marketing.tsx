@@ -103,7 +103,7 @@ export default function KatyAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Katy",
+      "name": "Marketing AI Houston - Katy",
       "description": "AI Marketing Services for Katy businesses. Local AI solutions for family-owned businesses, home services, and local retailers in Katy area.",
       "address": {
         "@type": "PostalAddress",

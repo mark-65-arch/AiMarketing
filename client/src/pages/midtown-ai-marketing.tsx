@@ -103,7 +103,7 @@ export default function MidtownAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Midtown",
+      "name": "Marketing AI Houston - Midtown",
       "description": "AI Marketing Services for Midtown Houston businesses. Local AI solutions for restaurants, professional services, and retail in Midtown Houston.",
       "address": {
         "@type": "PostalAddress",

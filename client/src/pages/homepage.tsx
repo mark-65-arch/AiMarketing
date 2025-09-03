@@ -74,7 +74,7 @@ export default function Homepage() {
   const { toast } = useToast();
 
   // SEO and FAQ data
-  const pageTitle = "Houston AI Marketing | #1 AI Marketing Agency in Houston, TX";
+  const pageTitle = "Marketing AI Houston | #1 AI Marketing Agency in Houston, TX";
   const pageDescription = "Transform your Houston business with AI marketing. Increase leads by 200-400% and save 15+ hours weekly. Serving Heights, Midtown, Katy, Sugar Land & all Houston suburbs. Free $500 audit!";
   const pageKeywords = generateLocationKeywords("Houston", "AI Marketing");
   const canonicalUrl = "https://houstonaimarketing.com/";
@@ -213,10 +213,10 @@ export default function Homepage() {
         description={pageDescription}
         keywords={pageKeywords}
         canonicalUrl={canonicalUrl}
-        ogTitle="Houston AI Marketing - Transform Your Business with AI"
+        ogTitle="Marketing AI Houston - Transform Your Business with AI"
         ogDescription={pageDescription}
         ogImage="https://houstonaimarketing.com/images/houston-ai-marketing-og.jpg"
-        twitterTitle="Houston AI Marketing - #1 AI Agency in Houston"
+        twitterTitle="Marketing AI Houston - #1 AI Agency in Houston"
         twitterDescription={pageDescription}
         twitterImage="https://houstonaimarketing.com/images/houston-ai-marketing-twitter.jpg"
       />
@@ -491,7 +491,7 @@ export default function Homepage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-foreground mb-2">
-                        Complete Houston AI Marketing Guide
+                        Complete Marketing AI Houston Guide
                       </h3>
                       <p className="text-muted-foreground text-sm mb-3">
                         87-page comprehensive guide + $1,188 in bonuses

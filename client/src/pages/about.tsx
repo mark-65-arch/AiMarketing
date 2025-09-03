@@ -119,7 +119,7 @@ export default function About() {
               <AnimatedSection>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
                   About{" "}
-                  <span className="gradient-text">Houston AI Marketing</span>
+                  <span className="gradient-text">Marketing AI Houston</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
                   Making AI marketing accessible and affordable for every Houston small business. We're Houston's first AI-native marketing agency, founded by a young entrepreneur passionate about helping local businesses succeed with artificial intelligence.
@@ -230,7 +230,7 @@ export default function About() {
           <div className="text-center mb-16">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="benefits-title">
-                Why Choose Houston AI Marketing?
+                Why Choose Marketing AI Houston?
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="benefits-subtitle">
                 We're not just another marketing agency. We're Houston's AI-native marketing experts, built specifically for the artificial intelligence era.

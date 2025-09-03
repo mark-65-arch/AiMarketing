@@ -93,7 +93,7 @@ export function SEOHead({
     updateMetaTag('og:type', ogType, true);
     updateMetaTag('og:image', ogImage, true);
     updateMetaTag('og:url', canonicalUrl || window.location.href, true);
-    updateMetaTag('og:site_name', 'Houston AI Marketing', true);
+    updateMetaTag('og:site_name', 'Marketing AI Houston', true);
 
     // Twitter Card meta tags
     updateMetaTag('twitter:card', twitterCard);
@@ -103,7 +103,7 @@ export function SEOHead({
     updateMetaTag('twitter:site', '@houstonaimarket');
 
     // Additional SEO meta tags
-    updateMetaTag('author', 'Houston AI Marketing');
+    updateMetaTag('author', 'Marketing AI Houston');
     updateMetaTag('viewport', 'width=device-width, initial-scale=1');
     updateMetaTag('theme-color', '#1e40af');
 
@@ -185,7 +185,7 @@ export const houstonLocationSEO = {
     "Cypress, TX"
   ],
   businessData: {
-    name: "Houston AI Marketing",
+    name: "Marketing AI Houston",
     description: "Houston's premier AI marketing agency helping local businesses grow with artificial intelligence technology, automation, and digital marketing strategies.",
     phone: "(713) 555-AI01",
     email: "hello@houstonaimarketing.com",
@@ -234,7 +234,7 @@ export function generateServiceStructuredData(
     "description": description,
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing",
+      "name": "Marketing AI Houston",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Houston",

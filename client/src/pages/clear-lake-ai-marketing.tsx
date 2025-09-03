@@ -103,7 +103,7 @@ export default function ClearLakeAIMarketing() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Houston AI Marketing - Clear Lake",
+      "name": "Marketing AI Houston - Clear Lake",
       "description": "AI Marketing Services for Clear Lake businesses. Local AI solutions for tech companies, marine-related businesses, and local services in Clear Lake area.",
       "address": {
         "@type": "PostalAddress",
