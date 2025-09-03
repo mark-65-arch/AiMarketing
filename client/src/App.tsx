@@ -4,7 +4,6 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Chatbot from "@/components/Chatbot";
 import Footer from "@/components/Footer";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import Homepage from "@/pages/homepage";
@@ -112,7 +111,6 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
       <Footer />
-      <Chatbot autoOpenOnHomepage={isHomepage} />
     </>
   );
 }
