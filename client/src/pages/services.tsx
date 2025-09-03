@@ -14,7 +14,13 @@ import {
   Trophy,
   Shield,
   Play,
-  Star
+  Star,
+  Calendar,
+  FileText,
+  Settings,
+  Camera,
+  MessageSquare,
+  DollarSign
 } from "lucide-react";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
 import { Button } from "@/components/ui/button";
@@ -47,17 +53,27 @@ export default function Services() {
       timeline: "2 weeks",
       href: "/business-profile",
       icon: <Trophy className="w-8 h-8 text-blue-600" />,
-      description: "Transform your Google Business Profile into a customer-generating machine with AI optimization.",
-      features: [
-        "Complete Google Business Profile audit and optimization",
-        "6 months of AI-generated posts (24 posts total, pre-scheduled)",
-        "AI-powered review response templates in your voice",
-        "Local keyword optimization for Houston market",
-        "Competitor analysis and positioning strategy",
-        "2-hour training session on managing your profile"
-      ],
-      bestFor: "Local businesses wanting to dominate Google search results",
-      results: "Typically saves 5+ hours weekly, increases local visibility 300%"
+      week1: {
+        title: "Week 1 Deliverables:",
+        items: [
+          "Professional photographer recommendations for 15+ business photos",
+          "Complete competitor analysis report for your Houston area",
+          "Optimized business description using local Houston keywords",
+          "Service/product descriptions rewritten with AI for maximum appeal",
+          "Categories optimized for better search visibility"
+        ]
+      },
+      week2: {
+        title: "Week 2 Deliverables:",
+        items: [
+          "24 pre-written posts scheduled across 6 months (holidays, tips, promotions)",
+          "12 different review response templates for various scenarios",
+          "Google Analytics and insights tracking setup",
+          "Step-by-step maintenance guide you can follow",
+          "2-hour hands-on training session via video call"
+        ]
+      },
+      difference: "Unlike other agencies that charge monthly fees, you own everything. The posts keep running automatically, and you can modify or add to them anytime without paying us again."
     },
     {
       title: "AI Marketing System Setup",
@@ -65,18 +81,37 @@ export default function Services() {
       timeline: "3 weeks",
       href: "/ai-training",
       icon: <BarChart3 className="w-8 h-8 text-green-600" />,
-      description: "Complete AI marketing automation system tailored to your Houston business needs.",
-      features: [
-        "Custom AI prompt library (20-30 prompts for your industry)",
-        "Social media automation across 3 platforms",
-        "Email marketing integration with AI content generation",
-        "Customer journey automation workflows",
-        "AI chatbot setup for lead qualification",
-        "Complete staff training on all systems"
-      ],
-      bestFor: "Growing businesses ready to scale with automation",
       popular: true,
-      results: "Typically saves 10+ hours weekly, automates 80% of content creation"
+      phases: [
+        {
+          title: "Week 1 - Discovery & Strategy:",
+          items: [
+            "Detailed analysis of your current marketing workflow",
+            "Custom AI prompt creation for your specific industry language",
+            "Competitor content analysis to identify opportunities",
+            "Customer journey mapping for your business type"
+          ]
+        },
+        {
+          title: "Week 2 - System Building:",
+          items: [
+            "30+ custom ChatGPT prompts for content creation",
+            "Zapier automation connecting 3-5 of your current tools",
+            "Email templates for customer follow-up sequences",
+            "Social media posting schedules optimized for your audience"
+          ]
+        },
+        {
+          title: "Week 3 - Training & Handoff:",
+          items: [
+            "3-hour comprehensive training session (recorded for reference)",
+            "Written procedures manual for daily/weekly tasks",
+            "30-day email support for questions and adjustments",
+            "Monthly content calendar template you can reuse forever"
+          ]
+        }
+      ],
+      difference: "Most agencies create content for you monthly. We teach you to create unlimited content yourself using AI, saving thousands in ongoing fees."
     },
     {
       title: "Website + AI Optimization",
@@ -84,64 +119,71 @@ export default function Services() {
       timeline: "4 weeks",
       href: "/ai-websites",
       icon: <Shield className="w-8 h-8 text-purple-600" />,
-      description: "Complete website redesign with integrated AI features for maximum conversion.",
-      features: [
-        "Complete website rebuild with AI-optimized content",
-        "Smart chatbot with industry-specific conversation flows",
-        "Voice search optimization for \"near me\" queries",
-        "Local SEO optimization for Houston suburbs",
-        "Conversion tracking and analytics setup",
-        "3-hour comprehensive training session"
+      phases: [
+        {
+          title: "Week 1 - Planning & Design:",
+          items: [
+            "Complete website audit and user experience analysis",
+            "Custom design mockups based on your Houston market position",
+            "Competitor website analysis and improvement recommendations",
+            "Site architecture planning for optimal conversion"
+          ]
+        },
+        {
+          title: "Week 2-3 - Development & AI Integration:",
+          items: [
+            "Complete website rebuild on modern, fast-loading platform",
+            "AI chatbot programmed with your business FAQs and personality",
+            "Contact forms with smart lead scoring and auto-responses",
+            "Voice search optimization for mobile \"near me\" searches",
+            "Speed optimization for Google's ranking requirements"
+          ]
+        },
+        {
+          title: "Week 4 - Launch & Training:",
+          items: [
+            "Complete website testing and optimization",
+            "3-hour website management training session",
+            "Google Analytics and conversion tracking setup",
+            "SEO monitoring dashboard setup and training",
+            "Website maintenance checklist and ongoing support plan"
+          ]
+        }
       ],
-      bestFor: "Businesses needing a complete online presence overhaul",
-      results: "Typically increases website leads by 200-400%"
+      difference: "Your website is built to work with AI search engines like ChatGPT, not just Google. When people ask AI \"recommend a [your service] in Houston,\" your business appears in the response."
     }
   ];
 
-  const timeline = [
-    { 
-      step: 1, 
-      title: "Discovery & Strategy", 
-      duration: "Week 1", 
-      description: "Initial consultation, business audit, and custom strategy development",
-      details: [
-        "Business goals assessment",
-        "Current system analysis", 
-        "Custom project roadmap"
-      ]
+  const comparisonData = [
+    {
+      criteria: "Project Scope",
+      google: "Google Business Profile only",
+      aiSystem: "Full marketing automation",
+      website: "Complete online presence"
     },
-    { 
-      step: 2, 
-      title: "System Build & Setup", 
-      duration: "2-4 weeks", 
-      description: "Build and configure your AI marketing systems according to specifications",
-      details: [
-        "AI system development",
-        "Custom automation setup",
-        "Integration testing"
-      ]
+    {
+      criteria: "Time Investment Required",
+      google: "2-3 hours total",
+      aiSystem: "8-10 hours over 3 weeks",
+      website: "12-15 hours over 4 weeks"
     },
-    { 
-      step: 3, 
-      title: "Training & Launch", 
-      duration: "Final week", 
-      description: "Comprehensive training session and official system launch",
-      details: [
-        "Staff training session",
-        "System handover",
-        "Live launch support"
-      ]
+    {
+      criteria: "Technical Complexity",
+      google: "Beginner friendly",
+      aiSystem: "Intermediate level",
+      website: "We handle technical parts"
     },
-    { 
-      step: 4, 
-      title: "Ongoing Ownership", 
-      duration: "Lifetime", 
-      description: "You own the complete system with lifetime access and support when needed",
-      details: [
-        "Complete system ownership",
-        "Documentation provided",
-        "Support available as needed"
-      ]
+    {
+      criteria: "Best Business Size",
+      google: "Local service businesses",
+      aiSystem: "Growing businesses (5-50 employees)",
+      website: "Established businesses needing web presence"
+    },
+    {
+      criteria: "Expected ROI Timeline",
+      google: "2-4 weeks",
+      aiSystem: "4-8 weeks",
+      website: "6-12 weeks"
     }
   ];
 
@@ -171,14 +213,14 @@ export default function Services() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6" data-testid="hero-title" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-                <span className="text-blue-300">Professional AI Marketing Projects</span>{" "}
+                <span className="text-blue-300">Detailed AI Marketing Project Packages</span>{" "}
                 for Houston Businesses
               </h1>
               <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto" data-testid="hero-subtitle" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
-                Choose your project package. One-time setup, lifetime ownership, no monthly fees.
+                Each project is custom-built for your specific business needs and Houston market position. Here's exactly what you get, how long it takes, and what results to expect.
               </p>
 
-              {/* CTAs - Mobile Optimized */}
+              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button 
                   asChild 
@@ -209,123 +251,112 @@ export default function Services() {
         </div>
       </section>
 
-      {/* SERVICES GRID */}
+      {/* DETAILED SERVICES */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Choose Your AI Marketing Project
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Each package is designed to deliver specific results for Houston businesses at different growth stages.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-12">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
-              >
-                <Card className={`h-full shadow-lg hover:shadow-xl transition-shadow duration-300 ${service.popular ? 'border-2 border-blue-500' : ''}`}>
-                  {service.popular && (
-                    <div className="text-center mb-4 pt-4">
-                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        MOST POPULAR
-                      </span>
-                    </div>
-                  )}
-                  <CardContent className="p-8">
-                    <div className={`w-16 h-16 ${index === 0 ? 'bg-blue-100' : index === 1 ? 'bg-green-100' : 'bg-purple-100'} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                      {service.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                      {service.title}
-                    </h3>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className={`text-3xl font-bold ${index === 0 ? 'text-blue-600' : index === 1 ? 'text-green-600' : 'text-purple-600'} mb-1`}>
-                        {service.price}
-                      </div>
-                      <div className="flex items-center text-gray-600 text-sm">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {service.timeline}
-                      </div>
-                    </div>
-
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
-
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start gap-2 text-gray-700">
-                          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                      <div className="text-xs font-semibold text-gray-500 mb-1">BEST FOR:</div>
-                      <div className="text-sm text-gray-700 mb-3">{service.bestFor}</div>
-                      <div className="text-xs font-semibold text-gray-500 mb-1">TYPICAL RESULTS:</div>
-                      <div className="text-sm text-gray-700">{service.results}</div>
-                    </div>
-
-                    <Button asChild className="w-full min-h-[48px]" size="lg">
-                      <a href={service.href}>
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ENHANCED PROCESS SECTION */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <AnimatedSection>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                How Our Projects Work
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Every project follows our proven 4-phase process to ensure you get results and own your systems.
-              </p>
-            </AnimatedSection>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {timeline.map((phase, index) => (
-              <AnimatedSection key={index} className="text-center">
-                <Card className="h-full shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-blue-600">{phase.step}</span>
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {phase.title}
-                    </h3>
-                    <div className="text-sm text-blue-600 font-semibold mb-3">{phase.duration}</div>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                      {phase.description}
-                    </p>
-                    <div className="space-y-1">
-                      {phase.details.map((detail, detailIndex) => (
-                        <div key={detailIndex} className="flex items-center justify-center gap-2 text-xs text-gray-500">
-                          <CheckCircle className="w-3 h-3 text-green-500" />
-                          <span>{detail}</span>
+              <AnimatedSection key={index}>
+                <Card className="shadow-xl bg-white">
+                  <CardContent className="p-8 lg:p-12">
+                    <div className="grid lg:grid-cols-2 gap-8 items-start">
+                      {/* Service Header */}
+                      <div>
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className={`w-16 h-16 ${index === 0 ? 'bg-blue-100' : index === 1 ? 'bg-green-100' : 'bg-purple-100'} rounded-xl flex items-center justify-center`}>
+                            {service.icon}
+                          </div>
+                          <div>
+                            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                              {service.title}
+                            </h2>
+                            {service.popular && (
+                              <Badge className="bg-blue-500 text-white">Most Popular</Badge>
+                            )}
+                          </div>
                         </div>
-                      ))}
+                        <div className="flex items-center gap-6 mb-6">
+                          <div className={`text-4xl font-bold ${index === 0 ? 'text-blue-600' : index === 1 ? 'text-green-600' : 'text-purple-600'}`}>
+                            {service.price}
+                          </div>
+                          <div className="flex items-center text-gray-600">
+                            <Clock className="w-5 h-5 mr-2" />
+                            <span className="font-semibold">{service.timeline}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* CTA */}
+                      <div className="flex justify-end">
+                        <Button asChild size="lg" className="px-8 py-4 text-lg">
+                          <a href={service.href}>
+                            Get Started
+                            <ArrowRight className="w-5 h-5 ml-2" />
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+
+                    {/* Week-by-Week Breakdown */}
+                    <div className="mt-8 space-y-8">
+                      {service.phases ? (
+                        service.phases.map((phase, phaseIndex) => (
+                          <div key={phaseIndex} className="border-l-4 border-gray-200 pl-6">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                              <Calendar className="w-5 h-5 text-blue-600" />
+                              {phase.title}
+                            </h3>
+                            <ul className="space-y-3">
+                              {phase.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start gap-3">
+                                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                                  <span className="text-gray-700">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))
+                      ) : (
+                        <>
+                          <div className="border-l-4 border-gray-200 pl-6">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                              <Calendar className="w-5 h-5 text-blue-600" />
+                              {service.week1.title}
+                            </h3>
+                            <ul className="space-y-3">
+                              {service.week1.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start gap-3">
+                                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                                  <span className="text-gray-700">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="border-l-4 border-gray-200 pl-6">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                              <Calendar className="w-5 h-5 text-blue-600" />
+                              {service.week2.title}
+                            </h3>
+                            <ul className="space-y-3">
+                              {service.week2.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start gap-3">
+                                  <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                                  <span className="text-gray-700">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </>
+                      )}
+
+                      {/* What Makes This Different */}
+                      <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                        <h4 className="text-lg font-bold text-blue-900 mb-3 flex items-center gap-2">
+                          <Star className="w-5 h-5 text-blue-600" />
+                          What Makes This Different:
+                        </h4>
+                        <p className="text-blue-800 leading-relaxed">{service.difference}</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -335,16 +366,76 @@ export default function Services() {
         </div>
       </section>
 
+      {/* PROJECT COMPARISON GUIDE */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Project Comparison Guide
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Compare all three packages to find the perfect fit for your business size, budget, and goals.
+              </p>
+            </div>
+
+            <Card className="shadow-xl">
+              <CardContent className="p-0">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="text-left p-6 font-bold text-gray-900 border-b border-gray-200">
+                          Comparison Criteria
+                        </th>
+                        <th className="text-center p-6 font-bold text-blue-600 border-b border-gray-200">
+                          Google Business<br />AI Domination
+                        </th>
+                        <th className="text-center p-6 font-bold text-green-600 border-b border-gray-200 bg-green-50">
+                          AI Marketing<br />System Setup
+                          <Badge className="ml-2 bg-green-500">Most Popular</Badge>
+                        </th>
+                        <th className="text-center p-6 font-bold text-purple-600 border-b border-gray-200">
+                          Website + AI<br />Optimization
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {comparisonData.map((row, index) => (
+                        <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="p-6 font-semibold text-gray-900">
+                            {row.criteria}
+                          </td>
+                          <td className="p-6 text-center text-gray-700">
+                            {row.google}
+                          </td>
+                          <td className="p-6 text-center text-gray-700 bg-green-50/50">
+                            {row.aiSystem}
+                          </td>
+                          <td className="p-6 text-center text-gray-700">
+                            {row.website}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Assessment CTA */}
       <section className="py-16 bg-blue-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <Target className="w-16 h-16 text-white mx-auto mb-6" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              Not Sure Which Package Is Right for You?
+              Still Not Sure Which Package Is Right?
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Take our free 3-minute assessment to discover which AI marketing project will deliver the biggest impact for your Houston business.
+              Take our free 3-minute assessment to get a personalized recommendation based on your business size, goals, and current marketing setup.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
