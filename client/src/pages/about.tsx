@@ -37,46 +37,46 @@ export default function About() {
   const benefits = [
     {
       icon: <Target className="w-6 h-6 text-primary" />,
-      title: "Houston's First AI-Native Marketing Agency",
-      description: "We were built for the AI era from day one, giving you cutting-edge advantages your competitors don't have."
+      title: "AI-Native from Day One",
+      description: "Growing up with AI technology means I understand its potential in ways traditional marketers simply can't."
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-primary" />,
-      title: "AI Tool Certified Experts",
-      description: "Our team holds certifications in all major AI platforms and stays ahead of the latest developments."
+      title: "Young is Our Advantage",
+      description: "Being young in technology means faster adoption, innovative thinking, and staying ahead of industry changes."
     },
     {
       icon: <MapPin className="w-6 h-6 text-primary" />,
-      title: "Deep Local Market Knowledge",
-      description: "We understand Houston's unique business landscape and how to make AI work for local companies."
+      title: "Deep Houston Roots",
+      description: "Born and raised in Houston, with family business experience spanning multiple generations in our community."
     },
     {
       icon: <Users className="w-6 h-6 text-primary" />,
-      title: "Education-First Approach",
-      description: "We don't just do the work for you - we teach you how to leverage AI for long-term success."
+      title: "Education-First Philosophy",
+      description: "I believe in empowering clients with knowledge, not creating dependency. Your success is my success."
     },
     {
       icon: <TrendingUp className="w-6 h-6 text-primary" />,
-      title: "Guaranteed Results",
-      description: "We're so confident in our methods that we guarantee measurable improvements or your money back."
+      title: "Future-Focused Results",
+      description: "While others catch up to yesterday's trends, we're already implementing tomorrow's solutions."
     }
   ];
 
   const values = [
     {
       icon: <Heart className="w-8 h-8 text-primary" />,
-      title: "Transparency",
-      description: "No black box solutions. We explain exactly how our AI strategies work and why they're effective for your business."
+      title: "Authentic Leadership",
+      description: "Being young means being genuine about what I know and what I'm learning. No false promises - just honest expertise and commitment to your success."
     },
     {
       icon: <GraduationCap className="w-8 h-8 text-primary" />,
       title: "Education-First",
-      description: "We believe in empowering business owners with knowledge, not creating dependency on our services."
+      description: "I believe in empowering business owners with knowledge. Your success grows when you understand AI, not just use it."
     },
     {
       icon: <CheckCircle className="w-8 h-8 text-primary" />,
-      title: "Results-Driven",
-      description: "Every strategy we implement is measured, tracked, and optimized for maximum ROI and real business growth."
+      title: "Future-Focused Results",
+      description: "While others catch up to today's technology, I implement tomorrow's solutions. Your business stays ahead of the competition."
     }
   ];
 
@@ -118,11 +118,11 @@ export default function About() {
             <div className="lg:col-span-7">
               <AnimatedSection>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
-                  About{" "}
-                  <span className="gradient-text">Marketing AI Houston</span>
+                  <span className="gradient-text">Houston's Next-Generation</span>
+                  <br />AI Marketing Specialist
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
-                  Making AI marketing accessible and affordable for every Houston small business. We're Houston's first AI-native marketing agency, founded by a young entrepreneur passionate about helping local businesses succeed with artificial intelligence.
+                  Where digital native meets Houston business expertise. As a young entrepreneur who grew up with AI technology, I see opportunities others miss and make cutting-edge AI marketing accessible to Houston's small businesses.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-get-started">
@@ -143,9 +143,9 @@ export default function About() {
                         <span className="text-2xl font-bold text-foreground">Founder Photo</span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Our Founder</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Next-Generation Leadership</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Young entrepreneur and AI expert passionate about empowering Houston businesses with cutting-edge marketing technology that drives real results.
+                      Father-son team combining business experience with AI innovation. Fresh perspective meets proven technology, with deep Houston roots and community connection.
                     </p>
                   </CardContent>
                 </Card>
@@ -187,34 +187,34 @@ export default function About() {
                   <BrainCircuit className="w-8 h-8 text-primary" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6" data-testid="mission-title">
-                  Our Mission
+                  My Mission
                 </h2>
                 <p className="text-xl text-muted-foreground mb-6 leading-relaxed" data-testid="mission-description">
-                  Making AI marketing accessible and affordable for every Houston small business.
+                  Making cutting-edge AI marketing accessible to Houston's small businesses.
                 </p>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  We believe that artificial intelligence shouldn't be reserved for Fortune 500 companies. Every Houston business, from family restaurants to local service providers, deserves access to the same powerful marketing tools that drive explosive growth.
+                  AI marketing is the future, and that future is now. As someone who grew up alongside artificial intelligence technology, I see opportunities that traditional marketers miss. My mission is to bridge that gap for Houston businesses - bringing tomorrow's marketing strategies to today's local companies with fresh perspective, proven technology, and unwavering local focus.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Local Focus</div>
-                      <div className="text-muted-foreground text-sm">We understand Houston's unique market and business landscape</div>
+                      <div className="font-semibold text-foreground">AI is the Future</div>
+                      <div className="text-muted-foreground text-sm">Every business will use AI marketing - I help you get there first</div>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Practical Solutions</div>
-                      <div className="text-muted-foreground text-sm">No complicated tech jargon - just results that grow your business</div>
+                      <div className="font-semibold text-foreground">Young Advantage</div>
+                      <div className="text-muted-foreground text-sm">Growing up with technology means faster innovation and adoption</div>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">Continuous Learning</div>
-                      <div className="text-muted-foreground text-sm">We stay ahead of AI developments to keep your business competitive</div>
+                      <div className="font-semibold text-foreground">Education & Success</div>
+                      <div className="text-muted-foreground text-sm">Committed to teaching clients AI strategies for long-term success</div>
                     </div>
                   </div>
                 </div>
@@ -230,10 +230,10 @@ export default function About() {
           <div className="text-center mb-16">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="benefits-title">
-                Why Choose Marketing AI Houston?
+                Why Work with a Next-Generation AI Expert?
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="benefits-subtitle">
-                We're not just another marketing agency. We're Houston's AI-native marketing experts, built specifically for the artificial intelligence era.
+                Fresh perspective meets proven technology. I bring the advantage of growing up with AI while understanding Houston's local business needs.
               </p>
             </AnimatedSection>
           </div>
@@ -266,10 +266,10 @@ export default function About() {
           <div className="text-center mb-16">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="values-title">
-                Our Core Values
+                My Core Values
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="values-subtitle">
-                The principles that guide everything we do for Houston businesses.
+                The principles that guide how I serve Houston businesses with next-generation AI marketing.
               </p>
             </AnimatedSection>
           </div>
@@ -302,10 +302,10 @@ export default function About() {
           <div className="text-center mb-16">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="community-title">
-                Proud Houston Community Member
+                Deep Houston Roots & Community Connection
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="community-subtitle">
-                We're deeply rooted in the Houston business community and committed to helping our city's economy thrive.
+                Born and raised in Houston with family business experience spanning generations. My commitment to our city's success runs deep.
               </p>
             </AnimatedSection>
           </div>
@@ -316,27 +316,27 @@ export default function About() {
                 <div className="flex items-start">
                   <Building className="w-8 h-8 text-primary mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Houston Chamber of Commerce</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Next-Generation Networking</h3>
                     <p className="text-muted-foreground">
-                      Active member supporting Houston's business ecosystem and connecting with fellow entrepreneurs.
+                      Building bridges between traditional Houston business leaders and the new AI-powered economy.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Users className="w-8 h-8 text-primary mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Local Business Groups</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">Young Entrepreneur Leadership</h3>
                     <p className="text-muted-foreground">
-                      Regular participant in Houston entrepreneur meetups, sharing AI insights and learning from peers.
+                      Active in Houston's young professional community, bridging the gap between AI innovation and local business needs.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Award className="w-8 h-8 text-primary mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Community Education</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">AI Education Advocate</h3>
                     <p className="text-muted-foreground">
-                      Free workshops and seminars to help Houston businesses understand and adopt AI marketing strategies.
+                      Passionate about teaching Houston businesses that AI isn't scary - it's the competitive advantage they've been looking for.
                     </p>
                   </div>
                 </div>
