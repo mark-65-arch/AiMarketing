@@ -1,0 +1,49 @@
+Replace the comparison table with mobile-friendly individual service cards and improve the website package value proposition:
+
+**REMOVE THE LARGE TABLE completely and replace with 3 separate comparison cards:**
+
+**Card 1: Google Business AI Domination**
+- Main Problem: "Invisible in local searches"
+- Time Savings: "5-8 hours monthly (posting & reviews)"
+- Perfect If: "You post inconsistently on Google"
+- Results: "Customers find you in local search"
+- Best For: "Local restaurant, salon, contractor"
+- Replaces: "$300-500/month local SEO agency"
+- ROI: "Pays for itself in 2-3 months"
+- Revenue Fit: "$10K-50K/month businesses"
+
+**Card 2: AI Marketing System Setup**
+- Main Problem: "Marketing takes too much time"
+- Time Savings: "10-15 hours monthly (content creation)"
+- Perfect If: "You manually create all content"
+- Results: "Automate 80% of marketing tasks"
+- Best For: "Professional services, growing business"
+- Replaces: "$800-1500/month content agency"
+- ROI: "Pays for itself in 1-2 months"
+- Revenue Fit: "$25K-100K/month businesses"
+
+**Card 3: Website + AI Optimization**
+- Main Problem: "Website doesn't generate leads"
+- Value Proposition: "Turn website into 24/7 sales machine"
+- Perfect If: "Website is 3+ years old or converts poorly"
+- Results: "3-5x more leads from same traffic"
+- Best For: "Any business needing web presence"
+- Replaces: "$1000-2000/month web management"
+- ROI: "Pays for itself in 3-4 months"
+- Revenue Fit: "$50K-200K/month businesses"
+
+**DESIGN AS MOBILE-FRIENDLY CARDS:**
+- Each service gets its own card/section
+- Cards stack vertically on mobile
+- Use icons and visual elements
+- Make each card easily scannable
+- Include "Choose This If..." decision helper
+
+**ADD DECISION HELPER SECTION:**
+"Quick Decision Guide:
+- Choose Google Business if people can't find you locally
+- Choose AI Marketing if you spend 10+ hours/week on marketing
+- Choose Website if your current site was built before 2022
+- Still unsure? Book a free 15-minute consultation"
+
+Focus on outcomes and value rather than just time savings for the website package. Make it clear this creates a lead-generating system, not just time savings.

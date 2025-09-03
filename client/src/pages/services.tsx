@@ -154,56 +154,6 @@ export default function Services() {
     }
   ];
 
-  const comparisonData = [
-    {
-      criteria: "Main Problem Solved",
-      google: "Not showing up in local searches",
-      aiSystem: "Spending too much time on marketing",
-      website: "Website not converting visitors"
-    },
-    {
-      criteria: "Monthly Time Savings",
-      google: "5-8 hours (posting & reviews)",
-      aiSystem: "10-15 hours (content creation)",
-      website: "3-5 hours (lead management)"
-    },
-    {
-      criteria: "Best If You Currently",
-      google: "Post inconsistently on Google",
-      aiSystem: "Manually create all content",
-      website: "Have outdated/slow website"
-    },
-    {
-      criteria: "You'll See Results When",
-      google: "Customers find you in local search",
-      aiSystem: "You automate daily marketing tasks",
-      website: "More website visitors become leads"
-    },
-    {
-      criteria: "Typical Client Profile",
-      google: "Local restaurant, salon, contractor",
-      aiSystem: "Professional service, growing business",
-      website: "Any business needing web presence"
-    },
-    {
-      criteria: "Investment vs Monthly Agency",
-      google: "Replaces $300-500/month local SEO",
-      aiSystem: "Replaces $800-1500/month content creation",
-      website: "Replaces $1000-2000/month web management"
-    },
-    {
-      criteria: "ROI Payback Period",
-      google: "2-3 months",
-      aiSystem: "1-2 months",
-      website: "3-4 months"
-    },
-    {
-      criteria: "Perfect If Your Revenue Is",
-      google: "$10K-50K/month",
-      aiSystem: "$25K-100K/month",
-      website: "$50K-200K/month"
-    }
-  ];
 
   return (
     <div className="bg-background font-sans antialiased">
@@ -384,93 +334,187 @@ export default function Services() {
         </div>
       </section>
 
-      {/* PROJECT COMPARISON GUIDE */}
+      {/* MOBILE-FRIENDLY COMPARISON CARDS */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Project Comparison Guide
+                Choose Your Perfect Package
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Compare all three packages to find the perfect fit for your business size, budget, and goals.
+                Each package solves a specific problem and delivers clear results. Here's how to decide:
               </p>
             </div>
 
-            <Card className="shadow-xl">
-              <CardContent className="p-0">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="text-left p-6 font-bold text-gray-900 border-b border-gray-200">
-                          Comparison Criteria
-                        </th>
-                        <th className="text-center p-6 font-bold text-blue-600 border-b border-gray-200">
-                          Google Business<br />AI Domination
-                        </th>
-                        <th className="text-center p-6 font-bold text-green-600 border-b border-gray-200 bg-green-50">
-                          AI Marketing<br />System Setup
-                          <Badge className="ml-2 bg-green-500">Most Popular</Badge>
-                        </th>
-                        <th className="text-center p-6 font-bold text-purple-600 border-b border-gray-200">
-                          Website + AI<br />Optimization
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {comparisonData.map((row, index) => (
-                        <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                          <td className="p-6 font-semibold text-gray-900">
-                            {row.criteria}
-                          </td>
-                          <td className="p-6 text-center text-gray-700">
-                            {row.google}
-                          </td>
-                          <td className="p-6 text-center text-gray-700 bg-green-50/50">
-                            {row.aiSystem}
-                          </td>
-                          <td className="p-6 text-center text-gray-700">
-                            {row.website}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Service Comparison Cards */}
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Card 1: Google Business AI */}
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-blue-200">
+                <CardHeader className="bg-blue-50 text-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-blue-900 text-xl">Google Business AI Domination</CardTitle>
+                  <div className="text-3xl font-bold text-blue-600">$800-1,200</div>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Main Problem:</h4>
+                      <p className="text-gray-700">"Invisible in local searches"</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Time Savings:</h4>
+                      <p className="text-gray-700">5-8 hours monthly (posting & reviews)</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Perfect If:</h4>
+                      <p className="text-gray-700">You post inconsistently on Google</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Results:</h4>
+                      <p className="text-gray-700">Customers find you in local search</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Best For:</h4>
+                      <p className="text-gray-700">Local restaurant, salon, contractor</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Replaces:</h4>
+                      <p className="text-gray-700">$300-500/month local SEO agency</p>
+                    </div>
+                    <div className="bg-blue-50 p-3 rounded">
+                      <p className="text-blue-800 font-semibold">ROI: Pays for itself in 2-3 months</p>
+                      <p className="text-blue-700 text-sm">Revenue Fit: $10K-50K/month businesses</p>
+                    </div>
+                  </div>
+                  <Button asChild className="w-full mt-6 bg-blue-600 hover:bg-blue-700">
+                    <a href="/business-profile">Choose This Package</a>
+                  </Button>
+                </CardContent>
+              </Card>
 
-            {/* Decision Helper Section */}
-            <div className="mt-12 bg-blue-50 p-8 rounded-lg border border-blue-200">
+              {/* Card 2: AI Marketing System */}
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-green-200 relative">
+                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-1">
+                  Most Popular
+                </Badge>
+                <CardHeader className="bg-green-50 text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-8 h-8 text-green-600" />
+                  </div>
+                  <CardTitle className="text-green-900 text-xl">AI Marketing System Setup</CardTitle>
+                  <div className="text-3xl font-bold text-green-600">$1,500-2,500</div>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Main Problem:</h4>
+                      <p className="text-gray-700">"Marketing takes too much time"</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Time Savings:</h4>
+                      <p className="text-gray-700">10-15 hours monthly (content creation)</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Perfect If:</h4>
+                      <p className="text-gray-700">You manually create all content</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Results:</h4>
+                      <p className="text-gray-700">Automate 80% of marketing tasks</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Best For:</h4>
+                      <p className="text-gray-700">Professional services, growing business</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Replaces:</h4>
+                      <p className="text-gray-700">$800-1500/month content agency</p>
+                    </div>
+                    <div className="bg-green-50 p-3 rounded">
+                      <p className="text-green-800 font-semibold">ROI: Pays for itself in 1-2 months</p>
+                      <p className="text-green-700 text-sm">Revenue Fit: $25K-100K/month businesses</p>
+                    </div>
+                  </div>
+                  <Button asChild className="w-full mt-6 bg-green-600 hover:bg-green-700">
+                    <a href="/ai-training">Choose This Package</a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Card 3: Website + AI */}
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-purple-200">
+                <CardHeader className="bg-purple-50 text-center">
+                  <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <CardTitle className="text-purple-900 text-xl">Website + AI Optimization</CardTitle>
+                  <div className="text-3xl font-bold text-purple-600">$2,500-5,000</div>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Main Problem:</h4>
+                      <p className="text-gray-700">"Website doesn't generate leads"</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Value Proposition:</h4>
+                      <p className="text-gray-700">Turn website into 24/7 sales machine</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Perfect If:</h4>
+                      <p className="text-gray-700">Website is 3+ years old or converts poorly</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Results:</h4>
+                      <p className="text-gray-700">3-5x more leads from same traffic</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Best For:</h4>
+                      <p className="text-gray-700">Any business needing web presence</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2">Replaces:</h4>
+                      <p className="text-gray-700">$1000-2000/month web management</p>
+                    </div>
+                    <div className="bg-purple-50 p-3 rounded">
+                      <p className="text-purple-800 font-semibold">ROI: Pays for itself in 3-4 months</p>
+                      <p className="text-purple-700 text-sm">Revenue Fit: $50K-200K/month businesses</p>
+                    </div>
+                  </div>
+                  <Button asChild className="w-full mt-6 bg-purple-600 hover:bg-purple-700">
+                    <a href="/ai-websites">Choose This Package</a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Quick Decision Guide */}
+            <div className="bg-blue-50 p-8 rounded-lg border border-blue-200">
               <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">
-                Still Not Sure? Here's a Simple Way to Choose:
+                Quick Decision Guide
               </h3>
-              <div className="grid md:grid-cols-1 gap-4 text-blue-800">
+              <div className="grid md:grid-cols-2 gap-6 text-blue-800">
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">1</span>
-                    </div>
-                    <span><strong>Choose Google Business AI</strong> if you're not showing up when people search for your services locally</span>
+                    <CheckCircle className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Choose Google Business</strong> if people can't find you locally</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">2</span>
-                    </div>
-                    <span><strong>Choose AI Marketing System</strong> if you're spending more than 10 hours/week on marketing tasks</span>
+                    <CheckCircle className="w-6 h-6 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Choose AI Marketing</strong> if you spend 10+ hours/week on marketing</span>
+                  </li>
+                </ul>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-6 h-6 text-purple-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Choose Website</strong> if your current site was built before 2022</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">3</span>
-                    </div>
-                    <span><strong>Choose Website + AI</strong> if your current website was built more than 3 years ago or converts poorly</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-sm font-bold">?</span>
-                    </div>
-                    <span><strong>Not sure about your website conversion?</strong> We can tell you in 5 minutes during a free consultation</span>
+                    <CheckCircle className="w-6 h-6 text-gray-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Still unsure?</strong> Book a free 15-minute consultation</span>
                   </li>
                 </ul>
               </div>
