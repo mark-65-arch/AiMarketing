@@ -10,12 +10,17 @@ import {
   BarChart3,
   ArrowRight,
   Users,
-  Zap
+  Zap,
+  Trophy,
+  Shield,
+  Play,
+  Star
 } from "lucide-react";
-import logoWide from "@assets/Logo3-ezgif.com-optipng_1756914512078.png";
+import houstonSkylineImage from "@assets/houston-skyline.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Navigation } from "@/components/Navigation";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);
@@ -39,169 +44,239 @@ export default function Services() {
     {
       title: "Google Business AI Domination",
       price: "$800-1,200",
-      timeline: "2-3 weeks",
+      timeline: "2 weeks",
       href: "/business-profile",
-      icon: <Search className="w-8 h-8 text-primary" />,
+      icon: <Trophy className="w-8 h-8 text-blue-600" />,
       description: "Transform your Google Business Profile into a customer-generating machine with AI optimization.",
       features: [
-        "AI-powered review response automation",
-        "Smart keyword optimization for local search",
-        "Automated post scheduling and content creation",
-        "Local SEO optimization with AI insights",
-        "Performance tracking and analytics setup"
+        "Complete Google Business Profile audit and optimization",
+        "6 months of AI-generated posts (24 posts total, pre-scheduled)",
+        "AI-powered review response templates in your voice",
+        "Local keyword optimization for Houston market",
+        "Competitor analysis and positioning strategy",
+        "2-hour training session on managing your profile"
       ],
-      bestFor: "Local businesses wanting to dominate Google search results"
+      bestFor: "Local businesses wanting to dominate Google search results",
+      results: "Typically saves 5+ hours weekly, increases local visibility 300%"
     },
     {
       title: "AI Marketing System Setup",
       price: "$1,500-2,500",
-      timeline: "3-4 weeks",
+      timeline: "3 weeks",
       href: "/ai-training",
-      icon: <BarChart3 className="w-8 h-8 text-primary" />,
+      icon: <BarChart3 className="w-8 h-8 text-green-600" />,
       description: "Complete AI marketing automation system tailored to your Houston business needs.",
       features: [
-        "Custom AI chatbot for lead qualification",
-        "Automated email marketing sequences",
-        "Social media content automation",
-        "Customer journey mapping and optimization",
-        "Staff training on AI tools and systems"
+        "Custom AI prompt library (20-30 prompts for your industry)",
+        "Social media automation across 3 platforms",
+        "Email marketing integration with AI content generation",
+        "Customer journey automation workflows",
+        "AI chatbot setup for lead qualification",
+        "Complete staff training on all systems"
       ],
       bestFor: "Growing businesses ready to scale with automation",
-      popular: true
+      popular: true,
+      results: "Typically saves 10+ hours weekly, automates 80% of content creation"
     },
     {
       title: "Website + AI Optimization",
       price: "$2,500-5,000",
-      timeline: "4-6 weeks",
+      timeline: "4 weeks",
       href: "/ai-websites",
-      icon: <Globe className="w-8 h-8 text-primary" />,
+      icon: <Shield className="w-8 h-8 text-purple-600" />,
       description: "Complete website redesign with integrated AI features for maximum conversion.",
       features: [
-        "Modern, mobile-responsive website design",
-        "AI-powered chatbot integration",
-        "Smart contact forms with lead scoring",
-        "SEO optimization with AI content",
-        "Analytics and conversion tracking setup"
+        "Complete website rebuild with AI-optimized content",
+        "Smart chatbot with industry-specific conversation flows",
+        "Voice search optimization for \"near me\" queries",
+        "Local SEO optimization for Houston suburbs",
+        "Conversion tracking and analytics setup",
+        "3-hour comprehensive training session"
       ],
-      bestFor: "Businesses needing a complete online presence overhaul"
+      bestFor: "Businesses needing a complete online presence overhaul",
+      results: "Typically increases website leads by 200-400%"
     }
   ];
 
   const timeline = [
-    { step: 1, title: "Discovery Call", duration: "1 week", description: "Understand your business goals and current challenges" },
-    { step: 2, title: "Strategy & Setup", duration: "2-4 weeks", description: "Build and configure your AI marketing systems" },
-    { step: 3, title: "Training & Launch", duration: "1 week", description: "Train your team and launch your new systems" },
-    { step: 4, title: "Ongoing Support", duration: "Lifetime", description: "You own the system - we provide support when needed" }
+    { 
+      step: 1, 
+      title: "Discovery & Strategy", 
+      duration: "Week 1", 
+      description: "Initial consultation, business audit, and custom strategy development",
+      details: [
+        "Business goals assessment",
+        "Current system analysis", 
+        "Custom project roadmap"
+      ]
+    },
+    { 
+      step: 2, 
+      title: "System Build & Setup", 
+      duration: "2-4 weeks", 
+      description: "Build and configure your AI marketing systems according to specifications",
+      details: [
+        "AI system development",
+        "Custom automation setup",
+        "Integration testing"
+      ]
+    },
+    { 
+      step: 3, 
+      title: "Training & Launch", 
+      duration: "Final week", 
+      description: "Comprehensive training session and official system launch",
+      details: [
+        "Staff training session",
+        "System handover",
+        "Live launch support"
+      ]
+    },
+    { 
+      step: 4, 
+      title: "Ongoing Ownership", 
+      duration: "Lifetime", 
+      description: "You own the complete system with lifetime access and support when needed",
+      details: [
+        "Complete system ownership",
+        "Documentation provided",
+        "Support available as needed"
+      ]
+    }
   ];
 
   return (
     <div className="bg-background font-sans antialiased">
       {/* Navigation */}
-      <nav className="bg-background/95 backdrop-blur-sm border-b border-border fixed top-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <a href="/" data-testid="nav-logo">
-                <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
-              </a>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-home">Home</a>
-                <a href="/services" className="text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
-                <a href="/about" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">About</a>
-                <a href="/assessment" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-assessment">Assessment</a>
-                <a href="/contact" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">Contact</a>
-                <a href="/contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-background to-muted/30 py-20 lg:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <AnimatedSection>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
-                Professional AI Marketing{" "}
-                <span className="gradient-text">Projects for Houston Businesses</span>
+      {/* HERO SECTION */}
+      <section 
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${houstonSkylineImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          paddingTop: '64px',
+          minHeight: '80vh'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/60"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-32">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6" data-testid="hero-title" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+                <span className="text-blue-300">Professional AI Marketing Projects</span>{" "}
+                for Houston Businesses
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto" data-testid="hero-subtitle">
+              <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto" data-testid="hero-subtitle" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
                 Choose your project package. One-time setup, lifetime ownership, no monthly fees.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-get-assessment">
-                  <a href="/assessment">
-                    <Target className="w-5 h-5 mr-2" />
+
+              {/* CTAs - Mobile Optimized */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="text-lg px-10 py-6 min-h-[56px] w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 font-bold" 
+                  data-testid="button-assessment"
+                >
+                  <a href="/assessment" className="flex items-center justify-center gap-2">
+                    <Target className="w-5 h-5" />
                     Take Free Assessment
                   </a>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-contact">
-                  <a href="/contact">Schedule Consultation</a>
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-lg px-8 py-6 min-h-[56px] w-full sm:w-auto text-white border-white/50 hover:bg-white/10 transition-all duration-200 font-medium" 
+                  data-testid="button-consultation"
+                >
+                  <a href="/contact" className="flex items-center justify-center gap-2">
+                    <Users className="w-5 h-5" />
+                    Schedule Consultation
+                  </a>
                 </Button>
               </div>
-            </AnimatedSection>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-background">
+      {/* SERVICES GRID */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="services-title">
-                Choose Your AI Marketing Project
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="services-subtitle">
-                Each package is designed to deliver specific results for Houston businesses at different growth stages.
-              </p>
-            </AnimatedSection>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Choose Your AI Marketing Project
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Each package is designed to deliver specific results for Houston businesses at different growth stages.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <AnimatedSection key={index} className="hover-lift">
-                <Card className={`h-full shadow-lg relative ${service.popular ? 'border-primary/50 shadow-primary/10' : ''}`} data-testid={`service-card-${index}`}>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
+              >
+                <Card className={`h-full shadow-lg hover:shadow-xl transition-shadow duration-300 ${service.popular ? 'border-2 border-blue-500' : ''}`}>
                   {service.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-primary text-primary-foreground px-3 py-1">Most Popular</Badge>
+                    <div className="text-center mb-4 pt-4">
+                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        MOST POPULAR
+                      </span>
                     </div>
                   )}
-                  <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <CardContent className="p-8">
+                    <div className={`w-16 h-16 ${index === 0 ? 'bg-blue-100' : index === 1 ? 'bg-green-100' : 'bg-purple-100'} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                       {service.icon}
                     </div>
-                    <CardTitle className="text-xl font-bold text-card-foreground mb-2" data-testid={`service-title-${index}`}>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                       {service.title}
-                    </CardTitle>
+                    </h3>
+                    
                     <div className="flex items-center justify-between mb-4">
-                      <div className="text-2xl font-bold text-primary">{service.price}</div>
-                      <div className="flex items-center text-muted-foreground text-sm">
+                      <div className={`text-3xl font-bold ${index === 0 ? 'text-blue-600' : index === 1 ? 'text-green-600' : 'text-purple-600'} mb-1`}>
+                        {service.price}
+                      </div>
+                      <div className="flex items-center text-gray-600 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
                         {service.timeline}
                       </div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed" data-testid={`service-description-${index}`}>
+
+                    <p className="text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3 mb-6">
+
+                    <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
-                        </div>
+                        <li key={featureIndex} className="flex items-start gap-2 text-gray-700">
+                          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </li>
                       ))}
+                    </ul>
+
+                    <div className="bg-gray-50 p-4 rounded-lg mb-6">
+                      <div className="text-xs font-semibold text-gray-500 mb-1">BEST FOR:</div>
+                      <div className="text-sm text-gray-700 mb-3">{service.bestFor}</div>
+                      <div className="text-xs font-semibold text-gray-500 mb-1">TYPICAL RESULTS:</div>
+                      <div className="text-sm text-gray-700">{service.results}</div>
                     </div>
-                    <div className="mb-6 p-4 bg-muted/30 rounded-lg">
-                      <div className="text-xs font-semibold text-muted-foreground mb-1">BEST FOR:</div>
-                      <div className="text-sm text-foreground">{service.bestFor}</div>
-                    </div>
-                    <Button asChild className="w-full" data-testid={`service-button-${index}`}>
+
+                    <Button asChild className="w-full min-h-[48px]" size="lg">
                       <a href={service.href}>
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -209,22 +284,22 @@ export default function Services() {
                     </Button>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Project Timeline */}
-      <section className="py-20 demo-container">
+      {/* ENHANCED PROCESS SECTION */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="timeline-title">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 How Our Projects Work
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="timeline-subtitle">
-                Every project follows our proven process to ensure you get results and own your systems.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Every project follows our proven 4-phase process to ensure you get results and own your systems.
               </p>
             </AnimatedSection>
           </div>
@@ -232,18 +307,26 @@ export default function Services() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {timeline.map((phase, index) => (
               <AnimatedSection key={index} className="text-center">
-                <Card className="h-full shadow-sm" data-testid={`timeline-card-${index}`}>
+                <Card className="h-full shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-primary">{phase.step}</span>
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl font-bold text-blue-600">{phase.step}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-card-foreground mb-2" data-testid={`timeline-title-${index}`}>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
                       {phase.title}
                     </h3>
-                    <div className="text-sm text-primary font-semibold mb-3">{phase.duration}</div>
-                    <p className="text-muted-foreground text-sm leading-relaxed" data-testid={`timeline-description-${index}`}>
+                    <div className="text-sm text-blue-600 font-semibold mb-3">{phase.duration}</div>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
                       {phase.description}
                     </p>
+                    <div className="space-y-1">
+                      {phase.details.map((detail, detailIndex) => (
+                        <div key={detailIndex} className="flex items-center justify-center gap-2 text-xs text-gray-500">
+                          <CheckCircle className="w-3 h-3 text-green-500" />
+                          <span>{detail}</span>
+                        </div>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -253,34 +336,32 @@ export default function Services() {
       </section>
 
       {/* Assessment CTA */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-blue-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-2xl p-8">
-              <Target className="w-16 h-16 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6" data-testid="assessment-cta-title">
-                Not Sure Which Package Is Right for You?
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="assessment-cta-description">
-                Take our free 3-minute assessment to discover which AI marketing project will deliver the biggest impact for your Houston business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-take-assessment">
-                  <a href="/assessment">
-                    <Zap className="w-5 h-5 mr-2" />
-                    Take Free Assessment
-                  </a>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-schedule-call">
-                  <a href="/contact">
-                    <Users className="w-5 h-5 mr-2" />
-                    Schedule Strategy Call
-                  </a>
-                </Button>
-              </div>
-              <div className="mt-6 text-sm text-muted-foreground">
-                <strong>No obligation</strong> • Get personalized recommendations in minutes
-              </div>
+            <Target className="w-16 h-16 text-white mx-auto mb-6" />
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Not Sure Which Package Is Right for You?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              Take our free 3-minute assessment to discover which AI marketing project will deliver the biggest impact for your Houston business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+                <a href="/assessment" className="flex items-center justify-center gap-2">
+                  <Zap className="w-5 h-5" />
+                  Take Free Assessment
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 text-white border-white/50 hover:bg-white/10 transition-all duration-200">
+                <a href="/contact" className="flex items-center justify-center gap-2">
+                  <Users className="w-5 h-5" />
+                  Schedule Strategy Call
+                </a>
+              </Button>
+            </div>
+            <div className="mt-6 text-sm text-blue-200">
+              <strong>No obligation</strong> • Get personalized recommendations in minutes
             </div>
           </AnimatedSection>
         </div>
