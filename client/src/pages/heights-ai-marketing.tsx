@@ -27,7 +27,7 @@ import { insertContactSubmissionSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import type { InsertContactSubmission } from "@shared/schema";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
-import logoWide from "@assets/Logo3_1756847446520.png";
+import logoWide from "@assets/Logo 3_1756914281767.png";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);

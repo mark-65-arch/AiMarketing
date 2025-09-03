@@ -17,7 +17,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { FormField, FormItem, FormLabel, FormControl } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import LeadMagnetForm from "@/components/LeadMagnetForm";
-import logoWide from "@assets/Logo3_1756847446520.png";
+import logoWide from "@assets/Logo 3_1756914281767.png";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
   const ref = useRef(null);

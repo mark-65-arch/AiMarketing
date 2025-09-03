@@ -13,7 +13,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import logoWide from "@assets/Logo3_1756847446520.png";
+import logoWide from "@assets/Logo 3_1756914281767.png";
 
 interface NavigationProps {
   className?: string;
