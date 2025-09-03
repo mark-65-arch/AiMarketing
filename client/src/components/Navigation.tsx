@@ -80,7 +80,7 @@ export function Navigation({ className = "" }: NavigationProps) {
   };
 
   return (
-    <nav className={`bg-background/95 backdrop-blur-sm border-b border-border fixed top-0 w-full z-50 ${className}`}>
+    <nav className={`bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm fixed top-0 w-full z-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -93,13 +93,13 @@ export function Navigation({ className = "" }: NavigationProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="/about" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">
+              <a href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">
                 About
               </a>
 
               {/* Services Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services-dropdown">
+                <DropdownMenuTrigger className="flex items-center text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services-dropdown">
                   Services <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-80" data-testid="services-dropdown-content">
@@ -116,7 +116,7 @@ export function Navigation({ className = "" }: NavigationProps) {
 
               {/* Houston Areas Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-areas-dropdown">
+                <DropdownMenuTrigger className="flex items-center text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-areas-dropdown">
                   Houston Areas <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-80" data-testid="areas-dropdown-content">
@@ -142,7 +142,7 @@ export function Navigation({ className = "" }: NavigationProps) {
 
               {/* Resources Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-resources-dropdown">
+                <DropdownMenuTrigger className="flex items-center text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-resources-dropdown">
                   Resources <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-80" data-testid="resources-dropdown-content">
@@ -159,7 +159,7 @@ export function Navigation({ className = "" }: NavigationProps) {
 
               {/* Free Tools Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-tools-dropdown">
+                <DropdownMenuTrigger className="flex items-center text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-tools-dropdown">
                   Free Tools <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-80" data-testid="tools-dropdown-content">
@@ -177,11 +177,11 @@ export function Navigation({ className = "" }: NavigationProps) {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <a href="/contact" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">
+              <a href="/contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">
                 Contact
               </a>
 
-              <a href="/free-ai-marketing-audit" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">
+              <a href="/free-ai-marketing-audit" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">
                 Get FREE Audit
               </a>
             </div>
@@ -198,9 +198,9 @@ export function Navigation({ className = "" }: NavigationProps) {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-background/95 backdrop-blur-sm border-t border-border" data-testid="mobile-menu">
+        <div className="lg:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200" data-testid="mobile-menu">
           <div className="px-4 py-3 space-y-3 max-h-96 overflow-y-auto">
-            <a href="/about" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about">
+            <a href="/about" className="block text-gray-900 hover:text-blue-600 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about">
               About
             </a>
 
@@ -209,7 +209,7 @@ export function Navigation({ className = "" }: NavigationProps) {
               open={openMobileSection === 'services'}
               onOpenChange={() => toggleMobileSection('services')}
             >
-              <CollapsibleTrigger className="flex justify-between items-center w-full text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services">
+              <CollapsibleTrigger className="flex justify-between items-center w-full text-gray-900 hover:text-blue-600 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services">
                 Services
                 {openMobileSection === 'services' ? (
                   <ChevronDown className="h-4 w-4" />
@@ -237,7 +237,7 @@ export function Navigation({ className = "" }: NavigationProps) {
               open={openMobileSection === 'areas'}
               onOpenChange={() => toggleMobileSection('areas')}
             >
-              <CollapsibleTrigger className="flex justify-between items-center w-full text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-areas">
+              <CollapsibleTrigger className="flex justify-between items-center w-full text-gray-900 hover:text-blue-600 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-areas">
                 Houston Areas
                 {openMobileSection === 'areas' ? (
                   <ChevronDown className="h-4 w-4" />
@@ -278,7 +278,7 @@ export function Navigation({ className = "" }: NavigationProps) {
               open={openMobileSection === 'resources'}
               onOpenChange={() => toggleMobileSection('resources')}
             >
-              <CollapsibleTrigger className="flex justify-between items-center w-full text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-resources">
+              <CollapsibleTrigger className="flex justify-between items-center w-full text-gray-900 hover:text-blue-600 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-resources">
                 Resources
                 {openMobileSection === 'resources' ? (
                   <ChevronDown className="h-4 w-4" />
@@ -306,7 +306,7 @@ export function Navigation({ className = "" }: NavigationProps) {
               open={openMobileSection === 'tools'}
               onOpenChange={() => toggleMobileSection('tools')}
             >
-              <CollapsibleTrigger className="flex justify-between items-center w-full text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-tools">
+              <CollapsibleTrigger className="flex justify-between items-center w-full text-gray-900 hover:text-blue-600 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-tools">
                 Free Tools
                 {openMobileSection === 'tools' ? (
                   <ChevronDown className="h-4 w-4" />
@@ -330,11 +330,11 @@ export function Navigation({ className = "" }: NavigationProps) {
               </CollapsibleContent>
             </Collapsible>
 
-            <a href="/contact" className="block text-foreground hover:text-primary px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-contact">
+            <a href="/contact" className="block text-gray-900 hover:text-blue-600 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-contact">
               Contact
             </a>
 
-            <a href="/free-ai-marketing-audit" className="block bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-4 min-h-[44px] rounded-lg text-base font-medium text-center transition-all duration-200 touch-target" data-testid="mobile-nav-cta" onClick={() => setIsMenuOpen(false)}>
+            <a href="/free-ai-marketing-audit" className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-4 min-h-[44px] rounded-lg text-base font-medium text-center transition-all duration-200 touch-target" data-testid="mobile-nav-cta" onClick={() => setIsMenuOpen(false)}>
               Get FREE Audit
             </a>
           </div>
