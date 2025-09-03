@@ -74,7 +74,7 @@ export default function AITraining() {
     onSuccess: () => {
       toast({
         title: "Success!",
-        description: "Thank you! We'll contact you within 24 hours to discuss your AI training needs and secure your spot.",
+        description: "Thank you! We'll contact you within 24 hours to discuss your project requirements and provide a custom quote.",
       });
       form.reset();
     },
@@ -88,120 +88,68 @@ export default function AITraining() {
   });
 
   const onSubmit = (data: InsertContactSubmission) => {
-    const messageWithContext = `${data.message}\n\nInterested in: AI Training Workshops`;
+    const messageWithContext = `${data.message}\n\nInterested in: AI Marketing System Setup Project`;
     contactMutation.mutate({ ...data, message: messageWithContext });
   };
 
   const faqs = [
     {
-      question: "Do I need any technical experience to attend?",
-      answer: "Not at all! Our workshops are designed for business owners and managers with any level of technical experience. We start with the basics and guide you through each step."
+      question: "Do I need any technical experience for this project?",
+      answer: "Not at all! We build everything for you. During the training session, we'll show you how to use your new system in simple, non-technical terms. You don't need to understand how it works, just how to operate it."
     },
     {
-      question: "What will I be able to do after the workshop?",
-      answer: "You'll leave with practical skills to use ChatGPT for marketing content, set up automated customer responses, create social media posts, and implement basic AI tools in your daily business operations."
+      question: "What exactly will I own after the 3 weeks?",
+      answer: "You'll own a complete AI marketing system including: custom content generation tools, automated social media posting, email marketing workflows, and lead capture systems. Everything runs on platforms you control - no monthly fees to us."
     },
     {
-      question: "Is this just theory or hands-on practice?",
-      answer: "It's 80% hands-on practice! You'll work on your actual business during the workshop, creating real marketing content and setting up actual AI tools you can use immediately."
+      question: "How is this different from monthly marketing services?",
+      answer: "Instead of paying monthly fees forever, you pay once and own the entire system. We build it, train you to use it, and you keep all the tools and automation forever. It's like buying a house instead of renting."
     },
     {
-      question: "What if I can't attend the scheduled date?",
-      answer: "We offer multiple workshop dates each month. If you can't make the scheduled session, we'll transfer your registration to the next available date at no extra cost."
+      question: "What if I need changes after the project is done?",
+      answer: "You get 30 days of free support for questions and minor adjustments. After that, we offer maintenance packages or one-off updates at hourly rates. But most clients find the system works great as-is."
     },
     {
-      question: "Do you offer corporate workshops for larger teams?",
-      answer: "Yes! Our corporate workshops can accommodate 8-15 people and are customized for your industry and specific business needs. Contact us for corporate pricing and scheduling."
+      question: "How much time will I need to spend during the 3 weeks?",
+      answer: "Week 1 requires about 2 hours for strategy sessions. Week 2 is mostly us working behind the scenes. Week 3 needs 3-4 hours for training. After that, the system runs automatically with minimal input from you."
     },
     {
-      question: "What's included in the 30-day support?",
-      answer: "You get email support for any questions about implementing what you learned, plus access to our private online community where you can ask questions and share results with other workshop graduates."
+      question: "What if the system doesn't work for my business?",
+      answer: "We do a thorough analysis before starting to ensure it's a good fit. If for any reason you're not satisfied after Week 1 planning phase, we'll refund your deposit. Our goal is long-term success, not quick sales."
     }
   ];
 
-  const workshopTypes = [
-    {
-      name: "AI Marketing Beginner",
-      price: "$150",
-      duration: "4 hours",
-      maxPeople: "6 people",
-      description: "Perfect for business owners new to AI. Learn the fundamentals of AI marketing tools.",
-      includes: [
-        "Introduction to ChatGPT for business",
-        "Basic content creation techniques", 
-        "Simple automation setup",
-        "Marketing copy templates",
-        "Take-home workbook",
-        "30-day email support"
-      ]
-    },
-    {
-      name: "Industry-Specific Workshop",
-      price: "$175", 
-      duration: "4 hours",
-      maxPeople: "6 people",
-      description: "Tailored for specific industries: restaurants, medical, legal, real estate, or retail.",
-      includes: [
-        "Industry-specific AI strategies",
-        "Custom templates for your business type",
-        "Competitor analysis techniques",
-        "Industry compliance considerations",
-        "Take-home workbook",
-        "30-day email support"
-      ]
-    },
-    {
-      name: "Advanced AI Marketing",
-      price: "$250",
-      duration: "4 hours", 
-      maxPeople: "6 people",
-      description: "For business owners ready to implement advanced AI automation and scaling strategies.",
-      includes: [
-        "Advanced automation workflows",
-        "AI-powered customer segmentation",
-        "Multi-channel marketing integration",
-        "ROI tracking and optimization",
-        "Take-home workbook",
-        "30-day email support"
-      ]
-    },
-    {
-      name: "Corporate Team Training",
-      price: "$800-$1,200",
-      duration: "Full day",
-      maxPeople: "8-15 people",
-      description: "Comprehensive training for larger teams with custom curriculum for your business.",
-      includes: [
-        "Custom curriculum development",
-        "Team collaboration tools",
-        "Implementation roadmap",
-        "Ongoing consulting session",
-        "Digital resource library",
-        "90-day follow-up support"
-      ]
-    }
-  ];
+  const projectPackage = {
+    name: "AI Marketing System Setup",
+    price: "$1,500-2,500",
+    duration: "3 weeks",
+    delivery: "Complete system",
+    description: "A complete AI marketing automation system custom-built for your business. You own everything, no monthly fees.",
+    includes: [
+      "Custom AI content generation system",
+      "Automated social media posting", 
+      "Email marketing integration",
+      "Lead capture and nurturing workflows",
+      "Complete training and handoff",
+      "30-day post-launch support"
+    ]
+  };
 
   const processSteps = [
     {
-      step: "1",
-      title: "Register & Prepare",
-      description: "Choose your workshop type and register online. We'll send you preparation materials and access details."
+      step: "Week 1",
+      title: "Strategy & Planning",
+      description: "We analyze your business, identify opportunities, and create a custom AI marketing strategy tailored to your Houston market."
     },
     {
-      step: "2", 
-      title: "Attend Workshop",
-      description: "Join us for 4 intensive hours of hands-on AI marketing training with expert guidance and peer learning."
+      step: "Week 2", 
+      title: "System Setup",
+      description: "We build and configure your complete AI marketing system including content automation, social scheduling, and email integration."
     },
     {
-      step: "3",
-      title: "Implement & Practice", 
-      description: "Use your new skills immediately with our take-home workbook and step-by-step implementation guides."
-    },
-    {
-      step: "4",
-      title: "Get Support",
-      description: "Access 30 days of email support and our private community for ongoing help and motivation."
+      step: "Week 3",
+      title: "Training & Handoff", 
+      description: "Complete training session where you learn to operate your new system, plus 30 days of support for any questions."
     }
   ];
 
@@ -221,7 +169,7 @@ export default function AITraining() {
                 <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-home">Home</a>
                 <a href="/#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
                 <a href="/assessment" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-assessment">Assessment</a>
-                <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Register Now</a>
+                <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Quote</a>
               </div>
             </div>
           </div>
@@ -235,32 +183,32 @@ export default function AITraining() {
             <div className="lg:col-span-7">
               <AnimatedSection>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
-                  Master AI Marketing in{" "}
-                  <span className="gradient-text">Just 4 Hours</span>
+                  AI Marketing System Setup -{" "}
+                  <span className="gradient-text">Complete Automation in 3 Weeks</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
-                  Transform your Houston business with hands-on AI marketing training. Learn to use ChatGPT, automate customer service, and create compelling content that drives real results. No technical experience required.
+                  Get a complete AI marketing system built for your Houston business. Custom AI content creation, social automation, email integration, and full training. You own everything, no monthly fees.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-register">
-                    <a href="#contact">Register for March 15th Workshop</a>
+                    <a href="#contact">Get Project Quote</a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-learn-more">
-                    <a href="#workshops">View All Workshops</a>
+                    <a href="#package">View Package Details</a>
                   </Button>
                 </div>
                 <div className="flex items-center space-x-6 text-sm text-muted-foreground">
                   <div className="flex items-center">
                     <Calendar className="w-4 h-4 mr-2" />
-                    March 15, 2025, 2-6 PM
+                    3 Week Delivery
                   </div>
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-2" />
-                    Houston Business Center
+                    Houston, TX
                   </div>
                   <div className="flex items-center">
                     <Users className="w-4 h-4 mr-2" />
-                    Max 6 people
+                    $1,500-2,500
                   </div>
                 </div>
               </AnimatedSection>
@@ -279,57 +227,59 @@ export default function AITraining() {
         </div>
       </section>
 
-      {/* Workshop Types Section */}
-      <section id="workshops" className="py-20 bg-background">
+      {/* Package Details Section */}
+      <section id="package" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="workshops-title">
-                Choose Your AI Marketing Workshop
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="package-title">
+                AI Marketing System Setup Package
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="workshops-subtitle">
-                From beginner-friendly introductions to advanced automation strategies, we have the perfect workshop for your Houston business needs.
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="package-subtitle">
+                Everything you need to automate your marketing and generate more leads. Custom-built for your Houston business and delivered in just 3 weeks.
               </p>
             </AnimatedSection>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {workshopTypes.map((workshop, index) => (
-              <AnimatedSection key={index} className="hover-lift">
-                <Card className="h-full shadow-sm" data-testid={`workshop-card-${index}`}>
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                      <BrainCircuit className="w-8 h-8 text-primary" />
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection className="hover-lift">
+              <Card className="h-full shadow-lg" data-testid="project-package-card">
+                <CardContent className="p-12">
+                  <div className="text-center mb-8">
+                    <div className="w-20 h-20 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                      <BrainCircuit className="w-10 h-10 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-4" data-testid={`workshop-name-${index}`}>
-                      {workshop.name}
+                    <h3 className="text-3xl font-bold text-card-foreground mb-4" data-testid="project-package-name">
+                      {projectPackage.name}
                     </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed" data-testid={`workshop-description-${index}`}>
-                      {workshop.description}
+                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed" data-testid="project-package-description">
+                      {projectPackage.description}
                     </p>
-                    <div className="mb-6">
-                      <span className="text-3xl font-bold text-primary" data-testid={`workshop-price-${index}`}>
-                        {workshop.price}
+                    <div className="mb-8">
+                      <span className="text-4xl font-bold text-primary" data-testid="project-package-price">
+                        {projectPackage.price}
                       </span>
-                      <div className="text-sm text-muted-foreground mt-1">
-                        {workshop.duration} • {workshop.maxPeople}
+                      <div className="text-lg text-muted-foreground mt-2">
+                        {projectPackage.duration} • {projectPackage.delivery}
                       </div>
                     </div>
-                    <div className="space-y-3 mb-8">
-                      {workshop.includes.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-card-foreground text-sm">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <Button asChild className="w-full" data-testid={`button-register-${index}`}>
-                      <a href="#contact">Register for This Workshop</a>
+                  </div>
+                  <div className="space-y-4 mb-8">
+                    {projectPackage.includes.map((item, itemIndex) => (
+                      <div key={itemIndex} className="flex items-start">
+                        <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
+                        <span className="text-card-foreground text-lg">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <Button asChild size="lg" className="text-lg px-12 py-4" data-testid="button-start-project">
+                      <a href="#contact">Start Your Project</a>
                     </Button>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -340,20 +290,20 @@ export default function AITraining() {
           <div className="text-center mb-16">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="process-title">
-                Your AI Marketing Learning Journey
+                3-Week Project Timeline
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="process-subtitle">
-                From registration to implementation, we guide you every step of the way to AI marketing success.
+                From strategy to handoff, we deliver your complete AI marketing system in just 3 weeks.
               </p>
             </AnimatedSection>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
               <AnimatedSection key={index}>
                 <Card className="text-center shadow-sm h-full" data-testid={`process-step-${index}`}>
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                    <div className="w-20 h-20 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-lg font-bold">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-bold text-card-foreground mb-4" data-testid={`step-title-${index}`}>
@@ -379,7 +329,7 @@ export default function AITraining() {
                 What Houston Business Owners Say
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="testimonials-subtitle">
-                See how our AI marketing workshops have transformed local businesses across Houston.
+                See how our AI marketing systems have transformed local businesses across Houston.
               </p>
             </AnimatedSection>
           </div>
@@ -478,7 +428,7 @@ export default function AITraining() {
                 Frequently Asked Questions
               </h2>
               <p className="text-xl text-muted-foreground" data-testid="faq-subtitle">
-                Get answers to common questions about our AI marketing workshops.
+                Get answers to common questions about our AI marketing system setup project.
               </p>
             </AnimatedSection>
           </div>
@@ -625,12 +575,13 @@ export default function AITraining() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Questions or Preferred Workshop Type</FormLabel>
+                          <FormLabel>Project Details & Questions</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder="Let us know which workshop interests you most or any questions you have..."
+                              placeholder="Tell us about your business and what you'd like to achieve with AI marketing..."
                               className="resize-none"
                               {...field}
+                              value={field.value || ""}
                               data-testid="textarea-message"
                             />
                           </FormControl>
@@ -646,7 +597,7 @@ export default function AITraining() {
                       disabled={contactMutation.isPending}
                       data-testid="button-submit"
                     >
-                      {contactMutation.isPending ? "Submitting..." : "Reserve My Workshop Spot"}
+                      {contactMutation.isPending ? "Submitting..." : "Get Project Quote"}
                     </Button>
                   </form>
                 </Form>

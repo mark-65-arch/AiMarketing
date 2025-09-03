@@ -95,86 +95,58 @@ export default function BusinessProfile() {
 
   const faqs = [
     {
-      question: "How quickly will I see results from Google Business Profile optimization?",
-      answer: "Most Houston businesses see improved local search visibility within 2-3 weeks. Full results typically appear within 30-45 days as Google recognizes your optimized profile and increased activity."
+      question: "What exactly do I own after the 2-week project?",
+      answer: "You own a complete automated system that posts to your Google Business Profile for 6 months, plus all templates, review responses, and optimization. No ongoing monthly fees to us."
     },
     {
-      question: "Do you guarantee first page rankings on Google?",
-      answer: "While we can't guarantee specific rankings due to Google's complex algorithm, our optimization dramatically improves your chances. 85% of our Houston clients reach the first page for their primary local keywords within 60 days."
+      question: "How is this different from monthly marketing services?",
+      answer: "Instead of paying monthly fees forever, you pay once and own the entire system. We build it, set it up, train you, and you keep everything. It's like buying automation instead of renting it."
     },
     {
-      question: "What if my business doesn't have many reviews yet?",
-      answer: "That's actually perfect! We'll help you build a strong review foundation with our proven review generation system. We provide templates and strategies to ethically encourage satisfied customers to leave reviews."
+      question: "What if I need help after the 2 weeks are complete?",
+      answer: "You get 30 days of free support for questions and minor adjustments. After that, we offer hourly support if needed, but most clients find the system runs smoothly on its own."
     },
     {
-      question: "Can you help if my business has multiple Houston locations?",
-      answer: "Absolutely! We specialize in multi-location businesses. Each location gets its own optimized profile with location-specific content, photos, and review management strategies."
+      question: "How much time will I need during the project?",
+      answer: "Week 1 requires about 2 hours for photos and business information gathering. Week 2 needs 2-3 hours for training. After setup, the system runs automatically with minimal input from you."
     },
     {
-      question: "What happens after the initial optimization is complete?",
-      answer: "With our Complete package, you get 3 months of content templates and posting schedules. We also provide training so your team can maintain the momentum we build during optimization."
+      question: "Will this work for multiple Houston locations?",
+      answer: "Yes! Each location gets its own optimized profile and automation system. Pricing varies by number of locations - we'll provide a custom quote for multi-location businesses."
     },
     {
-      question: "Is this different from regular SEO or website optimization?",
-      answer: "Yes! Google Business Profile optimization focuses specifically on local search results, Google Maps rankings, and the information panel that appears when people search for your business. It's faster and often more effective than traditional SEO for local businesses."
+      question: "What if the automated system stops working?",
+      answer: "The system is built on reliable platforms and includes redundancy. If anything stops working during your 6-month automation period, we'll fix it at no charge. After 6 months, you can renew the automation or manage posts manually."
     }
   ];
 
-  const packages = [
-    {
-      name: "Basic Optimization",
-      price: "$397",
-      description: "Perfect for new businesses or those just getting started with local search optimization.",
-      timeline: "5-7 business days",
-      includes: [
-        "Complete profile audit and cleanup",
-        "Keyword optimization for Houston searches",
-        "Professional business description writing",
-        "Category and attribute optimization",
-        "Basic photo recommendations",
-        "Review response templates",
-        "Initial posting strategy guide"
-      ]
-    },
-    {
-      name: "Complete with Templates",
-      price: "$597",
-      description: "Our most popular package for businesses serious about dominating local Houston search results.",
-      timeline: "5-7 business days + 3 months support",
-      popular: true,
-      includes: [
-        "Everything in Basic Optimization",
-        "3 months of post templates and content calendar",
-        "Advanced photo optimization and editing",
-        "Competitor analysis and positioning",
-        "Review generation strategy and templates",
-        "Monthly performance tracking setup",
-        "AI-powered posting recommendations",
-        "One hour of implementation training"
-      ]
-    }
-  ];
+  const projectPackage = {
+    name: "Google Business AI Domination",
+    price: "$800-1,200",
+    description: "Complete optimization plus 6 months of automated posting. Set up once, works forever.",
+    timeline: "2 weeks",
+    popular: true,
+    includes: [
+      "Complete profile audit and optimization",
+      "6-month automated posting system",
+      "Professional photo optimization",
+      "Review templates and response automation",
+      "Competitor analysis and positioning",
+      "Complete training and handoff",
+      "30-day post-launch support"
+    ]
+  };
 
   const processSteps = [
     {
-      step: "1",
-      title: "Profile Audit",
-      description: "We conduct a comprehensive analysis of your current Google Business Profile and identify optimization opportunities."
+      step: "Week 1",
+      title: "Audit & Optimization",
+      description: "Complete profile analysis, optimization of all elements, photo enhancement, and competitor research."
     },
     {
-      step: "2", 
-      title: "Optimization",
-      description: "We optimize every element: business info, categories, descriptions, photos, and set up tracking systems."
-    },
-    {
-      step: "3",
-      title: "Content Strategy", 
-      description: "We create a posting calendar, review templates, and provide ongoing content to keep your profile active."
-    },
-    {
-      step: "4",
-      title: "Monitor & Improve",
-      description: "We track performance and provide recommendations for continued growth and local search dominance."
+      step: "Week 2", 
+      title: "Automation Setup",
+      description: "Configure 6-month automated posting system, review templates, training session, and complete handoff."
     }
   ];
 
@@ -217,7 +189,7 @@ export default function BusinessProfile() {
                 <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-home">Home</a>
                 <a href="/#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
                 <a href="/assessment" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-assessment">Assessment</a>
-                <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Started</a>
+                <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Quote</a>
               </div>
             </div>
           </div>
@@ -231,32 +203,32 @@ export default function BusinessProfile() {
             <div className="lg:col-span-7">
               <AnimatedSection>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
-                  Dominate Houston Local Search with{" "}
-                  <span className="gradient-text">Google Business Profile</span>
+                  Google Business AI Domination -{" "}
+                  <span className="gradient-text">Automated Local Marketing</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
-                  Stop losing customers to competitors who show up first on Google. Our proven optimization process helps Houston businesses rank higher, get more calls, and attract more customers through local search.
+                  Get complete optimization plus 6 months of automated posting. We optimize everything, set up automation, and train you to manage it. Set up once, works forever.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-get-started">
-                    <a href="#contact">Start Ranking Higher</a>
+                    <a href="#contact">Get Project Quote</a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-learn-more">
-                    <a href="#packages">View Packages</a>
+                    <a href="#package">View Package Details</a>
                   </Button>
                 </div>
                 <div className="flex items-center space-x-6 text-sm text-muted-foreground">
                   <div className="flex items-center">
                     <Clock className="w-4 h-4 mr-2" />
-                    5-7 day delivery
+                    2 week delivery
                   </div>
                   <div className="flex items-center">
                     <BarChart3 className="w-4 h-4 mr-2" />
-                    Proven results
+                    $800-1,200
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 mr-2" />
-                    Houston-focused
+                    6 months automation
                   </div>
                 </div>
               </AnimatedSection>
@@ -316,57 +288,57 @@ export default function BusinessProfile() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="packages-title">
-                Choose Your Optimization Package
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="package-title">
+                Google Business AI Domination Package
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="packages-subtitle">
-                From basic optimization to comprehensive local marketing dominance, we have the perfect package for your Houston business needs.
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="package-subtitle">
+                Complete optimization plus 6 months of automation. Everything you need to dominate local Houston search results.
               </p>
             </AnimatedSection>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {packages.map((pkg, index) => (
-              <AnimatedSection key={index} className="hover-lift">
-                <Card className={`h-full shadow-sm relative overflow-hidden ${pkg.popular ? 'border-2 border-accent' : ''}`} data-testid={`package-card-${index}`}>
-                  {pkg.popular && (
-                    <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 py-2 text-sm font-semibold" data-testid="badge-popular">
-                      Most Popular
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection className="hover-lift">
+              <Card className="h-full shadow-lg relative overflow-hidden border-2 border-accent" data-testid="project-package-card">
+                <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 py-2 text-sm font-semibold" data-testid="badge-popular">
+                  Most Popular
+                </div>
+                <CardContent className="p-12">
+                  <div className="text-center mb-8">
+                    <div className="w-20 h-20 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                      <MapPin className="w-10 h-10 text-accent" />
                     </div>
-                  )}
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                      <MapPin className="w-8 h-8 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-4" data-testid={`package-name-${index}`}>
-                      {pkg.name}
+                    <h3 className="text-3xl font-bold text-card-foreground mb-4" data-testid="project-package-name">
+                      {projectPackage.name}
                     </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed" data-testid={`package-description-${index}`}>
-                      {pkg.description}
+                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed" data-testid="project-package-description">
+                      {projectPackage.description}
                     </p>
-                    <div className="mb-6">
-                      <span className="text-4xl font-bold text-accent" data-testid={`package-price-${index}`}>
-                        {pkg.price}
+                    <div className="mb-8">
+                      <span className="text-4xl font-bold text-accent" data-testid="project-package-price">
+                        {projectPackage.price}
                       </span>
-                      <div className="text-sm text-muted-foreground mt-1">
-                        Delivery: {pkg.timeline}
+                      <div className="text-lg text-muted-foreground mt-2">
+                        Delivery: {projectPackage.timeline}
                       </div>
                     </div>
-                    <div className="space-y-3 mb-8">
-                      {pkg.includes.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-card-foreground text-sm">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <Button asChild className={`w-full ${pkg.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`} data-testid={`button-choose-${index}`}>
-                      <a href="#contact">Choose This Package</a>
+                  </div>
+                  <div className="space-y-4 mb-8">
+                    {projectPackage.includes.map((item, itemIndex) => (
+                      <div key={itemIndex} className="flex items-start">
+                        <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
+                        <span className="text-card-foreground text-lg">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-12 py-4" data-testid="button-start-project">
+                      <a href="#contact">Start Your Project</a>
                     </Button>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -377,20 +349,20 @@ export default function BusinessProfile() {
           <div className="text-center mb-16">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="process-title">
-                Our Proven Optimization Process
+                2-Week Project Timeline
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="process-subtitle">
-                We follow a systematic approach that has helped hundreds of Houston businesses dominate local search results.
+                From audit to automation setup, we deliver your complete system in just 2 weeks.
               </p>
             </AnimatedSection>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {processSteps.map((step, index) => (
               <AnimatedSection key={index}>
                 <Card className="text-center shadow-sm h-full" data-testid={`process-step-${index}`}>
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                    <div className="w-20 h-20 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-lg font-bold">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-bold text-card-foreground mb-4" data-testid={`step-title-${index}`}>

@@ -91,101 +91,57 @@ export default function AIWebsites() {
   });
 
   const onSubmit = (data: InsertContactSubmission) => {
-    const messageWithContext = `${data.message}\n\nInterested in: AI-Optimized Websites`;
+    const messageWithContext = `${data.message}\n\nInterested in: AI-Optimized Website Project`;
     contactMutation.mutate({ ...data, message: messageWithContext });
   };
 
   const faqs = [
     {
-      question: "What makes your websites 'AI-optimized' compared to regular websites?",
-      answer: "Our AI-optimized websites are built specifically for the new era of search. They include voice search optimization, structured data for AI crawlers, conversational interfaces, and content structured to answer the questions people ask AI assistants about your business."
+      question: "What exactly do I own after the 4-week project?",
+      answer: "You own a complete professional website with AI chatbot, local SEO optimization, and all content. No ongoing monthly fees to us - you control everything."
     },
     {
-      question: "How long does it take to build an AI-optimized website?",
-      answer: "Most websites are completed within 2-3 weeks. The timeline includes content creation, AI optimization setup, mobile responsiveness testing, and training your team on the new features."
+      question: "How is this different from website subscription services?",
+      answer: "Instead of paying monthly fees forever, you pay once and own the entire website. We build it, optimize it, train you, and you keep everything. It's like buying a website instead of renting one."
     },
     {
-      question: "Do you provide hosting and ongoing maintenance?",
-      answer: "Yes! All packages include the first year of hosting, SSL certificates, and basic maintenance. We also provide training so you can update content yourself, plus ongoing support for any technical questions."
+      question: "What if I need changes after the project is complete?",
+      answer: "You get complete training on how to make content updates yourself. For major design changes or technical updates, we offer hourly support rates. Most clients find they can manage day-to-day updates on their own."
     },
     {
-      question: "Will my website work well on mobile devices?",
-      answer: "Absolutely! All our websites are built mobile-first, meaning they're designed to work perfectly on smartphones and tablets. Mobile optimization is crucial for both user experience and search rankings."
+      question: "How much involvement do I need during the 4 weeks?",
+      answer: "Week 1 requires 2-3 hours for planning discussions. Weeks 2-3 need minimal involvement while we build. Week 4 needs 2-3 hours for training. After that, the website runs independently."
     },
     {
-      question: "Can you integrate with my existing business systems?",
-      answer: "Yes, we can integrate with most popular business systems including appointment scheduling, CRM platforms, e-commerce systems, and payment processors. We'll discuss your specific needs during the consultation."
+      question: "Will my website work if I already have hosting elsewhere?",
+      answer: "We can work with your existing hosting or provide new hosting (included for first year). Our websites are built to work on any quality hosting platform, so you're never locked in to our services."
     },
     {
-      question: "What if I already have a website? Can you optimize it instead of building new?",
-      answer: "We can evaluate your existing website, but often building new is more cost-effective than retrofitting old sites for AI optimization. We'll provide honest recommendations based on your current site's structure and your business goals."
+      question: "What happens if the AI chatbot stops working?",
+      answer: "We build the chatbot on reliable platforms and include setup documentation. During your first year of hosting with us, we'll fix any technical issues at no charge. You also get training on basic chatbot management."
     }
   ];
 
-  const packages = [
-    {
-      name: "AI Starter Website",
-      pages: "5 pages",
-      price: "$1,200",
-      description: "Perfect for small Houston businesses ready to embrace AI-powered web presence.",
-      timeline: "2-3 weeks",
-      includes: [
-        "5 professionally designed pages",
-        "AI-optimized content structure",
-        "Voice search optimization",
-        "Mobile-responsive design",
-        "Basic chatbot integration",
-        "Contact forms with automation",
-        "Google Analytics setup",
-        "First year hosting included",
-        "SSL certificate",
-        "Basic training session"
-      ]
-    },
-    {
-      name: "AI Professional Website",
-      pages: "8 pages",
-      price: "$1,800",
-      description: "Comprehensive solution for growing businesses serious about AI marketing dominance.",
-      timeline: "2-3 weeks",
-      popular: true,
-      includes: [
-        "8 professionally designed pages",
-        "Advanced AI content optimization",
-        "Voice search and AI crawler optimization",
-        "Advanced chatbot with FAQ automation",
-        "Lead capture and nurturing system",
-        "Social media integration",
-        "Review management integration",
-        "Advanced analytics and tracking",
-        "Local SEO optimization",
-        "First year hosting included",
-        "SSL certificate",
-        "Comprehensive training"
-      ]
-    },
-    {
-      name: "AI Complete Website",
-      pages: "12+ pages",
-      price: "$2,500",
-      description: "Full-scale AI marketing website for businesses ready to dominate their Houston market.",
-      timeline: "3-4 weeks",
-      includes: [
-        "12+ custom designed pages",
-        "Full AI automation suite",
-        "Advanced voice search optimization",
-        "Intelligent chatbot with booking",
-        "Marketing automation integration",
-        "E-commerce capabilities (if needed)",
-        "Advanced lead scoring system",
-        "Multi-location optimization",
-        "Competitor analysis integration",
-        "First year hosting included",
-        "SSL certificate",
-        "Ongoing consultation included"
-      ]
-    }
-  ];
+  const projectPackage = {
+    name: "AI-Optimized Website Project",
+    pages: "Complete website",
+    price: "$2,500-5,000",
+    description: "Professional website you own and control, with AI chatbot and local SEO optimization.",
+    timeline: "4 weeks",
+    popular: true,
+    includes: [
+      "Complete custom website design",
+      "AI chatbot integration",
+      "Local SEO optimization",
+      "Mobile-responsive design",
+      "Lead capture and automation",
+      "Professional content creation",
+      "Advanced analytics setup",
+      "First year hosting included",
+      "SSL certificate",
+      "Complete training and handoff"
+    ]
+  };
 
   const features = [
     {
@@ -212,24 +168,19 @@ export default function AIWebsites() {
 
   const processSteps = [
     {
-      step: "1",
-      title: "Strategy & Planning",
-      description: "We analyze your business, competitors, and Houston market to create an AI-optimized website strategy."
+      step: "Week 1",
+      title: "Planning & Strategy",
+      description: "Complete business analysis, competitor research, and custom website strategy development."
     },
     {
-      step: "2", 
-      title: "Design & Development",
-      description: "Our team builds your custom website with AI optimization, mobile responsiveness, and modern design."
+      step: "Weeks 2-3", 
+      title: "Development",
+      description: "Build your complete website with AI chatbot, SEO optimization, and conversion features."
     },
     {
-      step: "3",
-      title: "Content & Optimization", 
-      description: "We create AI-friendly content and implement advanced optimization for voice search and automation."
-    },
-    {
-      step: "4",
-      title: "Launch & Training",
-      description: "We launch your website, set up hosting, and train your team on managing your new AI-powered presence."
+      step: "Week 4",
+      title: "Launch & Training", 
+      description: "Launch your website, complete training session, and ensure everything works perfectly."
     }
   ];
 
@@ -249,7 +200,7 @@ export default function AIWebsites() {
                 <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-home">Home</a>
                 <a href="/#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
                 <a href="/assessment" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-assessment">Assessment</a>
-                <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Started</a>
+                <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Quote</a>
               </div>
             </div>
           </div>
@@ -263,15 +214,15 @@ export default function AIWebsites() {
             <div className="lg:col-span-7">
               <AnimatedSection>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6" data-testid="hero-title">
-                  Websites Built for the{" "}
-                  <span className="gradient-text">AI Search Era</span>
+                  AI-Optimized Websites That{" "}
+                  <span className="gradient-text">Convert Visitors to Customers</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed" data-testid="hero-subtitle">
-                  Transform your Houston business with a website designed for voice search, AI assistants, and automated customer interactions. Get found, get leads, and grow faster with AI-optimized web design.
+                  Get a complete website with AI chatbot, local SEO, and conversion optimization. Professional website you own and control, delivered in 4 weeks.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-get-started">
-                    <a href="#contact">Get Your AI Website</a>
+                    <a href="#contact">Get Project Quote</a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-learn-more">
                     <a href="#packages">View Packages</a>
@@ -348,58 +299,58 @@ export default function AIWebsites() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="packages-title">
-                Choose Your AI Website Package
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="package-title">
+                AI-Optimized Website Project
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="packages-subtitle">
-                From starter websites to comprehensive AI marketing platforms, we have the perfect solution for your Houston business.
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="package-subtitle">
+                Complete website with AI chatbot and local SEO. Professional website you own and control.
               </p>
             </AnimatedSection>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <AnimatedSection key={index} className="hover-lift">
-                <Card className={`h-full shadow-sm relative overflow-hidden ${pkg.popular ? 'border-2 border-secondary' : ''}`} data-testid={`package-card-${index}`}>
-                  {pkg.popular && (
-                    <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground px-4 py-2 text-sm font-semibold" data-testid="badge-popular">
-                      Most Popular
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection className="hover-lift">
+              <Card className="h-full shadow-lg relative overflow-hidden border-2 border-secondary" data-testid="project-package-card">
+                <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground px-4 py-2 text-sm font-semibold" data-testid="badge-popular">
+                  Most Popular
+                </div>
+                <CardContent className="p-12">
+                  <div className="text-center mb-8">
+                    <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                      <Globe className="w-10 h-10 text-secondary" />
                     </div>
-                  )}
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
-                      <Globe className="w-8 h-8 text-secondary" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-card-foreground mb-2" data-testid={`package-name-${index}`}>
-                      {pkg.name}
+                    <h3 className="text-3xl font-bold text-card-foreground mb-2" data-testid="project-package-name">
+                      {projectPackage.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4">{pkg.pages}</p>
-                    <p className="text-muted-foreground mb-6 leading-relaxed" data-testid={`package-description-${index}`}>
-                      {pkg.description}
+                    <p className="text-lg text-muted-foreground mb-4">{projectPackage.pages}</p>
+                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed" data-testid="project-package-description">
+                      {projectPackage.description}
                     </p>
-                    <div className="mb-6">
-                      <span className="text-4xl font-bold text-secondary" data-testid={`package-price-${index}`}>
-                        {pkg.price}
+                    <div className="mb-8">
+                      <span className="text-4xl font-bold text-secondary" data-testid="project-package-price">
+                        {projectPackage.price}
                       </span>
-                      <div className="text-sm text-muted-foreground mt-1">
-                        Delivery: {pkg.timeline}
+                      <div className="text-lg text-muted-foreground mt-2">
+                        Delivery: {projectPackage.timeline}
                       </div>
                     </div>
-                    <div className="space-y-3 mb-8">
-                      {pkg.includes.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-card-foreground text-sm">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <Button asChild variant={pkg.popular ? "default" : "secondary"} className="w-full" data-testid={`button-choose-${index}`}>
-                      <a href="#contact">Choose This Package</a>
+                  </div>
+                  <div className="space-y-4 mb-8">
+                    {projectPackage.includes.map((item, itemIndex) => (
+                      <div key={itemIndex} className="flex items-start">
+                        <CheckCircle className="w-6 h-6 text-secondary mr-4 mt-0.5 flex-shrink-0" />
+                        <span className="text-card-foreground text-lg">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-12 py-4" data-testid="button-start-project">
+                      <a href="#contact">Start Your Project</a>
                     </Button>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -410,20 +361,20 @@ export default function AIWebsites() {
           <div className="text-center mb-16">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="process-title">
-                Our AI Website Development Process
+                4-Week Project Timeline
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="process-subtitle">
-                From strategy to launch, we guide you through every step of creating your AI-optimized website.
+                From planning to launch, we deliver your complete AI-optimized website in just 4 weeks.
               </p>
             </AnimatedSection>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {processSteps.map((step, index) => (
               <AnimatedSection key={index}>
                 <Card className="text-center shadow-sm h-full" data-testid={`process-step-${index}`}>
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                    <div className="w-20 h-20 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-lg font-bold">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-bold text-card-foreground mb-4" data-testid={`step-title-${index}`}>
