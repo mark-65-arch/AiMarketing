@@ -23,13 +23,9 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 mr-3 text-blue-400" />
                 <span>Houston, TX 77002</span>
               </div>
-              <div className="flex items-center text-gray-300" data-testid="footer-phone">
+              <div className="flex items-center text-gray-300" data-testid="footer-contact">
                 <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                <span>(713) 555-0123</span>
-              </div>
-              <div className="flex items-center text-gray-300" data-testid="footer-email">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                <span>info@marketingaihouston.com</span>
+                <span>(713) 555-0123 | info@marketingaihouston.com</span>
               </div>
             </div>
           </div>

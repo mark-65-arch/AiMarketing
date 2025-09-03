@@ -43,7 +43,7 @@ export default function Homepage() {
   
   // SEO data
   const pageTitle = "Houston's #1 AI Marketing Agency - Get 3X More Customers in 90 Days";
-  const pageDescription = "We help Houston businesses save 15+ hours per week and dominate local search using proven AI marketing systems. Trusted by 89+ businesses.";
+  const pageDescription = "We help Houston businesses save 10+ hours per week and dominate local search using proven AI marketing systems. Now serving Houston businesses.";
   const pageKeywords = generateLocationKeywords("Houston", "AI Marketing");
   const canonicalUrl = "https://houstonaimarketing.com/";
 
@@ -158,14 +158,14 @@ export default function Homepage() {
                 </p>
               </div>
               <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
-                Proudly serving Houston and surrounding areas since 2024
+                Launched September 2025 - Now serving Houston and surrounding areas
               </p>
 
               {/* Trust Indicator */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white/20 max-w-md mx-auto">
                 <p className="text-white font-semibold flex items-center justify-center gap-2">
                   <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  Trusted by 89+ Houston Businesses
+                  Now Serving Houston Businesses
                   <Star className="w-5 h-5 text-yellow-400 fill-current" />
                 </p>
               </div>
@@ -178,7 +178,7 @@ export default function Homepage() {
                   className="text-lg px-10 py-6 min-h-[56px] w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 font-bold" 
                   data-testid="button-primary-cta"
                 >
-                  <a href="#audit-form">Get FREE System Audit</a>
+                  <a href="#audit-form">Book Free Consultation</a>
                 </Button>
                 <Button 
                   asChild 
@@ -213,8 +213,8 @@ export default function Homepage() {
               <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">89+</div>
-              <div className="text-sm text-gray-600">Businesses Served</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">New</div>
+              <div className="text-sm text-gray-600">Houston Business</div>
             </motion.div>
 
             <motion.div
@@ -227,8 +227,8 @@ export default function Homepage() {
               <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <TrendingUp className="w-8 h-8 text-green-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">200-400%</div>
-              <div className="text-sm text-gray-600">Avg Revenue Increase</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">AI-Proven</div>
+              <div className="text-sm text-gray-600">Results</div>
             </motion.div>
 
             <motion.div
@@ -241,7 +241,7 @@ export default function Homepage() {
               <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <Clock className="w-8 h-8 text-purple-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">15+</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">10+</div>
               <div className="text-sm text-gray-600">Hours Saved Weekly</div>
             </motion.div>
 
@@ -255,8 +255,8 @@ export default function Homepage() {
               <div className="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <Award className="w-8 h-8 text-orange-600" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">98%</div>
-              <div className="text-sm text-gray-600">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">Professional</div>
+              <div className="text-sm text-gray-600">Service Guaranteed</div>
             </motion.div>
           </div>
 
@@ -281,10 +281,10 @@ export default function Homepage() {
                       ))}
                     </div>
                     <p className="text-lg text-gray-800 mb-4 leading-relaxed italic">
-                      "Marketing AI Houston built us a complete marketing system that runs itself. No more monthly fees to agencies - we own everything and it works 24/7."
+                      "As Houston's newest AI marketing specialist, I bring fresh expertise and cutting-edge AI systems to help local businesses automate their marketing and save time."
                     </p>
-                    <div className="font-semibold text-gray-900">Sarah M.</div>
-                    <div className="text-gray-600">Local Business Owner, Houston</div>
+                    <div className="font-semibold text-gray-900">Founder</div>
+                    <div className="text-gray-600">Marketing AI Houston</div>
                   </div>
                 </div>
               </CardContent>
@@ -450,10 +450,10 @@ export default function Homepage() {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get Your FREE AI System Audit
+              Book Your FREE Consultation
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Discover which AI marketing system is right for your Houston business. Free consultation, no obligations.
+              Discover which AI marketing system is right for your Houston business. New business special - limited-time introductory pricing.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -504,7 +504,7 @@ export default function Homepage() {
                           className="w-full h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 min-h-[56px]"
                           data-testid="audit-submit-button"
                         >
-                          {auditMutation.isPending ? "Sending..." : "Get My FREE System Audit"}
+                          {auditMutation.isPending ? "Sending..." : "Book Free Consultation"}
                         </Button>
                       </form>
                     </Form>
