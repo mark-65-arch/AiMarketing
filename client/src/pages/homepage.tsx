@@ -184,7 +184,7 @@ export default function Homepage() {
                   asChild 
                   variant="outline" 
                   size="lg" 
-                  className="text-lg px-8 py-6 min-h-[56px] w-full sm:w-auto text-white border-white/70 hover:bg-white hover:text-gray-900 transition-all duration-200 font-medium" 
+                  className="text-lg px-8 py-6 min-h-[56px] w-full sm:w-auto text-gray-900 bg-white/90 border-white hover:bg-white hover:text-gray-900 transition-all duration-200 font-medium" 
                   data-testid="button-demo"
                 >
                   <a href="/services" className="flex items-center justify-center gap-2">
