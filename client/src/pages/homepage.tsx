@@ -41,6 +41,10 @@ import { insertContactSubmissionSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { trackFormSubmission, trackAIToolUsage, trackBusinessGoal } from "@/lib/analytics";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import { SEOHead, generateLocationKeywords } from "@/components/seo/SEOHead";
+import { LocalBusinessSchema, FAQSchema, WebPageSchema } from "@/components/seo/SchemaMarkup";
+import { HeroImage, LazyImage } from "@/components/ui/LazyImage";
+import { generalAIMarketingFAQs, voiceSearchFAQs } from "@/data/faqData";
 import type { InsertContactSubmission } from "@shared/schema";
 
 const AnimatedSection = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => {
@@ -68,6 +72,18 @@ export default function Homepage() {
   const [selectedBusinessType, setSelectedBusinessType] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { toast } = useToast();
+
+  // SEO and FAQ data
+  const pageTitle = "Houston AI Marketing | #1 AI Marketing Agency in Houston, TX";
+  const pageDescription = "Transform your Houston business with AI marketing. Increase leads by 200-400% and save 15+ hours weekly. Serving Heights, Midtown, Katy, Sugar Land & all Houston suburbs. Free $500 audit!";
+  const pageKeywords = generateLocationKeywords("Houston", "AI Marketing");
+  const canonicalUrl = "https://houstonaimarketing.com/";
+  
+  // Combined FAQs for homepage
+  const homepageFAQs = [
+    ...generalAIMarketingFAQs.slice(0, 4),
+    ...voiceSearchFAQs.slice(0, 2)
+  ];
 
   const form = useForm<InsertContactSubmission>({
     resolver: zodResolver(insertContactSubmissionSchema),
@@ -191,6 +207,34 @@ export default function Homepage() {
 
   return (
     <div className="bg-background font-sans antialiased">
+      {/* SEO Components */}
+      <SEOHead
+        title={pageTitle}
+        description={pageDescription}
+        keywords={pageKeywords}
+        canonicalUrl={canonicalUrl}
+        ogTitle="Houston AI Marketing - Transform Your Business with AI"
+        ogDescription={pageDescription}
+        ogImage="https://houstonaimarketing.com/images/houston-ai-marketing-og.jpg"
+        twitterTitle="Houston AI Marketing - #1 AI Agency in Houston"
+        twitterDescription={pageDescription}
+        twitterImage="https://houstonaimarketing.com/images/houston-ai-marketing-twitter.jpg"
+      />
+
+      {/* Schema Markup */}
+      <LocalBusinessSchema
+        aggregateRating={{
+          ratingValue: 4.9,
+          reviewCount: 47
+        }}
+      />
+      <WebPageSchema
+        title={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+      />
+      <FAQSchema faqs={homepageFAQs} />
+
       {/* Navigation */}
       <nav className="bg-background/95 backdrop-blur-sm border-b border-border fixed top-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1370,6 +1414,144 @@ export default function Homepage() {
                 </Card>
               </AnimatedSection>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - SEO Optimized for Voice Search */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <AnimatedSection>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="faq-title">
+                Frequently Asked Questions About AI Marketing in Houston
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="faq-subtitle">
+                Get answers to common questions about AI marketing for Houston businesses
+              </p>
+            </AnimatedSection>
+          </div>
+
+          <div className="space-y-4">
+            {homepageFAQs.map((faq, index) => (
+              <AnimatedSection key={index}>
+                <Collapsible
+                  open={openFaq === index}
+                  onOpenChange={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  <CollapsibleTrigger 
+                    className="flex justify-between items-center w-full p-6 bg-card text-left border border-border rounded-lg hover:bg-muted/50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                    data-testid={`faq-question-${index}`}
+                  >
+                    <h3 className="text-lg font-semibold text-foreground pr-4">
+                      {faq.question}
+                    </h3>
+                    {openFaq === index ? (
+                      <ChevronUp className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    )}
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="px-6 pb-6 pt-2 bg-card border-x border-b border-border rounded-b-lg">
+                    <div className="text-muted-foreground leading-relaxed" data-testid={`faq-answer-${index}`}>
+                      {faq.answer}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* CTA after FAQs */}
+          <div className="text-center mt-12">
+            <AnimatedSection>
+              <p className="text-lg text-muted-foreground mb-6">
+                Still have questions? We're here to help your Houston business succeed with AI.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="text-lg px-8 py-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-200" data-testid="button-faq-cta">
+                  <a href="/contact">Schedule Free Consultation</a>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-faq-audit">
+                  <a href="/free-ai-marketing-audit">Get Your Free AI Audit</a>
+                </Button>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Linking Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <AnimatedSection>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4" data-testid="links-title">
+                AI Marketing Services for All Houston Areas
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="links-subtitle">
+                Serving businesses across Houston and surrounding suburbs with specialized AI marketing solutions
+              </p>
+            </AnimatedSection>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Houston Area Links */}
+            <AnimatedSection>
+              <Card className="h-full hover:shadow-lg transition-shadow" data-testid="area-links-inner">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-foreground mb-4 flex items-center">
+                    <MapPin className="w-5 h-5 text-primary mr-2" />
+                    Inner Houston
+                  </h3>
+                  <div className="space-y-2">
+                    <a href="/heights-ai-marketing" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-heights">Heights AI Marketing</a>
+                    <a href="/midtown-ai-marketing" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-midtown">Midtown AI Marketing</a>
+                    <a href="/downtown-ai-marketing" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-downtown">Downtown AI Marketing</a>
+                    <a href="/memorial-ai-marketing" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-memorial">Memorial AI Marketing</a>
+                    <a href="/galleria-ai-marketing" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-galleria">Galleria AI Marketing</a>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* Suburbs Links */}
+            <AnimatedSection>
+              <Card className="h-full hover:shadow-lg transition-shadow" data-testid="area-links-suburbs">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-foreground mb-4 flex items-center">
+                    <MapPin className="w-5 h-5 text-primary mr-2" />
+                    Houston Suburbs
+                  </h3>
+                  <div className="space-y-2">
+                    <a href="/ai-marketing-the-woodlands-texas" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-woodlands">The Woodlands AI Marketing</a>
+                    <a href="/ai-marketing-sugar-land-texas" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-sugar-land">Sugar Land AI Marketing</a>
+                    <a href="/ai-marketing-katy-texas" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-katy">Katy AI Marketing</a>
+                    <a href="/ai-marketing-pearland-texas" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-pearland">Pearland AI Marketing</a>
+                    <a href="/ai-marketing-clear-lake-texas" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-clear-lake">Clear Lake AI Marketing</a>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* Services Links */}
+            <AnimatedSection>
+              <Card className="h-full hover:shadow-lg transition-shadow" data-testid="service-links">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-foreground mb-4 flex items-center">
+                    <BrainCircuit className="w-5 h-5 text-primary mr-2" />
+                    AI Marketing Services
+                  </h3>
+                  <div className="space-y-2">
+                    <a href="/ai-tools" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-ai-tools">AI Tools & Software</a>
+                    <a href="/ai-websites" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-ai-websites">AI Website Development</a>
+                    <a href="/ai-training" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-ai-training">AI Training Workshops</a>
+                    <a href="/google-business-profile-ai-optimization" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-google-optimization">Google Business AI Optimization</a>
+                    <a href="/voice-search-optimization-houston" className="block text-primary hover:text-primary/80 transition-colors" data-testid="link-voice-search">Voice Search Optimization</a>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
         </div>
       </section>
