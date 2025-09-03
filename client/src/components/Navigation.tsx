@@ -93,16 +93,17 @@ export function Navigation({ className = "" }: NavigationProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="/about" className="text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">
-                About
+              <a href="/" className="text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-home">
+                Home
               </a>
 
-              {/* Services Dropdown */}
+              {/* Services Dropdown - Now includes Houston Areas and Free Tools */}
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services-dropdown">
                   Services <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-80" data-testid="services-dropdown-content">
+                  <div className="px-4 py-2 text-sm font-semibold text-muted-foreground">Main Services</div>
                   {navigation.services.map((service) => (
                     <DropdownMenuItem key={service.href} asChild>
                       <a href={service.href} className="block px-4 py-3 hover:bg-muted" data-testid={`service-${service.href.replace('/', '')}`}>
@@ -111,34 +112,44 @@ export function Navigation({ className = "" }: NavigationProps) {
                       </a>
                     </DropdownMenuItem>
                   ))}
+                  <DropdownMenuSeparator />
+                  <div className="px-4 py-2 text-sm font-semibold text-muted-foreground">Houston Areas</div>
+                  <div className="px-4 py-1 text-xs font-medium text-muted-foreground">Inner Houston</div>
+                  {innerHouston.slice(0, 3).map((area) => (
+                    <DropdownMenuItem key={area.href} asChild>
+                      <a href={area.href} className="block px-4 py-2 hover:bg-muted text-sm" data-testid={`area-${area.href.replace('/', '')}`}>
+                        {area.name}
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                  <DropdownMenuItem asChild>
+                    <a href="/houston-areas" className="block px-4 py-2 hover:bg-muted text-sm font-medium text-blue-600">
+                      View All Areas →
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <div className="px-4 py-2 text-sm font-semibold text-muted-foreground">Free Tools</div>
+                  {navigation.freeTools.slice(0, 3).map((tool) => (
+                    <DropdownMenuItem key={tool.href} asChild>
+                      <a href={tool.href} className="block px-4 py-2 hover:bg-muted" data-testid={`tool-${tool.href.replace('/', '')}`}>
+                        <div className={`font-medium text-sm ${tool.highlight ? 'text-primary' : ''}`}>
+                          {tool.name}
+                          {tool.highlight && <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-1 rounded">POPULAR</span>}
+                        </div>
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                  <DropdownMenuItem asChild>
+                    <a href="/ai-tools" className="block px-4 py-2 hover:bg-muted text-sm font-medium text-blue-600">
+                      View All Tools →
+                    </a>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              {/* Houston Areas Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-areas-dropdown">
-                  Houston Areas <ChevronDown className="ml-1 h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-80" data-testid="areas-dropdown-content">
-                  <div className="px-4 py-2 text-sm font-semibold text-muted-foreground">Inner Houston</div>
-                  {innerHouston.map((area) => (
-                    <DropdownMenuItem key={area.href} asChild>
-                      <a href={area.href} className="block px-4 py-2 hover:bg-muted" data-testid={`area-${area.href.replace('/', '')}`}>
-                        {area.name}
-                      </a>
-                    </DropdownMenuItem>
-                  ))}
-                  <DropdownMenuSeparator />
-                  <div className="px-4 py-2 text-sm font-semibold text-muted-foreground">Houston Suburbs</div>
-                  {suburbs.map((area) => (
-                    <DropdownMenuItem key={area.href} asChild>
-                      <a href={area.href} className="block px-4 py-2 hover:bg-muted" data-testid={`area-${area.href.replace('/', '')}`}>
-                        {area.name}
-                      </a>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <a href="/about" className="text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">
+                About
+              </a>
 
               {/* Resources Dropdown */}
               <DropdownMenu>
@@ -151,26 +162,6 @@ export function Navigation({ className = "" }: NavigationProps) {
                       <a href={resource.href} className="block px-4 py-3 hover:bg-muted" data-testid={`resource-${resource.href.replace('/', '')}`}>
                         <div className="font-medium">{resource.name}</div>
                         <div className="text-sm text-muted-foreground mt-1">{resource.description}</div>
-                      </a>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-
-              {/* Free Tools Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-tools-dropdown">
-                  Free Tools <ChevronDown className="ml-1 h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-80" data-testid="tools-dropdown-content">
-                  {navigation.freeTools.map((tool) => (
-                    <DropdownMenuItem key={tool.href} asChild>
-                      <a href={tool.href} className="block px-4 py-3 hover:bg-muted" data-testid={`tool-${tool.href.replace('/', '')}`}>
-                        <div className={`font-medium ${tool.highlight ? 'text-primary' : ''}`}>
-                          {tool.name}
-                          {tool.highlight && <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-1 rounded">POPULAR</span>}
-                        </div>
-                        <div className="text-sm text-muted-foreground mt-1">{tool.description}</div>
                       </a>
                     </DropdownMenuItem>
                   ))}
@@ -200,11 +191,11 @@ export function Navigation({ className = "" }: NavigationProps) {
       {isMenuOpen && (
         <div className="lg:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200" data-testid="mobile-menu">
           <div className="px-4 py-3 space-y-3 max-h-96 overflow-y-auto">
-            <a href="/about" className="block text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about">
-              About
+            <a href="/" className="block text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-home" onClick={() => setIsMenuOpen(false)}>
+              Home
             </a>
 
-            {/* Mobile Services */}
+            {/* Mobile Services - Now includes Houston Areas and Free Tools */}
             <Collapsible
               open={openMobileSection === 'services'}
               onOpenChange={() => toggleMobileSection('services')}
@@ -218,6 +209,7 @@ export function Navigation({ className = "" }: NavigationProps) {
                 )}
               </CollapsibleTrigger>
               <CollapsibleContent className="pl-6 space-y-2">
+                <div className="text-xs font-semibold text-muted-foreground px-3 py-1">Main Services</div>
                 {navigation.services.map((service) => (
                   <a
                     key={service.href}
@@ -229,49 +221,51 @@ export function Navigation({ className = "" }: NavigationProps) {
                     {service.name}
                   </a>
                 ))}
+                <div className="text-xs font-semibold text-muted-foreground px-3 py-1 pt-3">Houston Areas</div>
+                {innerHouston.slice(0, 3).map((area) => (
+                  <a
+                    key={area.href}
+                    href={area.href}
+                    className="block text-muted-foreground hover:text-primary px-3 py-2 text-sm transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                    data-testid={`mobile-area-${area.href.replace('/', '')}`}
+                  >
+                    {area.name}
+                  </a>
+                ))}
+                <a
+                  href="/houston-areas"
+                  className="block text-blue-600 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  View All Areas →
+                </a>
+                <div className="text-xs font-semibold text-muted-foreground px-3 py-1 pt-3">Free Tools</div>
+                {navigation.freeTools.slice(0, 3).map((tool) => (
+                  <a
+                    key={tool.href}
+                    href={tool.href}
+                    className={`block px-3 py-2 text-sm transition-colors ${tool.highlight ? 'text-primary hover:text-primary/80' : 'text-muted-foreground hover:text-primary'}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    data-testid={`mobile-tool-${tool.href.replace('/', '')}`}
+                  >
+                    {tool.name}
+                    {tool.highlight && <span className="ml-2 text-xs">🔥</span>}
+                  </a>
+                ))}
+                <a
+                  href="/ai-tools"
+                  className="block text-blue-600 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  View All Tools →
+                </a>
               </CollapsibleContent>
             </Collapsible>
 
-            {/* Mobile Houston Areas */}
-            <Collapsible
-              open={openMobileSection === 'areas'}
-              onOpenChange={() => toggleMobileSection('areas')}
-            >
-              <CollapsibleTrigger className="flex justify-between items-center w-full text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-areas">
-                Houston Areas
-                {openMobileSection === 'areas' ? (
-                  <ChevronDown className="h-4 w-4" />
-                ) : (
-                  <ChevronRight className="h-4 w-4" />
-                )}
-              </CollapsibleTrigger>
-              <CollapsibleContent className="pl-6 space-y-2">
-                <div className="text-xs font-semibold text-muted-foreground px-3 py-1">Inner Houston</div>
-                {innerHouston.map((area) => (
-                  <a
-                    key={area.href}
-                    href={area.href}
-                    className="block text-muted-foreground hover:text-primary px-3 py-2 text-sm transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                    data-testid={`mobile-area-${area.href.replace('/', '')}`}
-                  >
-                    {area.name}
-                  </a>
-                ))}
-                <div className="text-xs font-semibold text-muted-foreground px-3 py-1 pt-3">Suburbs</div>
-                {suburbs.map((area) => (
-                  <a
-                    key={area.href}
-                    href={area.href}
-                    className="block text-muted-foreground hover:text-primary px-3 py-2 text-sm transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                    data-testid={`mobile-area-${area.href.replace('/', '')}`}
-                  >
-                    {area.name}
-                  </a>
-                ))}
-              </CollapsibleContent>
-            </Collapsible>
+            <a href="/about" className="block text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about" onClick={() => setIsMenuOpen(false)}>
+              About
+            </a>
 
             {/* Mobile Resources */}
             <Collapsible
@@ -296,35 +290,6 @@ export function Navigation({ className = "" }: NavigationProps) {
                     data-testid={`mobile-resource-${resource.href.replace('/', '')}`}
                   >
                     {resource.name}
-                  </a>
-                ))}
-              </CollapsibleContent>
-            </Collapsible>
-
-            {/* Mobile Free Tools */}
-            <Collapsible
-              open={openMobileSection === 'tools'}
-              onOpenChange={() => toggleMobileSection('tools')}
-            >
-              <CollapsibleTrigger className="flex justify-between items-center w-full text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-tools">
-                Free Tools
-                {openMobileSection === 'tools' ? (
-                  <ChevronDown className="h-4 w-4" />
-                ) : (
-                  <ChevronRight className="h-4 w-4" />
-                )}
-              </CollapsibleTrigger>
-              <CollapsibleContent className="pl-6 space-y-2">
-                {navigation.freeTools.map((tool) => (
-                  <a
-                    key={tool.href}
-                    href={tool.href}
-                    className={`block px-3 py-2 text-sm transition-colors ${tool.highlight ? 'text-primary hover:text-primary/80' : 'text-muted-foreground hover:text-primary'}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    data-testid={`mobile-tool-${tool.href.replace('/', '')}`}
-                  >
-                    {tool.name}
-                    {tool.highlight && <span className="ml-2 text-xs">🔥</span>}
                   </a>
                 ))}
               </CollapsibleContent>

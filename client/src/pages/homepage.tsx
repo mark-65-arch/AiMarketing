@@ -146,11 +146,14 @@ export default function Homepage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6" data-testid="hero-title" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-                Houston's #1 AI Marketing Agency - Get{" "}
-                <span className="text-blue-300">3X More Customers</span> in 90 Days
+                <span className="text-blue-300">Transform Your Houston Business</span>{" "}
+                with AI Marketing
               </h1>
-              <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed max-w-3xl mx-auto" data-testid="hero-subtitle" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+              <p className="text-xl md:text-2xl text-gray-100 mb-6 leading-relaxed max-w-3xl mx-auto" data-testid="hero-subtitle" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
                 We help Houston businesses save 15+ hours per week and dominate local search using proven AI marketing systems
+              </p>
+              <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.7)' }}>
+                Proudly serving Houston and surrounding areas since 2024
               </p>
 
               {/* Trust Indicator */}
@@ -162,12 +165,12 @@ export default function Homepage() {
                 </p>
               </div>
 
-              {/* CTAs */}
+              {/* CTAs - Mobile Optimized */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button 
                   asChild 
                   size="lg" 
-                  className="text-lg px-10 py-6 text-white bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 font-bold" 
+                  className="text-lg px-10 py-6 min-h-[56px] w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 font-bold" 
                   data-testid="button-primary-cta"
                 >
                   <a href="#audit-form">Get FREE AI Marketing Audit</a>
@@ -176,10 +179,10 @@ export default function Homepage() {
                   asChild 
                   variant="outline" 
                   size="lg" 
-                  className="text-lg px-8 py-6 text-white border-white/50 hover:bg-white/10 transition-all duration-200 font-medium" 
+                  className="text-lg px-8 py-6 min-h-[56px] w-full sm:w-auto text-white border-white/50 hover:bg-white/10 transition-all duration-200 font-medium" 
                   data-testid="button-demo"
                 >
-                  <a href="/ai-tools" className="flex items-center gap-2">
+                  <a href="/ai-tools" className="flex items-center justify-center gap-2">
                     <Play className="w-5 h-5" />
                     Watch 2-Minute Demo
                   </a>
@@ -273,10 +276,10 @@ export default function Homepage() {
                       ))}
                     </div>
                     <p className="text-lg text-gray-800 mb-4 leading-relaxed italic">
-                      "Marketing AI Houston transformed our restaurant's online presence. We went from 2-3 customers per day to 25+ customers daily. Their AI systems found us customers we never knew existed in Houston. The ROI has been incredible - we've doubled our revenue in just 4 months."
+                      "Marketing AI Houston helped us streamline our social media and online presence. We're now getting more qualified leads and spending less time on marketing tasks. The AI tools they taught us have been a game-changer for our small business."
                     </p>
-                    <div className="font-semibold text-gray-900">Sarah Martinez</div>
-                    <div className="text-gray-600">Owner, Sabor Latino Restaurant, Houston Heights</div>
+                    <div className="font-semibold text-gray-900">Sarah M.</div>
+                    <div className="text-gray-600">Local Business Owner, Houston</div>
                   </div>
                 </div>
               </CardContent>
@@ -336,7 +339,7 @@ export default function Homepage() {
                     <div className="text-3xl font-bold text-blue-600 mb-1">$150</div>
                     <div className="text-gray-600">per person</div>
                   </div>
-                  <Button asChild className="w-full" size="lg">
+                  <Button asChild className="w-full min-h-[48px]" size="lg">
                     <a href="/ai-training">Learn More</a>
                   </Button>
                 </CardContent>
@@ -381,7 +384,7 @@ export default function Homepage() {
                     <div className="text-3xl font-bold text-green-600 mb-1">$397</div>
                     <div className="text-gray-600">one-time setup</div>
                   </div>
-                  <Button asChild className="w-full" size="lg">
+                  <Button asChild className="w-full min-h-[48px]" size="lg">
                     <a href="/business-profile">Learn More</a>
                   </Button>
                 </CardContent>
@@ -421,7 +424,7 @@ export default function Homepage() {
                     <div className="text-3xl font-bold text-purple-600 mb-1">$1,200</div>
                     <div className="text-gray-600">complete website</div>
                   </div>
-                  <Button asChild className="w-full" size="lg">
+                  <Button asChild className="w-full min-h-[48px]" size="lg">
                     <a href="/ai-websites">Learn More</a>
                   </Button>
                 </CardContent>
@@ -442,7 +445,7 @@ export default function Homepage() {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get Your FREE $500 AI Marketing Audit
+              Get Your FREE AI Marketing Audit
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Discover exactly how AI can transform your Houston business and increase your customer flow
@@ -493,7 +496,7 @@ export default function Homepage() {
                         <Button
                           type="submit"
                           disabled={auditMutation.isPending}
-                          className="w-full h-12 text-lg font-bold bg-blue-600 hover:bg-blue-700"
+                          className="w-full h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 min-h-[56px]"
                           data-testid="audit-submit-button"
                         >
                           {auditMutation.isPending ? "Sending..." : "Get My FREE Audit"}
@@ -501,7 +504,10 @@ export default function Homepage() {
                       </form>
                     </Form>
                     <p className="text-xs text-gray-500 mt-4 text-center">
-                      No spam. Unsubscribe anytime. Usually $500 value.
+                      No spam. Unsubscribe anytime. Professional consultation value.
+                    </p>
+                    <p className="text-sm text-gray-600 mt-2 text-center">
+                      No obligation. See if AI marketing is right for your business.
                     </p>
                   </CardContent>
                 </Card>
@@ -590,22 +596,22 @@ export default function Homepage() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <a
-                href="tel:7135550198"
+                href="tel:7135550123"
                 className="flex items-center gap-3 text-white hover:text-blue-300 transition-colors"
               >
                 <Phone className="w-6 h-6" />
-                <span className="text-xl font-medium">(713) 555-0198</span>
+                <span className="text-xl font-medium">(713) 555-0123</span>
               </a>
               <a
-                href="mailto:hello@houstonaimarketing.com"
+                href="mailto:info@marketingaihouston.com"
                 className="flex items-center gap-3 text-white hover:text-blue-300 transition-colors"
               >
                 <Mail className="w-6 h-6" />
-                <span className="text-xl font-medium">hello@houstonaimarketing.com</span>
+                <span className="text-xl font-medium">info@marketingaihouston.com</span>
               </a>
             </div>
 
-            <Button asChild size="lg" className="text-lg px-8 py-4 bg-blue-600 hover:bg-blue-700">
+            <Button asChild size="lg" className="text-lg px-8 py-4 min-h-[56px] bg-blue-600 hover:bg-blue-700">
               <a href="/contact">Schedule Free Consultation</a>
             </Button>
           </motion.div>
