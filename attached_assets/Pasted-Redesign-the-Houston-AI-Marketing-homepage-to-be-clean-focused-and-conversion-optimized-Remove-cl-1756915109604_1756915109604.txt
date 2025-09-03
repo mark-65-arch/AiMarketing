@@ -1,0 +1,56 @@
+Redesign the Houston AI Marketing homepage to be clean, focused, and conversion-optimized. Remove clutter and create a clear visitor journey.
+
+New streamlined homepage structure:
+
+**HERO SECTION (Above the fold):**
+- Strong headline: "Houston's #1 AI Marketing Agency - Get 3X More Customers in 90 Days"
+- Sub-headline: "We help Houston businesses save 15+ hours per week and dominate local search using proven AI marketing systems"
+- ONE primary CTA: "Get FREE AI Marketing Audit" (large, prominent button)
+- ONE secondary CTA: "Watch 2-Minute Demo" (smaller, less prominent)
+- Trust indicator: "Trusted by 89+ Houston Businesses"
+- Professional hero image (Houston skyline background)
+
+**SOCIAL PROOF SECTION:**
+- Simple 4-stat grid: Businesses Served (89+), Avg Revenue Increase (200-400%), Hours Saved Weekly (15+), Client Satisfaction (98%)
+- ONE standout client testimonial with photo
+- "Results may vary" disclaimer
+
+**SERVICES OVERVIEW (Simplified):**
+- 3 clean service cards ONLY:
+  1. AI Training Workshops ($150/person)
+  2. Google Business Optimization ($397)
+  3. AI-Optimized Websites ($1,200)
+- Each card: Title, 2-3 bullet points, price, "Learn More" button
+- Remove duplicate content and overwhelming details
+
+**ONE LEAD MAGNET SECTION:**
+- Focus on ONLY the AI Marketing Audit
+- "Get Your FREE $500 AI Marketing Audit"
+- 3 bullet points of what's included
+- Simple email capture form
+- Remove all other competing lead magnets from homepage
+
+**WHY CHOOSE US (Brief):**
+- 3 simple reasons: "Local Houston Experts", "Proven AI Systems", "Guaranteed Results"
+- Keep it concise and scannable
+
+**SIMPLE CONTACT SECTION:**
+- Phone number and email prominently displayed
+- "Ready to get started?" with consultation booking button
+- Remove complex contact form from homepage
+
+**REMOVE ENTIRELY FROM HOMEPAGE:**
+- Multiple lead magnet options (confusing)
+- Detailed Houston areas section (move to separate page)
+- FAQ section (move to separate page)
+- AI content generator demo (move to tools page)
+- Excessive testimonials (keep just one strong one)
+- Repetitive service descriptions
+
+**MOBILE OPTIMIZATION:**
+- Ensure clean, thumb-friendly navigation
+- Large, tappable buttons
+- Minimal scrolling required
+- Fast loading with optimized images
+
+Goal: Create a clean, focused homepage that guides visitors to ONE clear action - getting the free audit.
