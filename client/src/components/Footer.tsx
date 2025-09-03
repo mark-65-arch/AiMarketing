@@ -39,24 +39,24 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6" data-testid="footer-services-title">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <span className="text-gray-300">
+                <Link href="/business-profile" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-business-profile">
                   Google Business AI Domination
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">
+                <Link href="/ai-training" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-ai-training">
                   AI Marketing System Setup
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">
+                <Link href="/ai-websites" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-ai-websites">
                   Website + AI Optimization
-                </span>
+                </Link>
               </li>
               <li>
-                <span className="text-gray-300">
-                  Free System Audit
-                </span>
+                <Link href="/assessment" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-assessment">
+                  Free System Assessment
+                </Link>
               </li>
             </ul>
           </div>
@@ -65,6 +65,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6" data-testid="footer-resources-title">Resources</h4>
             <ul className="space-y-3">
+              <li>
+                <Link href="/services" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-services">
+                  All Services
+                </Link>
+              </li>
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-about">
                   About Us

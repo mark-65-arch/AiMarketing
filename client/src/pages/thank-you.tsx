@@ -148,7 +148,7 @@ export default function ThankYou() {
       title: "Explore Our Services",
       description: "Learn more about our AI marketing services for your business",
       action: "Browse",
-      href: "/#services",
+      href: "/services",
       icon: <ArrowRight className="w-5 h-5" />
     }
   ];
@@ -370,7 +370,7 @@ export default function ThankYou() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4" data-testid="button-browse-services">
-                <a href="/#services">
+                <a href="/services">
                   <Download className="w-5 h-5 mr-2" />
                   Browse Our Services
                 </a>

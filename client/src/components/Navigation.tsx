@@ -28,8 +28,12 @@ export function Navigation({ className = "" }: NavigationProps) {
                 Home
               </a>
 
-              <a href="/#services" className="text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">
+              <a href="/services" className="text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">
                 Services
+              </a>
+
+              <a href="/assessment" className="text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-assessment">
+                Assessment
               </a>
 
               <a href="/about" className="text-blue-900 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">
@@ -64,8 +68,12 @@ export function Navigation({ className = "" }: NavigationProps) {
               Home
             </a>
 
-            <a href="/#services" className="block text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>
+            <a href="/services" className="block text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-services" onClick={() => setIsMenuOpen(false)}>
               Services
+            </a>
+
+            <a href="/assessment" className="block text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-assessment" onClick={() => setIsMenuOpen(false)}>
+              Assessment
             </a>
 
             <a href="/about" className="block text-blue-900 hover:text-blue-700 px-3 py-3 min-h-[44px] text-base font-medium transition-colors touch-target" data-testid="mobile-nav-about" onClick={() => setIsMenuOpen(false)}>

@@ -151,7 +151,7 @@ export default function WoodlandsAIMarketing() {
             <div className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Home</a>
               <a href="/about" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">About</a>
-              <a href="/#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Free AI Tools</a>
+              <a href="/services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Services</a>
               <a href="/contact" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Contact</a>
               <a href="#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg">Get FREE Audit</a>
             </div>

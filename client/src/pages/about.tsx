@@ -101,8 +101,8 @@ export default function About() {
               <div className="ml-10 flex items-baseline space-x-8">
                 <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-home">Home</a>
                 <a href="/about" className="text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-about">About</a>
-                <a href="/#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
-                <a href="/#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
+                <a href="/services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
+                <a href="/services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-services">Services</a>
                 <a href="/contact" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors" data-testid="nav-contact">Contact</a>
                 <a href="/contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg" data-testid="nav-cta">Get Started</a>
               </div>
@@ -129,7 +129,7 @@ export default function About() {
                     <a href="/contact">Start Your AI Journey</a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-learn-more">
-                    <a href="/#services">View Our Services</a>
+                    <a href="/services">View Our Services</a>
                   </Button>
                 </div>
               </AnimatedSection>
@@ -370,7 +370,7 @@ export default function About() {
                 <a href="/contact">Get Free Consultation</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 hover:bg-muted/50 transition-all duration-200" data-testid="button-view-services">
-                <a href="/#services">View All Services</a>
+                <a href="/services">View All Services</a>
               </Button>
             </div>
           </AnimatedSection>

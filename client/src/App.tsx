@@ -9,6 +9,7 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 import Homepage from "@/pages/homepage";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
+import Services from "@/pages/services";
 import Assessment from "@/pages/assessment";
 import AITraining from "@/pages/ai-training";
 import BusinessProfile from "@/pages/business-profile";
@@ -41,6 +42,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Homepage}/>
         <Route path="/about" component={About}/>
+        <Route path="/services" component={Services}/>
         <Route path="/contact" component={Contact}/>
         <Route path="/assessment" component={Assessment}/>
         <Route path="/ai-training" component={AITraining}/>

@@ -310,7 +310,7 @@ export default function Assessment() {
               </div>
               <div className="hidden md:flex items-baseline space-x-8">
                 <a href="/" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                <a href="/#services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                <a href="/services" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Services</a>
                 <a href="/#contact" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200">Contact</a>
               </div>
             </div>
