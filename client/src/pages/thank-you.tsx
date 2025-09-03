@@ -145,46 +145,40 @@ export default function ThankYou() {
       icon: <Star className="w-5 h-5" />
     },
     {
-      title: "Explore Our Other Resources",
-      description: "Download additional free tools and guides for your business",
+      title: "Explore Our Services",
+      description: "Learn more about our AI marketing services for your business",
       action: "Browse",
-      href: "/ai-tools",
+      href: "/#services",
       icon: <ArrowRight className="w-5 h-5" />
     }
   ];
 
-  const otherLeadMagnets = [
+  const otherServices = [
     {
-      title: "Free AI Marketing Audit",
-      description: "Get a personalized analysis of your current marketing",
-      href: "/free-ai-marketing-audit",
+      title: "AI Website Development",
+      description: "Build smart, responsive websites with AI",
+      href: "/ai-websites",
       icon: <BrainCircuit className="w-6 h-6" />
     },
     {
-      title: "Marketing AI Houston Guide",
-      description: "87-page comprehensive guide to AI marketing",
-      href: "/houston-business-ai-guide",
+      title: "AI Training Workshops",
+      description: "Learn to leverage AI for your business",
+      href: "/ai-training",
       icon: <BookOpen className="w-6 h-6" />
     },
     {
-      title: "AI Tools Checklist",
-      description: "25 essential AI tools every business should use",
-      href: "/ai-tools-checklist",
+      title: "Business Profile Optimization",
+      description: "Optimize your online presence",
+      href: "/business-profile",
       icon: <CheckSquare className="w-6 h-6" />
     },
     {
-      title: "30-Day Implementation Calendar",
-      description: "Step-by-step plan to implement AI in your business",
-      href: "/30-day-ai-calendar",
-      icon: <Calendar className="w-6 h-6" />
-    },
-    {
-      title: "AI ROI Calculator",
-      description: "Calculate your potential return on AI investments",
-      href: "/ai-roi-calculator",
+      title: "AI Readiness Assessment",
+      description: "Evaluate your business's AI potential",
+      href: "/assessment",
       icon: <Calculator className="w-6 h-6" />
     }
-  ].filter(item => !item.href.includes(leadMagnetType)); // Remove the current lead magnet
+  ];
 
   return (
     <div className="bg-background font-sans antialiased">
@@ -311,7 +305,7 @@ export default function ThankYou() {
       </section>
 
       {/* Other Resources */}
-      {otherLeadMagnets.length > 0 && (
+      {otherServices.length > 0 && (
         <section className="py-20 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -326,7 +320,7 @@ export default function ThankYou() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {otherLeadMagnets.slice(0, 4).map((resource, index) => (
+              {otherServices.slice(0, 4).map((resource, index) => (
                 <AnimatedSection key={index} className="hover-lift">
                   <Card className="h-full shadow-sm" data-testid={`resource-card-${index}`}>
                     <CardContent className="p-6">
@@ -375,10 +369,10 @@ export default function ThankYou() {
                   Contact Us
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4" data-testid="button-browse-resources">
-                <a href="/ai-tools">
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4" data-testid="button-browse-services">
+                <a href="/#services">
                   <Download className="w-5 h-5 mr-2" />
-                  Browse All Resources
+                  Browse Our Services
                 </a>
               </Button>
             </div>

@@ -13,41 +13,16 @@ import Assessment from "@/pages/assessment";
 import AITraining from "@/pages/ai-training";
 import BusinessProfile from "@/pages/business-profile";
 import AIWebsites from "@/pages/ai-websites";
-import AITools from "@/pages/ai-tools";
 import HeightsAIMarketing from "@/pages/heights-ai-marketing";
 import MidtownAIMarketing from "@/pages/midtown-ai-marketing";
 import DowntownAIMarketing from "@/pages/downtown-ai-marketing";
 import MemorialAIMarketing from "@/pages/memorial-ai-marketing";
-import GalleriaAIMarketing from "@/pages/galleria-ai-marketing";
 import WoodlandsAIMarketing from "@/pages/woodlands-ai-marketing";
 import SugarLandAIMarketing from "@/pages/sugar-land-ai-marketing";
 import KatyAIMarketing from "@/pages/katy-ai-marketing";
-import PearlandAIMarketing from "@/pages/pearland-ai-marketing";
 import ClearLakeAIMarketing from "@/pages/clear-lake-ai-marketing";
-import LeagueCityAIMarketing from "@/pages/league-city-ai-marketing";
-import PasadenaAIMarketing from "@/pages/pasadena-ai-marketing";
-import CypressAIMarketing from "@/pages/cypress-ai-marketing";
 
-// Blog and Resource Pages
-import Blog from "@/pages/blog";
-import HoustonAIMarketingGuide from "@/pages/houston-ai-marketing-guide";
-import AIToolsSmallBusiness from "@/pages/ai-tools-small-business";
-import AIMarketingChecklist from "@/pages/ai-marketing-checklist";
-import HoustonBusinessResources from "@/pages/houston-business-resources";
-
-// Blog Articles
-import HowAIHelpsHoustonRestaurants from "@/pages/how-ai-helps-houston-restaurants";
-import AIVsTraditionalMarketing from "@/pages/ai-vs-traditional-marketing";
-import GoogleBusinessProfileAIOptimization from "@/pages/google-business-profile-ai-optimization";
-import AIContentCreationGuide from "@/pages/ai-content-creation-guide";
-import VoiceSearchOptimizationHouston from "@/pages/voice-search-optimization-houston";
-
-// Lead Magnet Pages
-import FreeAIMarketingAudit from "@/pages/free-ai-marketing-audit";
-import HoustonBusinessAIGuide from "@/pages/houston-business-ai-guide";
-import AIToolsChecklist from "@/pages/ai-tools-checklist";
-import ThirtyDayAICalendar from "@/pages/30-day-ai-calendar";
-import AIROICalculator from "@/pages/ai-roi-calculator";
+// Keep only essential pages
 import ThankYou from "@/pages/thank-you";
 
 import NotFound from "@/pages/not-found";
@@ -71,41 +46,14 @@ function Router() {
         <Route path="/ai-training" component={AITraining}/>
         <Route path="/business-profile" component={BusinessProfile}/>
         <Route path="/ai-websites" component={AIWebsites}/>
-        <Route path="/ai-tools" component={AITools}/>
         <Route path="/heights-ai-marketing" component={HeightsAIMarketing}/>
         <Route path="/midtown-ai-marketing" component={MidtownAIMarketing}/>
         <Route path="/downtown-ai-marketing" component={DowntownAIMarketing}/>
         <Route path="/memorial-ai-marketing" component={MemorialAIMarketing}/>
-        <Route path="/galleria-ai-marketing" component={GalleriaAIMarketing}/>
         <Route path="/ai-marketing-the-woodlands-texas" component={WoodlandsAIMarketing}/>
         <Route path="/ai-marketing-sugar-land-texas" component={SugarLandAIMarketing}/>
         <Route path="/ai-marketing-katy-texas" component={KatyAIMarketing}/>
-        <Route path="/ai-marketing-pearland-texas" component={PearlandAIMarketing}/>
         <Route path="/ai-marketing-clear-lake-texas" component={ClearLakeAIMarketing}/>
-        <Route path="/ai-marketing-league-city-texas" component={LeagueCityAIMarketing}/>
-        <Route path="/ai-marketing-pasadena-texas" component={PasadenaAIMarketing}/>
-        <Route path="/ai-marketing-cypress-texas" component={CypressAIMarketing}/>
-        
-        {/* Blog and Resource Pages */}
-        <Route path="/blog" component={Blog}/>
-        <Route path="/houston-ai-marketing-guide" component={HoustonAIMarketingGuide}/>
-        <Route path="/ai-tools-small-business" component={AIToolsSmallBusiness}/>
-        <Route path="/ai-marketing-checklist" component={AIMarketingChecklist}/>
-        <Route path="/houston-business-resources" component={HoustonBusinessResources}/>
-        
-        {/* Blog Articles */}
-        <Route path="/how-ai-helps-houston-restaurants" component={HowAIHelpsHoustonRestaurants}/>
-        <Route path="/ai-vs-traditional-marketing" component={AIVsTraditionalMarketing}/>
-        <Route path="/google-business-profile-ai-optimization" component={GoogleBusinessProfileAIOptimization}/>
-        <Route path="/ai-content-creation-guide" component={AIContentCreationGuide}/>
-        <Route path="/voice-search-optimization-houston" component={VoiceSearchOptimizationHouston}/>
-        
-        {/* Lead Magnet Pages */}
-        <Route path="/free-ai-marketing-audit" component={FreeAIMarketingAudit}/>
-        <Route path="/houston-business-ai-guide" component={HoustonBusinessAIGuide}/>
-        <Route path="/ai-tools-checklist" component={AIToolsChecklist}/>
-        <Route path="/30-day-ai-calendar" component={ThirtyDayAICalendar}/>
-        <Route path="/ai-roi-calculator" component={AIROICalculator}/>
         <Route path="/thank-you" component={ThankYou}/>
         
         <Route component={NotFound} />

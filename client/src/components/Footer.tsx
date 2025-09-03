@@ -76,11 +76,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-blog">
-                  Blog
-                </a>
-              </li>
-              <li>
                 <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-contact">
                   Contact Us
                 </Link>
@@ -108,28 +103,28 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/ai-marketing-pearland-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-pearland">
-                  Pearland
-                </Link>
-              </li>
-              <li>
                 <Link href="/ai-marketing-clear-lake-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-clear-lake">
                   Clear Lake
                 </Link>
               </li>
               <li>
-                <Link href="/ai-marketing-league-city-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-league-city">
-                  League City
+                <Link href="/heights-ai-marketing" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-heights">
+                  Heights
                 </Link>
               </li>
               <li>
-                <Link href="/ai-marketing-pasadena-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-pasadena">
-                  Pasadena
+                <Link href="/midtown-ai-marketing" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-midtown">
+                  Midtown
                 </Link>
               </li>
               <li>
-                <Link href="/ai-marketing-cypress-texas" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-cypress">
-                  Cypress
+                <Link href="/downtown-ai-marketing" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-downtown">
+                  Downtown
+                </Link>
+              </li>
+              <li>
+                <Link href="/memorial-ai-marketing" className="text-gray-300 hover:text-blue-400 transition-colors" data-testid="footer-link-memorial">
+                  Memorial
                 </Link>
               </li>
             </ul>
