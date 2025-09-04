@@ -20,6 +20,8 @@ import {
   Mail
 } from "lucide-react";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
+import houstonBusinessImage from "@assets/photo_5021966124203486685_y_1756837832564.jpg";
+import businessMeetingImage from "@assets/generated_images/Houston_business_meeting_scene_767a3d9e.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
@@ -84,9 +86,11 @@ export default function About() {
               <AnimatedSection>
                 <Card className="shadow-xl bg-white/95 backdrop-blur-sm border-0" data-testid="founder-card">
                   <CardContent className="p-8 text-center">
-                    <div className="w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-bold text-gray-700">[Your Name]</span>
+                    <div className="founder-photo-container rounded-full mb-6">
+                      <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
+                        <div className="w-3/4 h-3/4 bg-gray-100 rounded-full flex items-center justify-center">
+                          <span className="text-sm font-bold text-gray-700">[Your Name]</span>
+                        </div>
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Founder & AI Marketing Specialist</h3>
@@ -237,11 +241,14 @@ export default function About() {
             </div>
             <div className="mt-12 lg:mt-0">
               <AnimatedSection>
-                <img 
-                  src="https://images.unsplash.com/photo-1583416750470-965b2707b355?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                  alt="Houston downtown skyline" 
-                  className="rounded-2xl shadow-xl w-full" 
-                />
+                <div className="responsive-image-container rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={businessMeetingImage}
+                    alt="Professional business meeting in Houston office setting" 
+                    className="rounded-2xl w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </AnimatedSection>
             </div>
           </div>
@@ -300,7 +307,7 @@ export default function About() {
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start gap-3">
                   <Lightbulb className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
-                  <span>Certified in leading AI marketing platforms</span>
+                  <span>Extensively trained in advanced AI marketing tools and techniques</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Lightbulb className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
