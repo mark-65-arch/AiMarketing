@@ -16,7 +16,10 @@ import {
   Award,
   Shield,
   Target,
-  Trophy
+  Trophy,
+  MapPin as GoogleBusiness,
+  Settings,
+  Monitor
 } from "lucide-react";
 import houstonSkylineImage from "@assets/houston-skyline.jpg";
 import { Button } from "@/components/ui/button";
@@ -198,103 +201,149 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* SOCIAL PROOF SECTION */}
+      {/* WHAT YOU ACTUALLY GET SECTION */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <Users className="w-8 h-8 text-blue-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">New</div>
-              <div className="text-sm text-gray-600">Houston Business</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <TrendingUp className="w-8 h-8 text-green-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">AI-Proven</div>
-              <div className="text-sm text-gray-600">Results</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <Clock className="w-8 h-8 text-purple-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">10+</div>
-              <div className="text-sm text-gray-600">Hours Saved Weekly</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <Award className="w-8 h-8 text-orange-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">Professional</div>
-              <div className="text-sm text-gray-600">Service Guaranteed</div>
-            </motion.div>
-          </div>
-
-          {/* Single Standout Testimonial */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            className="text-center mb-16"
           >
-            <Card className="bg-blue-50 border-blue-200 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    SM
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex text-yellow-400 mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-lg text-gray-800 mb-4 leading-relaxed italic">
-                      "As Houston's newest AI marketing specialist, I bring fresh expertise and cutting-edge AI systems to help local businesses automate their marketing and save time."
-                    </p>
-                    <div className="font-semibold text-gray-900">Founder</div>
-                    <div className="text-gray-600">Marketing AI Houston</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              What You Actually Get With Each Project
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Concrete deliverables you own forever, not vague promises
+            </p>
           </motion.div>
 
-          {/* Results Disclaimer */}
-          <p className="text-center text-sm text-gray-500 mt-8">
-            Results may vary. Past performance does not guarantee future results.
-          </p>
+          {/* Three Value Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Card 1: Google Business AI Domination */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Card className="h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 text-center">
+                  <div className="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <GoogleBusiness className="w-10 h-10 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Google Business AI Domination
+                  </h3>
+                  <div className="bg-blue-50 rounded-lg p-4 mb-6">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">24 Posts</div>
+                    <div className="text-lg font-semibold text-gray-900">Pre-Written & Scheduled</div>
+                  </div>
+                  <ul className="space-y-3 mb-6 text-left">
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>12 Review Response Templates</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>2-Hour Training Session</span>
+                    </li>
+                  </ul>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <p className="text-sm font-medium text-gray-700">
+                      6 months of content ready to post automatically
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Card 2: AI Marketing System Setup */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Card className="h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-green-500">
+                <CardContent className="p-8 text-center">
+                  <div className="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Settings className="w-10 h-10 text-green-600" />
+                  </div>
+                  <div className="text-center mb-4">
+                    <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      MOST VALUABLE
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    AI Marketing System Setup
+                  </h3>
+                  <div className="bg-green-50 rounded-lg p-4 mb-6">
+                    <div className="text-3xl font-bold text-green-600 mb-2">30+</div>
+                    <div className="text-lg font-semibold text-gray-900">Custom AI Prompts Created</div>
+                  </div>
+                  <ul className="space-y-3 mb-6 text-left">
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>3-Platform Automation</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>Complete Staff Training</span>
+                    </li>
+                  </ul>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <p className="text-sm font-medium text-gray-700">
+                      Unlimited content creation system you control
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Card 3: Website + AI Optimization */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Card className="h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 text-center">
+                  <div className="w-20 h-20 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Monitor className="w-10 h-10 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Website + AI Optimization
+                  </h3>
+                  <div className="bg-purple-50 rounded-lg p-4 mb-6">
+                    <div className="text-2xl font-bold text-purple-600 mb-2">Complete Website</div>
+                    <div className="text-lg font-semibold text-gray-900">+ Smart Chatbot</div>
+                  </div>
+                  <ul className="space-y-3 mb-6 text-left">
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>Local SEO Setup</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>Analytics Dashboard</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span>3-Hour Training</span>
+                    </li>
+                  </ul>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <p className="text-sm font-medium text-gray-700">
+                      Professional online presence that converts 24/7
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
 
