@@ -51,7 +51,7 @@ export default function About() {
 
       {/* HERO SECTION */}
       <section 
-        className="hero-background relative overflow-hidden"
+        className="hero-background"
         style={{
           backgroundImage: `url(${houstonSkylineImage})`,
           paddingTop: '64px'
