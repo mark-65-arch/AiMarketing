@@ -51,12 +51,23 @@ export default function About() {
 
       {/* HERO SECTION */}
       <section 
-        className="hero-background"
-        style={{
-          backgroundImage: `url(${houstonSkylineImage})`,
-          paddingTop: '64px'
-        }}
+        className="relative min-h-screen w-full overflow-hidden"
+        style={{ paddingTop: '64px' }}
       >
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src={houstonSkylineImage}
+            alt="Houston skyline background"
+            className="w-full h-full object-cover object-center"
+            style={{ 
+              minHeight: '100%',
+              minWidth: '100%',
+              width: '100%',
+              height: '100%'
+            }}
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/60"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-32">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">

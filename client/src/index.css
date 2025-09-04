@@ -492,13 +492,16 @@ nav .flex.justify-between {
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* Force background to scale with page zoom */
+  transform: scale(1);
+  transform-origin: center center;
 }
 
 /* Ensure hero scales properly at all zoom levels */
@@ -509,66 +512,36 @@ nav .flex.justify-between {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .hero-background {
-    min-height: 90vh;
-  }
-}
-
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
   .hero-background {
     min-height: 100vh;
   }
 }
 
-/* Fix zoom level issues for different browser zoom */
+/* Zoom-level specific logo adjustments only */
 @media screen and (min-resolution: 0.75dppx) {
-  /* 75% zoom */
   .logo-responsive {
     max-height: 38px !important;
-  }
-  .hero-background {
-    background-size: cover !important;
-    min-height: 100vh !important;
-    width: 100vw !important;
   }
 }
 
 @media screen and (min-resolution: 1.25dppx) {
-  /* 125% zoom */
   .logo-responsive {
     max-height: 36px !important;
-  }
-  .hero-background {
-    background-size: cover !important;
-    min-height: 100vh !important;
-    width: 100vw !important;
   }
 }
 
 @media screen and (min-resolution: 1.5dppx) {
-  /* 150% zoom */
   .logo-responsive {
     max-height: 32px !important;
-  }
-  .hero-background {
-    background-size: cover !important;
-    min-height: 100vh !important;
-    width: 100vw !important;
   }
 }
 
 /* Additional zoom support using CSS zoom property fallback */
 @supports (zoom: 1) {
   @media screen and (max-resolution: 0.8dppx) {
-    /* Handles browser zoom out (50%, 75%) */
     .logo-responsive {
       max-height: 42px !important;
-    }
-    .hero-background {
-      min-height: 100vh !important;
-      width: 100vw !important;
-      background-size: cover !important;
     }
   }
 }
@@ -604,13 +577,6 @@ nav .flex.justify-between {
 
 /* Fix for very large zoom levels (200% and above) */
 @media screen and (min-resolution: 2dppx) {
-  .hero-background {
-    min-height: 100vh !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    width: 100vw !important;
-  }
-  
   .logo-responsive {
     max-height: 28px !important;
   }
