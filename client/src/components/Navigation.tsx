@@ -15,9 +15,14 @@ export function Navigation({ className = "" }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <a href="/" data-testid="nav-logo">
-              <img src={logoWide} alt="Marketing AI Houston" className="h-10 w-auto" />
+              <img 
+                src={logoWide} 
+                alt="Marketing AI Houston" 
+                className="logo-responsive h-8 sm:h-10 w-auto max-h-10"
+                style={{ maxHeight: '40px', width: 'auto', height: 'auto' }}
+              />
             </a>
           </div>
 

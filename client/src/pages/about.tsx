@@ -51,14 +51,10 @@ export default function About() {
 
       {/* HERO SECTION */}
       <section 
-        className="relative overflow-hidden"
+        className="hero-background relative overflow-hidden"
         style={{
           backgroundImage: `url(${houstonSkylineImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-          paddingTop: '64px',
-          minHeight: '80vh'
+          paddingTop: '64px'
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/60"></div>

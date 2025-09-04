@@ -444,3 +444,110 @@ img {
     image-rendering: crisp-edges;
   }
 }
+
+/* Navigation Logo Responsive Scaling */
+.logo-responsive {
+  max-height: 40px !important;
+  height: auto !important;
+  width: auto !important;
+  object-fit: contain !important;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+/* Ensure logo scales properly at all zoom levels */
+@media screen and (max-width: 640px) {
+  .logo-responsive {
+    max-height: 32px !important;
+    height: 32px !important;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  .logo-responsive {
+    max-height: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .logo-responsive {
+    max-height: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Navigation bar height adjustments */
+nav .flex.justify-between {
+  min-height: 64px;
+  height: auto;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+/* Hero section background image responsive scaling */
+.hero-background {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure hero scales properly at all zoom levels */
+@media screen and (max-width: 768px) {
+  .hero-background {
+    min-height: 60vh;
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-background {
+    min-height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-background {
+    min-height: 80vh;
+  }
+}
+
+/* Fix zoom level issues for different browser zoom */
+@media screen and (min-resolution: 0.75dppx) {
+  /* 75% zoom */
+  .logo-responsive {
+    max-height: 38px !important;
+  }
+  .hero-background {
+    background-size: cover !important;
+  }
+}
+
+@media screen and (min-resolution: 1.25dppx) {
+  /* 125% zoom */
+  .logo-responsive {
+    max-height: 36px !important;
+  }
+}
+
+@media screen and (min-resolution: 1.5dppx) {
+  /* 150% zoom */
+  .logo-responsive {
+    max-height: 32px !important;
+  }
+}
+
+/* Additional zoom support using CSS zoom property fallback */
+@supports (zoom: 1) {
+  @media screen and (max-resolution: 0.8dppx) {
+    /* Handles browser zoom out (50%, 75%) */
+    .logo-responsive {
+      max-height: 42px !important;
+    }
+  }
+}
